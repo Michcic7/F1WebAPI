@@ -1,0 +1,163 @@
+[
+  {
+    "Position": "1",
+    "Name": "Lewis Hamilton",
+    "Nationality": "GBR",
+    "Team": "Mercedes",
+    "Points": 347.0
+  },
+  {
+    "Position": "2",
+    "Name": "Valtteri Bottas",
+    "Nationality": "FIN",
+    "Team": "Mercedes",
+    "Points": 223.0
+  },
+  {
+    "Position": "3",
+    "Name": "Max Verstappen",
+    "Nationality": "NED",
+    "Team": "Red Bull Racing Honda",
+    "Points": 214.0
+  },
+  {
+    "Position": "4",
+    "Name": "Sergio Perez",
+    "Nationality": "MEX",
+    "Team": "Racing Point BWT Mercedes",
+    "Points": 125.0
+  },
+  {
+    "Position": "5",
+    "Name": "Daniel Ricciardo",
+    "Nationality": "AUS",
+    "Team": "Renault",
+    "Points": 119.0
+  },
+  {
+    "Position": "6",
+    "Name": "Carlos Sainz",
+    "Nationality": "ESP",
+    "Team": "McLaren Renault",
+    "Points": 105.0
+  },
+  {
+    "Position": "7",
+    "Name": "Alexander Albon",
+    "Nationality": "THA",
+    "Team": "Red Bull Racing Honda",
+    "Points": 105.0
+  },
+  {
+    "Position": "8",
+    "Name": "Charles Leclerc",
+    "Nationality": "MON",
+    "Team": "Ferrari",
+    "Points": 98.0
+  },
+  {
+    "Position": "9",
+    "Name": "Lando Norris",
+    "Nationality": "GBR",
+    "Team": "McLaren Renault",
+    "Points": 97.0
+  },
+  {
+    "Position": "10",
+    "Name": "Pierre Gasly",
+    "Nationality": "FRA",
+    "Team": "AlphaTauri Honda",
+    "Points": 75.0
+  },
+  {
+    "Position": "11",
+    "Name": "Lance Stroll",
+    "Nationality": "CAN",
+    "Team": "Racing Point BWT Mercedes",
+    "Points": 75.0
+  },
+  {
+    "Position": "12",
+    "Name": "Esteban Ocon",
+    "Nationality": "FRA",
+    "Team": "Renault",
+    "Points": 62.0
+  },
+  {
+    "Position": "13",
+    "Name": "Sebastian Vettel",
+    "Nationality": "GER",
+    "Team": "Ferrari",
+    "Points": 33.0
+  },
+  {
+    "Position": "14",
+    "Name": "Daniil Kvyat",
+    "Nationality": "RUS",
+    "Team": "AlphaTauri Honda",
+    "Points": 32.0
+  },
+  {
+    "Position": "15",
+    "Name": "Nico Hulkenberg",
+    "Nationality": "GER",
+    "Team": "Racing Point BWT Mercedes",
+    "Points": 10.0
+  },
+  {
+    "Position": "16",
+    "Name": "Kimi Räikkönen",
+    "Nationality": "FIN",
+    "Team": "Alfa Romeo Racing Ferrari",
+    "Points": 4.0
+  },
+  {
+    "Position": "17",
+    "Name": "Antonio Giovinazzi",
+    "Nationality": "ITA",
+    "Team": "Alfa Romeo Racing Ferrari",
+    "Points": 4.0
+  },
+  {
+    "Position": "18",
+    "Name": "George Russell",
+    "Nationality": "GBR",
+    "Team": "Williams Mercedes",
+    "Points": 3.0
+  },
+  {
+    "Position": "19",
+    "Name": "Romain Grosjean",
+    "Nationality": "FRA",
+    "Team": "Haas Ferrari",
+    "Points": 2.0
+  },
+  {
+    "Position": "20",
+    "Name": "Kevin Magnussen",
+    "Nationality": "DEN",
+    "Team": "Haas Ferrari",
+    "Points": 1.0
+  },
+  {
+    "Position": "21",
+    "Name": "Nicholas Latifi",
+    "Nationality": "CAN",
+    "Team": "Williams Mercedes",
+    "Points": 0.0
+  },
+  {
+    "Position": "22",
+    "Name": "Jack Aitken",
+    "Nationality": "GBR",
+    "Team": "Williams Mercedes",
+    "Points": 0.0
+  },
+  {
+    "Position": "23",
+    "Name": "Pietro Fittipaldi",
+    "Nationality": "BRA",
+    "Team": "Haas Ferrari",
+    "Points": 0.0
+  }
+]
