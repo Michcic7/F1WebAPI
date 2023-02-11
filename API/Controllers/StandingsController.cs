@@ -55,7 +55,7 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDriver(int id, Driver driver)
         {
-            if (id != driver.Id)
+            if (id != driver.DriverId)
             {
                 return BadRequest();
             }
@@ -93,7 +93,7 @@ namespace API.Controllers
             _context.Drivers.Add(driver);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDriver", new { id = driver.Id }, driver);
+            return CreatedAtAction("GetDriver", new { id = driver.DriverId }, driver);
         }
 
         // DELETE: api/Drivers2/5
@@ -118,7 +118,7 @@ namespace API.Controllers
 
         private bool DriverExists(int id)
         {
-            return (_context.Drivers?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Drivers?.Any(e => e.DriverId == id)).GetValueOrDefault();
         }
     }
 }

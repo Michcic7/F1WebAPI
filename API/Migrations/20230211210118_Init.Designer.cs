@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(StandingsContext))]
-    [Migration("20230211140931_AddTables")]
-    partial class AddTables
+    [Migration("20230211210118_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,11 +26,11 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Models.Driver", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("DriverId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DriverId"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -47,22 +47,27 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StandingsYearId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Team")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("DriverId");
+
+                    b.HasIndex("StandingsYearId");
 
                     b.ToTable("Drivers");
                 });
 
             modelBuilder.Entity("API.Models.Race", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("RaceId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RaceId"));
 
                     b.Property<string>("Car")
                         .IsRequired()
@@ -79,6 +84,9 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StandingsYearId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Time")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -87,18 +95,36 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("RaceId");
+
+                    b.HasIndex("StandingsYearId");
 
                     b.ToTable("Races");
                 });
 
-            modelBuilder.Entity("API.Models.Team", b =>
+            modelBuilder.Entity("API.Models.StandingsYear", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("StandingsYearId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StandingsYearId"));
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("StandingsYearId");
+
+                    b.ToTable("StandingsYears");
+                });
+
+            modelBuilder.Entity("API.Models.Team", b =>
+                {
+                    b.Property<int>("TeamId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TeamId"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -111,9 +137,56 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<int>("StandingsYearId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TeamId");
+
+                    b.HasIndex("StandingsYearId");
 
                     b.ToTable("Teams");
+                });
+
+            modelBuilder.Entity("API.Models.Driver", b =>
+                {
+                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                        .WithMany("Drivers")
+                        .HasForeignKey("StandingsYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StandingsYear");
+                });
+
+            modelBuilder.Entity("API.Models.Race", b =>
+                {
+                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                        .WithMany("Races")
+                        .HasForeignKey("StandingsYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StandingsYear");
+                });
+
+            modelBuilder.Entity("API.Models.Team", b =>
+                {
+                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                        .WithMany("Teams")
+                        .HasForeignKey("StandingsYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("StandingsYear");
+                });
+
+            modelBuilder.Entity("API.Models.StandingsYear", b =>
+                {
+                    b.Navigation("Drivers");
+
+                    b.Navigation("Races");
+
+                    b.Navigation("Teams");
                 });
 #pragma warning restore 612, 618
         }

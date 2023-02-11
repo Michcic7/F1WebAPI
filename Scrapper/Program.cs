@@ -1,8 +1,5 @@
-﻿using Newtonsoft.Json;
-using Scrapper;
+﻿using ScrapperConsoleApp.Serializers;
 
-var drivers = DriverStandingsScrapper.GetDriverStandings(2020);
-
-var json = JsonConvert.SerializeObject(drivers, Formatting.Indented);
-
-File.WriteAllText("drivers.json", json);
+Serializer.SerializeDrivers();
+Serializer.SerializeTeams();
+Serializer.SerializeRaces();

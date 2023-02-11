@@ -5,7 +5,10 @@ using API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<StandingsContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("F1WebAPI") ?? throw new InvalidOperationException("Connection string 'F1WebAPI' not found.")));
+{
+	options.UseSqlServer(builder.Configuration.GetConnectionString("F1WebAPI") ?? throw new InvalidOperationException("Connection string 'F1WebAPI' not found."));
+	options.EnableSensitiveDataLogging();
+});
 
 // Add services to the container.
 

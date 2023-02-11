@@ -1,4 +1,4 @@
-﻿namespace API.Models;
+﻿namespace ScrapperConsoleApp.Models;
 
 public class Race
 {
@@ -11,5 +11,4 @@ public class Race
 	public string Time { get; set; }
 
 	public int StandingsYearId { get; set; }
-	public StandingsYear StandingsYear { get; set; }
 }

@@ -1,4 +1,4 @@
-﻿namespace API.Models;
+﻿namespace ScrapperConsoleApp.Models;
 
 public class Team
 {
@@ -8,5 +8,4 @@ public class Team
 	public float Points { get; set; }
 
 	public int StandingsYearId { get; set; }
-	public StandingsYear StandingsYear { get; set; }
 }
