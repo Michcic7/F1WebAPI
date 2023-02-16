@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using Microsoft.Extensions.Options;
 using API.Data.Models;
 
 namespace API.Data;
@@ -44,7 +39,7 @@ public class F1WebAPIContext : DbContext
     public List<Driver> SeedDriverData()
     {
         List<Driver> drivers = new();
-        using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\drivers.json"))
+        using (StreamReader reader = new(@"D:\C#\F1WebAPI\API\Data\Json\drivers.json"))
         {
             string json = reader.ReadToEnd();
             drivers = JsonConvert.DeserializeObject<List<Driver>>(json);
@@ -56,7 +51,7 @@ public class F1WebAPIContext : DbContext
 	public List<Team> SeedTeamData()
 	{
 		List<Team> teams = new();
-		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\teams.json"))
+		using (StreamReader reader = new(@"D:\C#\F1WebAPI\API\Data\Json\teams.json"))
 		{
 			string json = reader.ReadToEnd();
 			teams = JsonConvert.DeserializeObject<List<Team>>(json);
@@ -68,7 +63,7 @@ public class F1WebAPIContext : DbContext
 	public List<Race> SeedRaceData()
 	{
 		List<Race> races = new();
-		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\races.json"))
+		using (StreamReader reader = new(@"D:\C#\F1WebAPI\API\Data\Json\races.json"))
 		{
 			string json = reader.ReadToEnd();
 			races = JsonConvert.DeserializeObject<List<Race>>(json);

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data\Json\drivers.json" />
+    <Content Remove="Data\Json\races.json" />
+    <Content Remove="Data\Json\teams.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
@@ -20,6 +26,12 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\Json\drivers.json" />
+    <None Include="Data\Json\races.json" />
+    <None Include="Data\Json\teams.json" />
   </ItemGroup>
 
 </Project>

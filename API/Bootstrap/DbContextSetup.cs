@@ -1,6 +1,5 @@
 ﻿using API.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace API.Bootstrap;
 
@@ -12,8 +11,8 @@ public static class DbContextSetup
 		services
 			.AddDbContext<F1WebAPIContext>(options =>
 			{
-				options.UseSqlServer(builder.Configuration
-					.GetConnectionString("F1WebAPI") ?? 
+				options.UseSqlServer(
+					builder.Configuration.GetConnectionString("F1WebAPI") ?? 
 					throw new InvalidOperationException("Connection string 'F1WebAPI' not found."));
 			});
 

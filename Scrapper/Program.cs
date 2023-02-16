@@ -1,5 +1,5 @@
 ﻿using ScrapperConsoleApp.Serializers;
 
-//Serializer.SerializeDrivers();
-//Serializer.SerializeTeams();
-//Serializer.SerializeRaces();
+Serializer.SerializeDrivers();
+Serializer.SerializeTeams();
+Serializer.SerializeRaces();
