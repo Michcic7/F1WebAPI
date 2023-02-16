@@ -1,58 +1,69 @@
-﻿using API.Models;
-using HtmlAgilityPack;
-using System.Net;
-using System.Text;
+﻿using API.Data;
+using API.Data.Models;
+using API.Data.ModelViews;
+using API.Exceptions;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Services;
 
 public class DriverService
 {
-	public IEnumerable<Driver> GetDriverStandings(int year)
+	private readonly F1WebAPIContext _context;
+
+	public DriverService(F1WebAPIContext context)
 	{
-		HtmlWeb web = new();
-		web.OverrideEncoding = Encoding.UTF8;
-		HtmlDocument document = web.Load($"https://www.formula1.com/en/results.html/{year}/drivers.html");
+		_context = context;
+	}
 
-		HtmlNodeCollection rows = document.DocumentNode.SelectNodes(
-			"//table[@class='resultsarchive-table']/tbody/tr");
+	public async Task<IEnumerable<DriverView>> GetDrivers(int year)
+	{
+		List<Driver> drivers = new();
 
-		Queue<Driver> drivers = new();
-
-		foreach (var item in rows)
+		try
 		{
-			Driver driver = new();
-
-			try
-			{
-				var position = item.SelectSingleNode(
-				"./td[@class='dark']").InnerText;
-				var firstName = item.SelectSingleNode(
-					"./td/a/span[@class='hide-for-tablet']").InnerText;
-				var lastName = item.SelectSingleNode(
-					"./td/a/span[@class='hide-for-mobile']").InnerText;
-				var nationality = item.SelectSingleNode(
-					"./td[@class='dark semi-bold uppercase']").InnerText;
-				var team = item.SelectSingleNode(
-					"./td/a[@class='grey semi-bold uppercase ArchiveLink']").InnerText;
-				var points = item.SelectSingleNode(
-					"./td[@class='dark bold']").InnerText;
-
-				driver.Position = position;
-				driver.Name = $"{WebUtility.HtmlDecode(firstName)} {WebUtility.HtmlDecode(lastName)}";
-				driver.Nationality = nationality;
-				driver.Team = team;
-				if (points == "null")
-					points = "0";
-				driver.Points = float.Parse(points);
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e.Message);
-			}
-
-			drivers.Enqueue(driver);
+			drivers = await 
+				_context.Drivers.Where(d => d.StandingsYear.StandingsYearId == year).ToListAsync();
+		}
+		catch (ArgumentNullException)
+		{
+			throw new InvalidYearException();
 		}
 
-		return drivers;
+		Queue<DriverView> driverViews = new();
+
+		foreach (var driver in drivers)
+		{
+			DriverView driverView = new(
+				driver.Position,
+				$"{driver.FirstName} {driver.LastName}",
+				driver.Nationality,
+				driver.Team,
+				driver.Points);
+
+			driverViews.Enqueue(driverView);
+		}
+
+		return driverViews;
+	}
+
+	public async Task<DriverCareerView> GetDriverByName(string name)
+	{		
+		Driver driver = new();
+		
+		try
+		{
+			// Linq 'could not tanslate(?)' extension methods to remove spaces, thus string.Replace()
+			driver = await _context.Drivers.FirstAsync(d => name == d.FirstName.Replace(" ", string.Empty) + d.LastName.Replace(" ", string.Empty));
+		}
+		catch (Exception)
+		{
+			throw new InvalidNameException();
+		}
+
+		int WDCwins = _context.Drivers.Count(d => d.Position == "1" && d.FirstName.Replace(" ", string.Empty) + d.LastName.Replace(" ", string.Empty) == name);
+
+		int raceWins = _context.Races.Count(r => r.WinnerFirstName.Replace(" ", string.Empty) + r.WinnerLastName.Replace(" ", string.Empty) == name);
+
+		return new DriverCareerView($"{driver.FirstName} {driver.LastName}", driver.Nationality, raceWins, WDCwins);
 	}
 }

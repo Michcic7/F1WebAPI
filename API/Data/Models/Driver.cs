@@ -1,4 +1,4 @@
-﻿namespace ScrapperConsoleApp.Models;
+﻿namespace API.Data.Models;
 
 public class Driver
 {
@@ -11,4 +11,5 @@ public class Driver
     public float Points { get; set; }
 
     public int StandingsYearId { get; set; }
+    public StandingsYear StandingsYear { get; set; }
 }
