@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using API.Models;
 using Newtonsoft.Json;
 using Microsoft.Extensions.Options;
+using API.Data.Models;
 
 namespace API.Data;
 
-public class StandingsContext : DbContext
+public class F1WebAPIContext : DbContext
 {
-    public StandingsContext (DbContextOptions<StandingsContext> options)
+    public F1WebAPIContext (DbContextOptions<F1WebAPIContext> options)
         : base(options)
     {
 	}
@@ -35,16 +35,16 @@ public class StandingsContext : DbContext
             .HasOne(r => r.StandingsYear)
             .WithMany(y => y.Races);
 
-		modelBuilder.Entity<StandingsYear>().HasData(SeedStandingsYearData());
-		modelBuilder.Entity<Driver>().HasData(SeedDriverData());
-		modelBuilder.Entity<Team>().HasData(SeedTeamData());
-		modelBuilder.Entity<Race>().HasData(SeedRaceData());
+        modelBuilder.Entity<StandingsYear>().HasData(SeedStandingsYearData());
+        modelBuilder.Entity<Driver>().HasData(SeedDriverData());
+        modelBuilder.Entity<Team>().HasData(SeedTeamData());
+        modelBuilder.Entity<Race>().HasData(SeedRaceData());
     }
 
     public List<Driver> SeedDriverData()
     {
         List<Driver> drivers = new();
-        using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\drivers.json"))
+        using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\drivers.json"))
         {
             string json = reader.ReadToEnd();
             drivers = JsonConvert.DeserializeObject<List<Driver>>(json);
@@ -56,7 +56,7 @@ public class StandingsContext : DbContext
 	public List<Team> SeedTeamData()
 	{
 		List<Team> teams = new();
-		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\teams.json"))
+		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\teams.json"))
 		{
 			string json = reader.ReadToEnd();
 			teams = JsonConvert.DeserializeObject<List<Team>>(json);
@@ -68,7 +68,7 @@ public class StandingsContext : DbContext
 	public List<Race> SeedRaceData()
 	{
 		List<Race> races = new();
-		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\races.json"))
+		using (StreamReader reader = new(@"D:\C#\F1WebAPI\Scrapper\json\races.json"))
 		{
 			string json = reader.ReadToEnd();
 			races = JsonConvert.DeserializeObject<List<Race>>(json);
@@ -88,12 +88,10 @@ public class StandingsContext : DbContext
         for (int i = 0; i < years; i++)
         {
             StandingsYear yearToAdd = new();
-            yearToAdd.StandingsYearId = yearVar;
-            yearToAdd.Year = yearVar++;
+            yearToAdd.StandingsYearId = yearVar++;
             standingsYears.Add(yearToAdd);
         }
 
         return standingsYears;
 	}
-
 }

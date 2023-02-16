@@ -42,8 +42,9 @@ internal class DriverStandingsScrapper
                 driver.DriverId = index++;
                 driver.StandingsYearId = year;
                 driver.Position = position;
-                driver.Name = $"{WebUtility.HtmlDecode(firstName)} {WebUtility.HtmlDecode(lastName)}";
-                driver.Nationality = nationality;
+                driver.FirstName = WebUtility.HtmlDecode(firstName);
+                driver.LastName = WebUtility.HtmlDecode(lastName);
+				driver.Nationality = nationality;
                 driver.Team = team;
                 if (points == "null")
                     points = "0";

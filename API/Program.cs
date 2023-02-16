@@ -1,30 +1,30 @@
+using API.Bootstrap;
 using API.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using API.Data;
+using Hellang.Middleware.ProblemDetails;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<StandingsContext>(options =>
-{
-	options.UseSqlServer(builder.Configuration.GetConnectionString("F1WebAPI") ?? throw new InvalidOperationException("Connection string 'F1WebAPI' not found."));
-	options.EnableSensitiveDataLogging();
-});
 
-// Add services to the container.
+var services = builder.Services;
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddSwaggerGen();
-builder.Services.AddTransient<DriverService>();
+services
+	.AddProblemDetailsConfiguration()
+	.AddTransient<DriverService>()
+	.AddTransient<TeamService>()
+	.AddTransient<RaceService>()
+	.AddDbContext(builder)
+	.AddControllers();
+
+services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
+
+app.UseProblemDetails();
 
 app.UseHttpsRedirection();
 

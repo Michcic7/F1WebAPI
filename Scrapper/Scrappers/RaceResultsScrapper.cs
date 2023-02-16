@@ -47,7 +47,8 @@ internal class RaceResultsScrapper
 				race.StandingsYearId = year;
 				race.Name = name;
 				race.Date = date;
-				race.WinnerName = winnerFirstName + " " + winnerLastName;
+				race.WinnerFirstName = winnerFirstName;
+				race.WinnerLastName = winnerLastName;
 				race.Car = car;
 				if (laps == "null")
 					laps = "0";

@@ -26,7 +26,7 @@ internal static class Serializer
 
 		var json = JsonConvert.SerializeObject(drivers, Formatting.Indented);
 
-		File.WriteAllText("drivers.json", json);
+		File.WriteAllText(@"D:\C#\F1WebAPI\Scrapper\Json\drivers.json", json);
 	}
 
 	public static void SerializeTeams()
@@ -44,7 +44,7 @@ internal static class Serializer
 
 		var json = JsonConvert.SerializeObject(teams, Formatting.Indented);
 
-		File.WriteAllText("teams.json", json);
+		File.WriteAllText(@"D:\C#\F1WebAPI\Scrapper\Json\teams.json", json);
 	}
 
 	public static void SerializeRaces()
@@ -62,6 +62,6 @@ internal static class Serializer
 
 		var json = JsonConvert.SerializeObject(races, Formatting.Indented);
 
-		File.WriteAllText("races.json", json);
+		File.WriteAllText(@"D:\C#\F1WebAPI\Scrapper\Json\races.json", json);
 	}
 }

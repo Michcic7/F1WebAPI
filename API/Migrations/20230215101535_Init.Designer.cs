@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
-    [DbContext(typeof(StandingsContext))]
-    [Migration("20230211210118_Init")]
+    [DbContext(typeof(F1WebAPIContext))]
+    [Migration("20230215101535_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("API.Models.Driver", b =>
+            modelBuilder.Entity("API.Data.Models.Driver", b =>
                 {
                     b.Property<int>("DriverId")
                         .ValueGeneratedOnAdd()
@@ -32,7 +32,11 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DriverId"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -61,7 +65,7 @@ namespace API.Migrations
                     b.ToTable("Drivers");
                 });
 
-            modelBuilder.Entity("API.Models.Race", b =>
+            modelBuilder.Entity("API.Data.Models.Race", b =>
                 {
                     b.Property<int>("RaceId")
                         .ValueGeneratedOnAdd()
@@ -91,7 +95,11 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("WinnerName")
+                    b.Property<string>("WinnerFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WinnerLastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -102,7 +110,7 @@ namespace API.Migrations
                     b.ToTable("Races");
                 });
 
-            modelBuilder.Entity("API.Models.StandingsYear", b =>
+            modelBuilder.Entity("API.Data.Models.StandingsYear", b =>
                 {
                     b.Property<int>("StandingsYearId")
                         .ValueGeneratedOnAdd()
@@ -110,15 +118,12 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StandingsYearId"));
 
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
-
                     b.HasKey("StandingsYearId");
 
                     b.ToTable("StandingsYears");
                 });
 
-            modelBuilder.Entity("API.Models.Team", b =>
+            modelBuilder.Entity("API.Data.Models.Team", b =>
                 {
                     b.Property<int>("TeamId")
                         .ValueGeneratedOnAdd()
@@ -147,9 +152,9 @@ namespace API.Migrations
                     b.ToTable("Teams");
                 });
 
-            modelBuilder.Entity("API.Models.Driver", b =>
+            modelBuilder.Entity("API.Data.Models.Driver", b =>
                 {
-                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                    b.HasOne("API.Data.Models.StandingsYear", "StandingsYear")
                         .WithMany("Drivers")
                         .HasForeignKey("StandingsYearId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -158,9 +163,9 @@ namespace API.Migrations
                     b.Navigation("StandingsYear");
                 });
 
-            modelBuilder.Entity("API.Models.Race", b =>
+            modelBuilder.Entity("API.Data.Models.Race", b =>
                 {
-                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                    b.HasOne("API.Data.Models.StandingsYear", "StandingsYear")
                         .WithMany("Races")
                         .HasForeignKey("StandingsYearId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -169,9 +174,9 @@ namespace API.Migrations
                     b.Navigation("StandingsYear");
                 });
 
-            modelBuilder.Entity("API.Models.Team", b =>
+            modelBuilder.Entity("API.Data.Models.Team", b =>
                 {
-                    b.HasOne("API.Models.StandingsYear", "StandingsYear")
+                    b.HasOne("API.Data.Models.StandingsYear", "StandingsYear")
                         .WithMany("Teams")
                         .HasForeignKey("StandingsYearId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -180,7 +185,7 @@ namespace API.Migrations
                     b.Navigation("StandingsYear");
                 });
 
-            modelBuilder.Entity("API.Models.StandingsYear", b =>
+            modelBuilder.Entity("API.Data.Models.StandingsYear", b =>
                 {
                     b.Navigation("Drivers");
 
