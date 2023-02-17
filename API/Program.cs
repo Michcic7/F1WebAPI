@@ -7,14 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 
 services
+	.AddSwagger()
 	.AddProblemDetailsConfiguration()
-	.AddTransient<DriverService>()
-	.AddTransient<TeamService>()
-	.AddTransient<RaceService>()
 	.AddDbContext(builder)
+	.AddTransient<IDriverService, DriverService>()
+	.AddTransient<ITeamService, TeamService>()
+	.AddTransient<IRaceService, RaceService>()
 	.AddControllers();
-
-services.AddSwaggerGen();
 
 var app = builder.Build();
 

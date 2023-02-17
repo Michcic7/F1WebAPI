@@ -1,12 +1,17 @@
 ﻿using API.Data;
 using API.Data.Models;
-using API.Data.ModelViews;
+using API.Data.DTOs;
 using API.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Services;
 
-public class TeamService
+public interface ITeamService
+{
+	Task<IEnumerable<TeamDto>> GetTeams(int year);
+}
+
+public class TeamService : ITeamService
 {
 	private readonly F1WebAPIContext _context;
 
@@ -15,32 +20,29 @@ public class TeamService
 		_context = context;
 	}
 
-	public async Task<IEnumerable<TeamView>> GetTeams(int year)
+	public async Task<IEnumerable<TeamDto>> GetTeams(int year)
 	{
-		List<Team> teams = new();
-
-		try
+		if (year < 1958 || year > 2022)
 		{
-			teams = await
+			throw new ArgumentException("The year must be between 1958 and 2022");
+		}
+
+		List<Team> teams = await
 			_context.Teams.Where(t => t.StandingsYear.StandingsYearId == year).ToListAsync();
-		}
-		catch (ArgumentNullException)
+
+		if (teams.Count is 0)
 		{
-			throw new InvalidYearException();
-		}		
-
-		Queue<TeamView> teamViews = new();
-
-		foreach (var team in teams)
-		{
-			TeamView teamView = new(
-				team.Position,
-				team.Name,
-				team.Points);
-
-			teamViews.Enqueue(teamView);
+			throw new ArgumentNullException();
 		}
 
-		return teamViews;
+		return teams.Select(t =>
+		{
+			return new TeamDto
+			{
+				Position = t.Position,
+				Name = t.Name,
+				Points = t.Points
+			};
+		});
 	}
 }

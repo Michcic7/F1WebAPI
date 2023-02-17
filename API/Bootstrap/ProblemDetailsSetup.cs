@@ -11,8 +11,10 @@ public static class ProblemDetailsSetup
 		services.AddProblemDetails(options =>
 		{
 			options.IncludeExceptionDetails = (context, exception) => false;
-			options.MapToStatusCode<InvalidYearException>(StatusCodes.Status404NotFound);
+			options.MapToStatusCode<ArgumentNullException>(StatusCodes.Status400BadRequest);
+			options.MapToStatusCode<ArgumentException>(StatusCodes.Status400BadRequest);
 			options.MapToStatusCode<InvalidNameException>(StatusCodes.Status404NotFound);
+			options.MapToStatusCode<InvalidYearException>(StatusCodes.Status404NotFound);
 		});
 
 		return services;

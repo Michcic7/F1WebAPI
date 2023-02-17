@@ -3,8 +3,8 @@
 public class Driver
 {
     public int DriverId { get; set; }
-    public string Position { get; set; }
-    public string FirstName { get; set; }
+    public string Position { get; set; } = string.Empty;
+    public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; }
     public string Nationality { get; set; }
     public string Team { get; set; }

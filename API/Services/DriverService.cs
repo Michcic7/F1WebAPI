@@ -1,12 +1,18 @@
 ﻿using API.Data;
 using API.Data.Models;
-using API.Data.ModelViews;
+using API.Data.DTOs;
 using API.Exceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Services;
 
-public class DriverService
+public interface IDriverService
+{
+	Task<DriverCareerDto> GetDriverByName(string name);
+	Task<IEnumerable<DriverDto>> GetDrivers(int year);
+}
+
+public class DriverService : IDriverService
 {
 	private readonly F1WebAPIContext _context;
 
@@ -15,47 +21,45 @@ public class DriverService
 		_context = context;
 	}
 
-	public async Task<IEnumerable<DriverView>> GetDrivers(int year)
-	{
-		List<Driver> drivers = new();
-
-		try
+	public async Task<IEnumerable<DriverDto>> GetDrivers(int year)
+	{		
+		if (year < 1950 || year > 2022)
 		{
-			drivers = await 
+			throw new ArgumentException("The year must be between 1950 and 2022");
+		}
+
+		List<Driver> drivers = await
 				_context.Drivers.Where(d => d.StandingsYear.StandingsYearId == year).ToListAsync();
-		}
-		catch (ArgumentNullException)
+
+		if (drivers.Count is 0)
 		{
-			throw new InvalidYearException();
+			throw new ArgumentNullException();
 		}
 
-		Queue<DriverView> driverViews = new();
-
-		foreach (var driver in drivers)
+		return drivers.Select(d =>
 		{
-			DriverView driverView = new(
-				driver.Position,
-				$"{driver.FirstName} {driver.LastName}",
-				driver.Nationality,
-				driver.Team,
-				driver.Points);
-
-			driverViews.Enqueue(driverView);
-		}
-
-		return driverViews;
+			return new DriverDto()
+			{
+				Position = d.Position,
+				Name = $"{d.FirstName} {d.LastName}",
+				Nationality = d.Nationality,
+				Team = d.Team,
+				Points = d.Points
+			};
+		});
 	}
 
-	public async Task<DriverCareerView> GetDriverByName(string name)
+	public async Task<DriverCareerDto> GetDriverByName(string name)
 	{		
-		Driver driver = new();
-		
-		try
+		if (name is null || name == string.Empty) 
 		{
-			// Linq 'could not tanslate(?)' extension methods to remove spaces, thus string.Replace()
-			driver = await _context.Drivers.FirstAsync(d => name == d.FirstName.Replace(" ", string.Empty) + d.LastName.Replace(" ", string.Empty));
+			throw new ArgumentNullException();
 		}
-		catch (Exception)
+
+		// Linq 'could not tanslate(?)' extension methods to remove spaces, thus string.Replace()
+		Driver? driver = await _context.Drivers.FirstOrDefaultAsync(d => name == d.FirstName.Replace(" ", string.Empty) + d.LastName.Replace(" ", string.Empty));
+		
+		if (driver is null)
 		{
 			throw new InvalidNameException();
 		}
@@ -64,6 +68,12 @@ public class DriverService
 
 		int raceWins = _context.Races.Count(r => r.WinnerFirstName.Replace(" ", string.Empty) + r.WinnerLastName.Replace(" ", string.Empty) == name);
 
-		return new DriverCareerView($"{driver.FirstName} {driver.LastName}", driver.Nationality, raceWins, WDCwins);
+		return new DriverCareerDto()
+		{
+			Name = $"{driver.FirstName} {driver.LastName}",
+			Nationality = driver.Nationality,
+			RaceWins = raceWins,
+			ChampionshipWins = WDCwins
+		};
 	}
 }
