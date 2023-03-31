@@ -1,0 +1,572 @@
+[
+  {
+    "CircuitId": 1,
+    "Name": "Silverstone Circuit",
+    "Country": "Great Britain"
+  },
+  {
+    "CircuitId": 2,
+    "Name": "Circuit de Monaco",
+    "Country": "Monaco"
+  },
+  {
+    "CircuitId": 3,
+    "Name": "Indianapolis Motor Speedway",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 4,
+    "Name": "Bremgarten",
+    "Country": "Switzerland"
+  },
+  {
+    "CircuitId": 5,
+    "Name": "Circuit de Spa-Francorchamps",
+    "Country": "Belgium"
+  },
+  {
+    "CircuitId": 6,
+    "Name": "Circuit de Reims-Gueux",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 7,
+    "Name": "Autodromo Nazionale Monza",
+    "Country": "Italy"
+  },
+  {
+    "CircuitId": 8,
+    "Name": "Nürburgring",
+    "Country": "Germany"
+  },
+  {
+    "CircuitId": 9,
+    "Name": "Circuit de Pedralbes",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 10,
+    "Name": "Rouen les Essarts",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 11,
+    "Name": "Circuit Park Zandvoort",
+    "Country": "Netherlands"
+  },
+  {
+    "CircuitId": 12,
+    "Name": "Autódromo 17 de Octubre",
+    "Country": "Argentina"
+  },
+  {
+    "CircuitId": 13,
+    "Name": "Aintree Racecourse",
+    "Country": "Great Britain"
+  },
+  {
+    "CircuitId": 14,
+    "Name": "Autódromo Juan y Oscar Gálvez",
+    "Country": "Argentina"
+  },
+  {
+    "CircuitId": 15,
+    "Name": "Pescara Circuit",
+    "Country": "Italy"
+  },
+  {
+    "CircuitId": 16,
+    "Name": "Circuit da Boavista",
+    "Country": "Portugal"
+  },
+  {
+    "CircuitId": 17,
+    "Name": "Ain-Diab Circuit",
+    "Country": "Morocco"
+  },
+  {
+    "CircuitId": 18,
+    "Name": "Automobil-Verkehrs und Übungs-Straße",
+    "Country": "Germany"
+  },
+  {
+    "CircuitId": 19,
+    "Name": "Monsanto Park",
+    "Country": "Portugal"
+  },
+  {
+    "CircuitId": 20,
+    "Name": "Sebring Raceway",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 21,
+    "Name": "Riverside International Raceway",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 22,
+    "Name": "Watkins Glen International",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 23,
+    "Name": "Prince George Circuit",
+    "Country": "South Africa"
+  },
+  {
+    "CircuitId": 24,
+    "Name": "Autódromo Hermanos Rodríguez",
+    "Country": "Mexico"
+  },
+  {
+    "CircuitId": 25,
+    "Name": "Brands Hatch Circuit",
+    "Country": "Great Britain"
+  },
+  {
+    "CircuitId": 26,
+    "Name": "Zeltweg Airfield",
+    "Country": "Austria"
+  },
+  {
+    "CircuitId": 27,
+    "Name": "Charade Circuit",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 28,
+    "Name": "Kyalami Grand Prix Circuit",
+    "Country": "South Africa"
+  },
+  {
+    "CircuitId": 29,
+    "Name": "Bugatti Au Mans",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 30,
+    "Name": "Mosport International Raceway",
+    "Country": "Canada"
+  },
+  {
+    "CircuitId": 31,
+    "Name": "Circuito Permanente del Jarama",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 32,
+    "Name": "Mont-Tremblant",
+    "Country": "Canada"
+  },
+  {
+    "CircuitId": 33,
+    "Name": "Montjuïc Circuit",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 34,
+    "Name": "Hockenheimring",
+    "Country": "Germany"
+  },
+  {
+    "CircuitId": 35,
+    "Name": "Österreichring",
+    "Country": "Austria"
+  },
+  {
+    "CircuitId": 36,
+    "Name": "Circuit Paul Ricard",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 37,
+    "Name": "Complexe Européen de Nivelles-Baulers",
+    "Country": "Belgium"
+  },
+  {
+    "CircuitId": 38,
+    "Name": "Autódromo de Interlagos",
+    "Country": "Brazil"
+  },
+  {
+    "CircuitId": 39,
+    "Name": "Circuit Zolder",
+    "Country": "Belgium"
+  },
+  {
+    "CircuitId": 40,
+    "Name": "Scandinavian Raceway",
+    "Country": "Sweden"
+  },
+  {
+    "CircuitId": 41,
+    "Name": "Circuit Dijon-Prenois",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 42,
+    "Name": "Long Beach Street Circuit",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 43,
+    "Name": "Fuji Speedway",
+    "Country": "Japan"
+  },
+  {
+    "CircuitId": 44,
+    "Name": "Autódromo Internacional do Rio de Janeiro",
+    "Country": "Brazil"
+  },
+  {
+    "CircuitId": 45,
+    "Name": "Circuit Île Notre-Dame",
+    "Country": "Canada"
+  },
+  {
+    "CircuitId": 46,
+    "Name": "Autódromo José Carlos Pace",
+    "Country": "Brazil"
+  },
+  {
+    "CircuitId": 47,
+    "Name": "Autodromo Dino Ferrari",
+    "Country": "Italy"
+  },
+  {
+    "CircuitId": 48,
+    "Name": "Autodromo Dino Ferrari",
+    "Country": "San Marino"
+  },
+  {
+    "CircuitId": 49,
+    "Name": "Caesars Palace",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 50,
+    "Name": "Detroit Street Circuit",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 51,
+    "Name": "Circuit Gilles Villeneuve",
+    "Country": "Canada"
+  },
+  {
+    "CircuitId": 52,
+    "Name": "Dallas Fair Park",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 53,
+    "Name": "Autódromo do Estoril",
+    "Country": "Portugal"
+  },
+  {
+    "CircuitId": 54,
+    "Name": "Adelaide Street Circuit",
+    "Country": "Australia"
+  },
+  {
+    "CircuitId": 55,
+    "Name": "Circuito Permanente de Jerez",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 56,
+    "Name": "Hungaroring",
+    "Country": "Hungary"
+  },
+  {
+    "CircuitId": 57,
+    "Name": "Suzuka International Racing Course",
+    "Country": "Japan"
+  },
+  {
+    "CircuitId": 58,
+    "Name": "Autodromo Enzo e Dino Ferrari",
+    "Country": "San Marino"
+  },
+  {
+    "CircuitId": 59,
+    "Name": "Circuit Gilles-Villeneuve",
+    "Country": "Canada"
+  },
+  {
+    "CircuitId": 60,
+    "Name": "Phoenix Street Circuit",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 61,
+    "Name": "Circuit de Nevers Magny-Cours",
+    "Country": "France"
+  },
+  {
+    "CircuitId": 62,
+    "Name": "Circuit de Catalunya",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 63,
+    "Name": "Donington Park",
+    "Country": "Great Britain"
+  },
+  {
+    "CircuitId": 64,
+    "Name": "TI Circuit Aida",
+    "Country": "Japan"
+  },
+  {
+    "CircuitId": 65,
+    "Name": "Melbourne Grand Prix Circuit",
+    "Country": "Australia"
+  },
+  {
+    "CircuitId": 66,
+    "Name": "A1-Ring",
+    "Country": "Austria"
+  },
+  {
+    "CircuitId": 67,
+    "Name": "Sepang International Circuit",
+    "Country": "Malaysia"
+  },
+  {
+    "CircuitId": 68,
+    "Name": "Bahrain International Circuit",
+    "Country": "Bahrain"
+  },
+  {
+    "CircuitId": 69,
+    "Name": "Shanghai International Circuit",
+    "Country": "China"
+  },
+  {
+    "CircuitId": 70,
+    "Name": "Istanbul Park",
+    "Country": "Turkey"
+  },
+  {
+    "CircuitId": 71,
+    "Name": "Valencia Street Circuit",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 72,
+    "Name": "Marina Bay Street Circuit",
+    "Country": "Singapore"
+  },
+  {
+    "CircuitId": 73,
+    "Name": "Yas Marina Circuit",
+    "Country": "Abu Dhabi"
+  },
+  {
+    "CircuitId": 74,
+    "Name": "Korean International Circuit",
+    "Country": "South Korea"
+  },
+  {
+    "CircuitId": 75,
+    "Name": "Buddh International Circuit",
+    "Country": "India"
+  },
+  {
+    "CircuitId": 76,
+    "Name": "Circuit of The Americas",
+    "Country": "United States"
+  },
+  {
+    "CircuitId": 77,
+    "Name": "Circuit de Barcelona-Catalunya",
+    "Country": "Spain"
+  },
+  {
+    "CircuitId": 78,
+    "Name": "Red Bull Ring",
+    "Country": "Austria"
+  },
+  {
+    "CircuitId": 79,
+    "Name": "Sochi Autodrom",
+    "Country": "Russia"
+  },
+  {
+    "CircuitId": 80,
+    "Name": "Melbourne Grand Prix Circuit",
+    "Country": "Melbourne"
+  },
+  {
+    "CircuitId": 81,
+    "Name": "Sepang International Circuit",
+    "Country": "Kuala Lumpur"
+  },
+  {
+    "CircuitId": 82,
+    "Name": "Shanghai International Circuit",
+    "Country": "Shanghai"
+  },
+  {
+    "CircuitId": 83,
+    "Name": "Bahrain International Circuit",
+    "Country": "Sakhir"
+  },
+  {
+    "CircuitId": 84,
+    "Name": "Circuit de Barcelona-Catalunya",
+    "Country": "Catalunya"
+  },
+  {
+    "CircuitId": 85,
+    "Name": "Circuit de Monaco",
+    "Country": "Monte Carlo"
+  },
+  {
+    "CircuitId": 86,
+    "Name": "Circuit Gilles-Villeneuve",
+    "Country": "Montréal"
+  },
+  {
+    "CircuitId": 87,
+    "Name": "Red Bull Ring",
+    "Country": "Spielberg"
+  },
+  {
+    "CircuitId": 88,
+    "Name": "Silverstone Circuit",
+    "Country": "Silverstone"
+  },
+  {
+    "CircuitId": 89,
+    "Name": "Hungaroring",
+    "Country": "Budapest"
+  },
+  {
+    "CircuitId": 90,
+    "Name": "Circuit de Spa-Francorchamps",
+    "Country": "Spa-Francorchamps"
+  },
+  {
+    "CircuitId": 91,
+    "Name": "Autodromo Nazionale Monza",
+    "Country": "Monza"
+  },
+  {
+    "CircuitId": 92,
+    "Name": "Suzuka International Racing Course",
+    "Country": "Suzuka"
+  },
+  {
+    "CircuitId": 93,
+    "Name": "Sochi Autodrom",
+    "Country": "Sochi"
+  },
+  {
+    "CircuitId": 94,
+    "Name": "Circuit of The Americas",
+    "Country": "Austin"
+  },
+  {
+    "CircuitId": 95,
+    "Name": "Autódromo Hermanos Rodríguez",
+    "Country": "Mexico City"
+  },
+  {
+    "CircuitId": 96,
+    "Name": "Autódromo José Carlos Pace",
+    "Country": "São Paulo"
+  },
+  {
+    "CircuitId": 97,
+    "Name": "Yas Marina Circuit",
+    "Country": "Yas Marina"
+  },
+  {
+    "CircuitId": 98,
+    "Name": "Baku City Circuit",
+    "Country": "Baku"
+  },
+  {
+    "CircuitId": 99,
+    "Name": "Hockenheimring",
+    "Country": "Hockenheim"
+  },
+  {
+    "CircuitId": 100,
+    "Name": "Circuit de Barcelona-Catalunya",
+    "Country": "Barcelona"
+  },
+  {
+    "CircuitId": 101,
+    "Name": "Circuit Paul Ricard",
+    "Country": "Le Castellet"
+  },
+  {
+    "CircuitId": 102,
+    "Name": "Yas Marina Circuit",
+    "Country": "Yas Island"
+  },
+  {
+    "CircuitId": 103,
+    "Name": "Mugello",
+    "Country": "Mugello"
+  },
+  {
+    "CircuitId": 104,
+    "Name": "Nürburgring",
+    "Country": "Nürburgring"
+  },
+  {
+    "CircuitId": 105,
+    "Name": "Autódromo Internacional do Algarve",
+    "Country": "Portimão"
+  },
+  {
+    "CircuitId": 106,
+    "Name": "Autodromo Enzo e Dino Ferrari",
+    "Country": "Imola"
+  },
+  {
+    "CircuitId": 107,
+    "Name": "Intercity Istanbul Park",
+    "Country": "Istanbul"
+  },
+  {
+    "CircuitId": 108,
+    "Name": "Bahrain International Circuit – Outer Track",
+    "Country": "Sakhir"
+  },
+  {
+    "CircuitId": 109,
+    "Name": "Circuit Zandvoort",
+    "Country": "Zandvoort"
+  },
+  {
+    "CircuitId": 110,
+    "Name": "Lusail International Circuit",
+    "Country": "Lusail"
+  },
+  {
+    "CircuitId": 111,
+    "Name": "Jeddah Corniche Circuit",
+    "Country": "Jeddah"
+  },
+  {
+    "CircuitId": 112,
+    "Name": "Albert Park Circuit",
+    "Country": "Melbourne"
+  },
+  {
+    "CircuitId": 113,
+    "Name": "Miami International Autodrome",
+    "Country": "Miami"
+  },
+  {
+    "CircuitId": 114,
+    "Name": "Marina Bay Street Circuit",
+    "Country": "Marina Bay"
+  }
+]
