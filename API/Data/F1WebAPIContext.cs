@@ -24,8 +24,8 @@ public class F1WebAPIContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)        
     {
-        optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable("F1WebAPIConnectionString",
-            EnvironmentVariableTarget.Machine));
+        optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable(
+            "F1WebAPIConnectionString", EnvironmentVariableTarget.Machine));
 
         optionsBuilder.EnableSensitiveDataLogging(true);
     }
