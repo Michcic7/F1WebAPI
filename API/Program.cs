@@ -1,6 +1,7 @@
 using API.Bootstrap;
 using API.Data;
 using API.Data.Models;
+using API.Services;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -15,7 +16,7 @@ services
 	.AddProblemDetailsConfiguration()
 	.AddDbContext(builder)
 	//.AddTransient<IDriverService, DriverService>()
-	//.AddTransient<ITeamService, TeamService>()
+	.AddTransient<ITeamService, TeamService>()
 	//.AddTransient<IRaceService, RaceService>()
 	.AddControllers();
 
@@ -26,8 +27,8 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 
-    //DataSeeder seeder = new();
-    //seeder.SeedInitialData();
+    DataSeeder seeder = new();
+    seeder.SeedInitialData();
 }
 
 app.UseProblemDetails();
