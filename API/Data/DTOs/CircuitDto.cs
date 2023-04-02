@@ -1,10 +1,8 @@
-﻿namespace API.Data.Models;
+﻿namespace API.Data.DTOs;
 
-public class Circuit
+public class CircuitDto
 {
     public int CircuitId { get; set; }
     public string Name { get; set; }
     public string Location { get; set; }
-
-    public List<RaceResult> RaceResults { get; set; }
 }

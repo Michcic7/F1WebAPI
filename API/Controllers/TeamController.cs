@@ -7,10 +7,10 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class TeamController : ControllerBase
+public class TeamsController : ControllerBase
 {
     private readonly ITeamService _service;
-    public TeamController(ITeamService service)
+    public TeamsController(ITeamService service)
     {
         _service = service;
     }

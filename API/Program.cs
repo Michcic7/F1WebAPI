@@ -15,10 +15,10 @@ services
 	.AddSwagger()
 	.AddProblemDetailsConfiguration()
 	.AddDbContext(builder)
-	//.AddTransient<IDriverService, DriverService>()
+	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
-	//.AddTransient<IRaceService, RaceService>()
-	.AddControllers();
+    .AddTransient<ICircuitService, CircuitService>()
+    .AddControllers();
 
 var app = builder.Build();
 
@@ -27,8 +27,8 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 
-    DataSeeder seeder = new();
-    seeder.SeedInitialData();
+    //DataSeeder seeder = new();
+    //seeder.SeedInitialData();
 }
 
 app.UseProblemDetails();
