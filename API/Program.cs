@@ -6,7 +6,6 @@ using Hellang.Middleware.ProblemDetails;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +17,8 @@ services
 	.AddDbContext(builder)
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
-	.AddTransient<ICircuitService, CircuitService>()
-	.AddTransient<IDriverStandingService, DriverStandingService>()
-	.AddControllers();
+    .AddTransient<ICircuitService, CircuitService>()
+    .AddControllers();
 
 var app = builder.Build();
 

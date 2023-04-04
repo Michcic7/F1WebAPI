@@ -21,21 +21,17 @@ public class DriverStandingService : IDriverStandingService
 
     public async Task<IEnumerable<DriverStandingDto>> GetDriverStandings(int year)
     {
-        List<DriverStanding> driverStandings = await _context.DriverStandings
-            .Where(ds => ds.Year == year)
-            .Include(ds => ds.Driver)
-            .OrderBy(ds => ds.Position)
-            .ToListAsync();
+        List<DriverStanding> driverStandings = await _context.DriverStandings.Select(ds => ds)
+            .Where(ds => ds.Year == year).ToListAsync();
 
         return driverStandings.Select(ds =>
         {
             return new DriverStandingDto
             {
-                //DriverStandingId = ds.DriverStandingId,
-                //Year = ds.Year,
+                DriverStandingId = ds.DriverStandingId,
+                Year = ds.Year,
                 Position = ds.Position,
-                Driver = ds.Driver,
-                Points = ds.Points
+                Driver = ds.Driver
             };
         });
     }
