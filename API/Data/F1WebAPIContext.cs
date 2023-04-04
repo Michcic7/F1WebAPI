@@ -15,12 +15,12 @@ public class F1WebAPIContext : DbContext
     {
 	}
         
-    public virtual DbSet<Driver> Drivers { get; set; } = default!;
-    public virtual DbSet<Team> Teams { get; set; } = default!;
-    public virtual DbSet<Circuit> Circuits { get; set; } = default!;
-    public virtual DbSet<DriverStanding> DriverStandings { get; set; } = default!;
-    public virtual DbSet<TeamStanding> TeamStandings { get; set; } = default!;
-    public virtual DbSet<RaceResult> RaceResults { get; set; } = default!;
+    public DbSet<Driver> Drivers { get; set; } = default!;
+    public DbSet<Team> Teams { get; set; } = default!;
+    public DbSet<Circuit> Circuits { get; set; } = default!;
+    public DbSet<DriverStanding> DriverStandings { get; set; } = default!;
+    public DbSet<TeamStanding> TeamStandings { get; set; } = default!;
+    public DbSet<RaceResult> RaceResults { get; set; } = default!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)        
     {
