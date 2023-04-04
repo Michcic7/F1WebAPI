@@ -18,6 +18,7 @@ services
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
     .AddTransient<ICircuitService, CircuitService>()
+	.AddTransient<IDriverStandingService, DriverStandingService>()
     .AddControllers();
 
 var app = builder.Build();
