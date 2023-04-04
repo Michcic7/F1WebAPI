@@ -7,7 +7,7 @@ namespace API.Services;
 
 public interface IDriverService
 {
-    Task<IEnumerable<DriverDto>> GetDrivers();
+    Task<IEnumerable<DriverDto>> GetDrivers();    
 }
 
 public class DriverService : IDriverService

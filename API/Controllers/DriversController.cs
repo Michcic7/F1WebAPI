@@ -8,18 +8,32 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class DriversController : ControllerBase
 {
-    private readonly IDriverService _service;
+    private readonly IDriverService _driverService;
+    private readonly IDriverStandingService _driverStandingService;
 
-    public DriversController(IDriverService service)
+    public DriversController(
+        IDriverService service, 
+        IDriverStandingService driverStandingService)
     {
-        _service = service;
+        _driverService = service;
+        _driverStandingService = driverStandingService;
+
     }
 
     [HttpGet]
     public async Task<ActionResult<DriverDto>> GetDrivers()
     {
-        IEnumerable<DriverDto> drivers = await _service.GetDrivers();
+        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
 
         return Ok(drivers);
+    }
+
+    [HttpGet]
+    [Route("{year}")]
+    public async Task<ActionResult<DriverStandingDto>> GetDriverStandings(int year)
+    {
+        IEnumerable<DriverStandingDto> driverStandings = await _driverStandingService.GetDriverStandings(year);
+
+        return Ok(driverStandings);
     }
 }
