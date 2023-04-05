@@ -9,4 +9,5 @@ public class DriverStandingDto
     public string Nationality { get; set; }
     public string TeamName { get; set; }
     public float Points { get; set; }
+    public int? Year { get; set; }
 }

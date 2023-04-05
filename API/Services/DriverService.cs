@@ -8,6 +8,7 @@ namespace API.Services;
 public interface IDriverService
 {
     Task<IEnumerable<DriverDto>> GetDrivers();    
+    Task<DriverDto> GetDriverById(int id);
 }
 
 public class DriverService : IDriverService
@@ -32,5 +33,24 @@ public class DriverService : IDriverService
                 Nationality = d.Nationality
             };
         });
+    }
+
+    public async Task<DriverDto> GetDriverById(int id)
+    {
+        Driver driver = await _context.Drivers.FindAsync(id);
+
+        if (driver != null)
+        {
+            return new DriverDto
+            {
+                DriverId = driver.DriverId,
+                Name = driver.FirstName + " " + driver.LastName,
+                Nationality = driver.Nationality
+            };
+        }
+        else
+        {
+            return null;
+        }
     }
 }

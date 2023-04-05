@@ -8,6 +8,7 @@ namespace API.Services;
 public interface ICircuitService
 {
     Task<IEnumerable<CircuitDto>> GetCircuits();
+    Task<CircuitDto> GetCircuitById(int id);
 }
 
 public class CircuitService : ICircuitService
@@ -32,5 +33,24 @@ public class CircuitService : ICircuitService
                 Location = c.Location
             };
         });
+    }
+
+    public async Task<CircuitDto> GetCircuitById(int id)
+    {
+        Circuit circuit = await _context.Circuits.FindAsync(id);
+
+        if (circuit != null)
+        {
+            return new CircuitDto
+            {
+                CircuitId = circuit.CircuitId,
+                Name = circuit.Name,
+                Location = circuit.Location
+            };
+        }
+        else
+        {
+            return null;
+        }
     }
 }

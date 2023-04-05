@@ -7,9 +7,9 @@ namespace API.Services;
 
 public interface IRaceResultService
 {
-    Task<IEnumerable<RaceResultDto>> GetDriverRaceResultsByYear(int driverId, int year);
-    Task<IEnumerable<RaceResultDto>> GetTeamRaceResultsByYear(int teamId, int year);
-    Task<IEnumerable<RaceResultDto>> GetCircuitRaceResultsByYear(int teamId, int year);
+    Task<IEnumerable<RaceResultDto>> GetDriverRaceResultsByYear(int id, int year);
+    Task<IEnumerable<RaceResultDto>> GetTeamRaceResultsByYear(int id, int year);
+    Task<IEnumerable<RaceResultDto>> GetCircuitRaceResultsByYear(int id, int year);
 }
 
 public class RaceResultService : IRaceResultService
@@ -21,35 +21,42 @@ public class RaceResultService : IRaceResultService
         _context = context;
     }
 
-    public async Task<IEnumerable<RaceResultDto>> GetDriverRaceResultsByYear(int driverId, int year)
+    public async Task<IEnumerable<RaceResultDto>> GetDriverRaceResultsByYear(int id, int year)
     {
         List<RaceResult> raceResults = await _context.RaceResults
-            .Where(rr => rr.Year == year && rr.DriverId == driverId)
+            .Where(rr => rr.Year == year && rr.DriverId == id)
             .Include(rr => rr.Driver)
             .Include(rr => rr.Team)
             .Include(rr => rr.Circuit)
             .OrderBy(rr => rr.Date)
             .ToListAsync();
         
-        return raceResults.Select(rr =>
+        if (raceResults.Any())
         {
-            return new RaceResultDto
+            return raceResults.Select(rr =>
             {
-                Position = rr.Position,
-                CircuitName = rr.Circuit.Name,
-                Date = rr.Date,
-                DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
-                TeamName = rr.Team.Name,
-                Time = rr.Time,
-                Laps = rr.Laps
-            };
-        });
+                return new RaceResultDto
+                {
+                    Position = rr.Position,
+                    CircuitName = rr.Circuit.Name,
+                    Date = rr.Date,
+                    DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
+                    TeamName = rr.Team.Name,
+                    Time = rr.Time,
+                    Laps = rr.Laps
+                };
+            });
+        }
+        else
+        {
+            return null;
+        }
     }
 
-    public async Task<IEnumerable<RaceResultDto>> GetTeamRaceResultsByYear(int teamId, int year)
+    public async Task<IEnumerable<RaceResultDto>> GetTeamRaceResultsByYear(int id, int year)
     {
         List<RaceResult> raceResults = await _context.RaceResults
-            .Where(rr => rr.Year == year && rr.TeamId == teamId)
+            .Where(rr => rr.Year == year && rr.TeamId == id)
             .Include(rr => rr.Driver)
             .Include(rr => rr.Team)
             .Include(rr => rr.Circuit)
@@ -72,10 +79,10 @@ public class RaceResultService : IRaceResultService
         });
     }
 
-    public async Task<IEnumerable<RaceResultDto>> GetCircuitRaceResultsByYear(int circuitId, int year)
+    public async Task<IEnumerable<RaceResultDto>> GetCircuitRaceResultsByYear(int id, int year)
     {
         List<RaceResult> raceResults = await _context.RaceResults
-            .Where(rr => rr.Year == year && rr.CircuitId == circuitId)
+            .Where(rr => rr.Year == year && rr.CircuitId == id)
             .Include(rr => rr.Driver)
             .Include(rr => rr.Team)
             .Include(rr => rr.Circuit)
@@ -83,18 +90,27 @@ public class RaceResultService : IRaceResultService
             .ThenBy(rr => rr.Position == 0 ? int.MaxValue : rr.Position)
             .ToListAsync();
 
-        return raceResults.Select(rr =>
+        if (raceResults.Any())
         {
-            return new RaceResultDto
+            return raceResults.Select(rr =>
             {
-                Position = rr.Position,
-                CircuitName = rr.Circuit.Name,
-                Date = rr.Date,
-                DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
-                TeamName = rr.Team.Name,
-                Time = rr.Time,
-                Laps = rr.Laps
-            };
-        });
+                return new RaceResultDto
+                {
+                    Position = rr.Position,
+                    CircuitName = rr.Circuit.Name,
+                    Date = rr.Date,
+                    DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
+                    TeamName = rr.Team.Name,
+                    Points = rr.Points,
+                    Time = rr.Time,
+                    Laps = rr.Laps,
+                    Year = rr.Year
+                };
+            });
+        }
+        else
+        {
+            return null;
+        }
     }
 }

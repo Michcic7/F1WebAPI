@@ -13,7 +13,6 @@ var services = builder.Services;
 
 services
 	.AddSwagger()
-	.AddProblemDetailsConfiguration()
 	.AddDbContext(builder)
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
@@ -34,7 +33,6 @@ if (app.Environment.IsDevelopment())
     //seeder.SeedInitialData();
 }
 
-app.UseProblemDetails();
 app.UseHttpsRedirection();
 app.MapControllers();
 

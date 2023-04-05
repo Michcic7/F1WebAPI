@@ -8,6 +8,7 @@ namespace API.Services;
 public interface IDriverStandingService
 {
     Task<IEnumerable<DriverStandingDto>> GetDriverStandings(int year);
+    Task<IEnumerable<DriverStandingDto>> GetDriverAllStandingsById(int id);
 }
 
 public class DriverStandingService : IDriverStandingService
@@ -24,7 +25,7 @@ public class DriverStandingService : IDriverStandingService
         List<DriverStanding> driverStandings = await _context.DriverStandings
             .Where(ds => ds.Year == year)
             .Include(ds => ds.Driver)
-            .Include(dc => dc.Team)
+            .Include(ds => ds.Team)
             .OrderBy(ds => ds.Position == 0 ? int.MaxValue : ds.Position)
             .ToListAsync();
 
@@ -36,8 +37,39 @@ public class DriverStandingService : IDriverStandingService
                 DriverName = ds.Driver.FirstName + " " + ds.Driver.LastName,
                 Nationality = ds.Driver.Nationality,
                 TeamName = ds.Team.Name,
-                Points = ds.Points
+                Points = ds.Points,
+                Year = ds.Year
             };
         });
+    }
+
+    public async Task<IEnumerable<DriverStandingDto>> GetDriverAllStandingsById(int id)
+    {
+        List<DriverStanding> driverStandings = await _context.DriverStandings
+            .Where(ds => ds.DriverId == id)
+            .Include(ds => ds.Driver)
+            .Include(ds => ds.Team)
+            .OrderBy(ds => ds.Year)
+            .ToListAsync();
+
+        if (driverStandings.Any())
+        {
+            return driverStandings.Select(ds =>
+            {
+                return new DriverStandingDto
+                {
+                    Position = ds.Position,
+                    DriverName = ds.Driver.FirstName + " " + ds.Driver.LastName,
+                    Nationality = ds.Driver.Nationality,
+                    TeamName = ds.Team.Name,
+                    Points = ds.Points,
+                    Year = ds.Year
+                };
+            });
+        }
+        else
+        {
+            return null;
+        }        
     }
 }
