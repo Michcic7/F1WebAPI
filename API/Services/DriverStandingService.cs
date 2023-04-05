@@ -24,6 +24,7 @@ public class DriverStandingService : IDriverStandingService
         List<DriverStanding> driverStandings = await _context.DriverStandings
             .Where(ds => ds.Year == year)
             .Include(ds => ds.Driver)
+            .Include(dc => dc.Team)
             .OrderBy(ds => ds.Position)
             .ToListAsync();
 
@@ -32,7 +33,9 @@ public class DriverStandingService : IDriverStandingService
             return new DriverStandingDto
             {
                 Position = ds.Position,
-                Driver = ds.Driver,
+                DriverName = ds.Driver.FirstName + " " + ds.Driver.LastName,
+                Nationality = ds.Driver.Nationality,
+                TeamName = ds.Team.Name,
                 Points = ds.Points
             };
         });
