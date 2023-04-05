@@ -10,14 +10,16 @@ public class DriversController : ControllerBase
 {
     private readonly IDriverService _driverService;
     private readonly IDriverStandingService _driverStandingService;
+    private readonly IRaceResultService _raceResultService;
 
     public DriversController(
         IDriverService service, 
-        IDriverStandingService driverStandingService)
+        IDriverStandingService driverStandingService, 
+        IRaceResultService raceResultService)
     {
         _driverService = service;
         _driverStandingService = driverStandingService;
-
+        _raceResultService = raceResultService;
     }
 
     [HttpGet]
@@ -32,8 +34,19 @@ public class DriversController : ControllerBase
     [Route("{year}")]
     public async Task<ActionResult<DriverStandingDto>> GetDriverStandings(int year)
     {
-        IEnumerable<DriverStandingDto> driverStandings = await _driverStandingService.GetDriverStandings(year);
+        IEnumerable<DriverStandingDto> driverStandings = await 
+            _driverStandingService.GetDriverStandings(year);
 
         return Ok(driverStandings);
+    }
+
+    [HttpGet]
+    [Route("{driverId}/{year}/raceresults")]
+    public async Task<ActionResult<RaceResultDto>> GetRaceResultsByYear(int driverId, int year)
+    {
+        IEnumerable<RaceResultDto> raceResults = await
+            _raceResultService.GetDriverRaceResultsByYear(driverId, year);
+
+        return Ok(raceResults);
     }
 }

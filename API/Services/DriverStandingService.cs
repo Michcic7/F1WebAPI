@@ -25,7 +25,7 @@ public class DriverStandingService : IDriverStandingService
             .Where(ds => ds.Year == year)
             .Include(ds => ds.Driver)
             .Include(dc => dc.Team)
-            .OrderBy(ds => ds.Position)
+            .OrderBy(ds => ds.Position == 0 ? int.MaxValue : ds.Position)
             .ToListAsync();
 
         return driverStandings.Select(ds =>
