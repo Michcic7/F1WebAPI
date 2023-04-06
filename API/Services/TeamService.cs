@@ -8,6 +8,7 @@ namespace API.Services;
 public interface ITeamService
 {
     Task<IEnumerable<TeamDto>> GetTeams();
+    Task<TeamDto> GetTeamById(int id);
 }
 
 public class TeamService : ITeamService
@@ -31,5 +32,23 @@ public class TeamService : ITeamService
                 Name = t.Name
             };
         });
+    }
+
+    public async Task<TeamDto> GetTeamById(int id)
+    {
+        Team team = await _context.Teams.FindAsync(id);
+
+        if (team != null)
+        {
+            return new TeamDto
+            {
+                TeamId = team.TeamId,
+                Name = team.Name
+            };
+        }
+        else
+        {
+            return null;
+        }
     }
 }

@@ -30,12 +30,12 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverDto>>> GetDrivers(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
     {
-        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
-
         if (pageSize <= 0 || page <= 0)
         {
             return BadRequest();
         }
+
+        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
 
         if (!string.IsNullOrEmpty(name))
         {
@@ -85,8 +85,8 @@ public class DriversController : ControllerBase
         return Ok(driver);
     }
 
-    [HttpGet("DriverStandings")]
-    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStandings(
+    [HttpGet("DriverStanding")]
+    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
         [FromQuery] int year = 2022)
     {
         if (year < 1950 || year > 2022)
@@ -95,7 +95,7 @@ public class DriversController : ControllerBase
         }
         
         IEnumerable<DriverStandingDto> driverStandings = await 
-            _driverStandingService.GetDriverStandings(year);
+            _driverStandingService.GetDriverStanding(year);
 
         return Ok(driverStandings);
     }

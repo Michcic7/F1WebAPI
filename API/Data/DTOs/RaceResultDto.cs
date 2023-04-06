@@ -12,5 +12,4 @@ public class RaceResultDto
     public int Laps { get; set; }
     public string Time { get; set; }
     public float Points { get; set; }
-    public int Year { get; set; }
 }

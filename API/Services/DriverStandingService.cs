@@ -7,7 +7,7 @@ namespace API.Services;
 
 public interface IDriverStandingService
 {
-    Task<IEnumerable<DriverStandingDto>> GetDriverStandings(int year);
+    Task<IEnumerable<DriverStandingDto>> GetDriverStanding(int year);
     Task<IEnumerable<DriverStandingDto>> GetDriverAllStandingsById(int id);
 }
 
@@ -20,7 +20,7 @@ public class DriverStandingService : IDriverStandingService
         _context = context;
     }
 
-    public async Task<IEnumerable<DriverStandingDto>> GetDriverStandings(int year)
+    public async Task<IEnumerable<DriverStandingDto>> GetDriverStanding(int year)
     {
         List<DriverStanding> driverStandings = await _context.DriverStandings
             .Where(ds => ds.Year == year)

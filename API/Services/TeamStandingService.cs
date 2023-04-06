@@ -7,7 +7,8 @@ namespace API.Services;
 
 public interface ITeamStandingService
 {
-	Task<IEnumerable<TeamStandingDto>> GetTeamStandings(int year);
+	Task<IEnumerable<TeamStandingDto>> GetTeamStanding(int year);
+	Task<IEnumerable<TeamStandingDto>> GetTeamAllStandingsById(int id);
 }
 
 public class TeamStandingService : ITeamStandingService
@@ -18,8 +19,8 @@ public class TeamStandingService : ITeamStandingService
     {
         _context = context;
     }
-
-    public async Task<IEnumerable<TeamStandingDto>> GetTeamStandings(int year)
+    
+    public async Task<IEnumerable<TeamStandingDto>> GetTeamStanding(int year)
     {
         List<TeamStanding> teamStandings = await _context.TeamStandings
             .Where(ts => ts.Year == year)
@@ -33,8 +34,36 @@ public class TeamStandingService : ITeamStandingService
             {
                 Position = ts.Position,
                 Name = ts.Team.Name,
-                Points = ts.Points
+                Points = ts.Points,
+                Year = ts.Year
             };
         });
+    }
+
+    public async Task<IEnumerable<TeamStandingDto>> GetTeamAllStandingsById(int id)
+    {
+        List<TeamStanding> teamStandings = await _context.TeamStandings
+            .Where(ts => ts.TeamId == id)
+            .Include(ts => ts.Team)
+            .OrderBy(ts => ts.Year)
+            .ToListAsync();
+
+        if (teamStandings.Any())
+        {
+            return teamStandings.Select(ts =>
+            {
+                return new TeamStandingDto
+                {
+                    Position = ts.Position,
+                    Name = ts.Team.Name,
+                    Points = ts.Points,
+                    Year = ts.Year
+                };
+            });
+        }
+        else
+        {
+            return null;
+        }
     }
 }

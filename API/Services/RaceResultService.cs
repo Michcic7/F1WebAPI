@@ -42,6 +42,7 @@ public class RaceResultService : IRaceResultService
                     Date = rr.Date,
                     DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
                     TeamName = rr.Team.Name,
+                    Points = rr.Points,
                     Time = rr.Time,
                     Laps = rr.Laps
                 };
@@ -64,19 +65,27 @@ public class RaceResultService : IRaceResultService
             .ThenBy(rr => rr.Position == 0 ? int.MaxValue : rr.Position)
             .ToListAsync();
 
-        return raceResults.Select(rr =>
+        if (raceResults.Any())
         {
-            return new RaceResultDto
+            return raceResults.Select(rr =>
             {
-                Position = rr.Position,
-                CircuitName = rr.Circuit.Name,
-                Date = rr.Date,
-                DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
-                TeamName = rr.Team.Name,
-                Time = rr.Time,
-                Laps = rr.Laps
-            };
-        });
+                return new RaceResultDto
+                {
+                    Position = rr.Position,
+                    CircuitName = rr.Circuit.Name,
+                    Date = rr.Date,
+                    DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
+                    TeamName = rr.Team.Name,
+                    Points = rr.Points,
+                    Time = rr.Time,
+                    Laps = rr.Laps
+                };
+            });
+        }
+        else
+        {
+            return null;
+        }
     }
 
     public async Task<IEnumerable<RaceResultDto>> GetCircuitRaceResultsByYear(int id, int year)
@@ -103,8 +112,7 @@ public class RaceResultService : IRaceResultService
                     TeamName = rr.Team.Name,
                     Points = rr.Points,
                     Time = rr.Time,
-                    Laps = rr.Laps,
-                    Year = rr.Year
+                    Laps = rr.Laps
                 };
             });
         }
