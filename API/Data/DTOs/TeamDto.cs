@@ -2,7 +2,6 @@
 
 public class TeamDto
 {
-	public required string Position { get; set; }
-	public required string Name { get; set; }
-	public required float Points { get; set; }
+	public int TeamId { get; set; }
+	public string Name { get; set; }
 }

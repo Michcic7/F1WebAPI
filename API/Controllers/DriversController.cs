@@ -1,51 +1,137 @@
 ﻿using API.Data.DTOs;
+using API.Data.Models;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 
 namespace API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class DriversController :ControllerBase
+public class DriversController : ControllerBase
 {
-	private readonly IDriverService _service;
+    private const int maxPageSize = 40;
 
-	public DriversController(IDriverService service)
-	{
-		_service = service;
-	}
-	
-	/// <summary>
-	/// Gets driver standings from a specified year.
-	/// </summary>
-	/// <param name="year">The year must be between 1950-2022.</param>
-	/// <returns>
-	/// Driver standings from a specified year.
-	/// </returns>
-	[HttpGet]
-	[Route("{year}")]
-	[ProducesResponseType(StatusCodes.Status400BadRequest)]
-	[ProducesResponseType(StatusCodes.Status200OK)]
-	public async Task<ActionResult<DriverDto>> GetDrivers(int year)
-	{
-		IEnumerable<DriverDto> drivers = await _service.GetDrivers(year);
+    private readonly IDriverService _driverService;
+    private readonly IDriverStandingService _driverStandingService;
+    private readonly IRaceResultService _raceResultService;
 
-		return Ok(drivers);
-	}
+    public DriversController(
+        IDriverService service, 
+        IDriverStandingService driverStandingService, 
+        IRaceResultService raceResultService)
+    {
+        _driverService = service;
+        _driverStandingService = driverStandingService;
+        _raceResultService = raceResultService;
+    }
 
-	/// <summary>
-	/// Gets career results of a specified driver
-	/// </summary>
-	/// <param name="name">The full name of a driver without spaces</param>
-	/// <returns>
-	/// Returns career results about a specified driver
-	/// </returns>
-	[HttpGet]
-	[Route("career/{name}")]
-	public async Task<ActionResult<DriverCareerDto>> GetDriverByName(string name)
-	{
-		DriverCareerDto driver = await _service.GetDriverByName(name);
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<DriverDto>>> GetDrivers(
+        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
+    {
+        if (pageSize <= 0 || page <= 0)
+        {
+            return BadRequest();
+        }
 
-		return Ok(driver);
-	}
+        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
+
+        if (!string.IsNullOrEmpty(name))
+        {
+            drivers = drivers.Where(d => 
+                d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) || 
+                d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        int totalDrivers = drivers.Count();
+        int totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
+
+        if (page > totalPages)
+        {
+            return BadRequest();
+        }
+
+        IEnumerable<DriverDto> paginatedDrivers = drivers.Skip((page - 1) * pageSize).Take(pageSize);
+
+        var response = new
+        {
+            TotalDrivers = totalDrivers,
+            TotalPages = totalPages,
+            CurrentPage = page,
+            PageSize = pageSize,
+            NameFilter = name,
+            Drivers = paginatedDrivers
+        };
+
+        return Ok(response);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<DriverDto>> GetDriverById(int id)
+    {
+        if (id <= 0)
+        {
+            return BadRequest();
+        }
+        
+        DriverDto driver = await _driverService.GetDriverById(id);
+
+        if (driver is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(driver);
+    }
+
+    [HttpGet("DriverStanding")]
+    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
+        [FromQuery] int year = 2022)
+    {
+        if (year < 1950 || year > 2022)
+        {
+            return BadRequest();
+        }
+        
+        IEnumerable<DriverStandingDto> driverStandings = await 
+            _driverStandingService.GetDriverStanding(year);
+
+        return Ok(driverStandings);
+    }
+
+    [HttpGet("{id}/DriverStandings")]
+    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverAllStandingsById(
+        int id)
+    {
+        IEnumerable<DriverStandingDto> driverStandings = await
+            _driverStandingService.GetDriverAllStandingsById(id);
+
+        if (driverStandings is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(driverStandings);
+    }
+
+    [HttpGet("{id}/RaceResults")]
+    public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetDriverRaceResultsByYear(
+        int id, [FromQuery] int year = 2022)
+    {
+        if (year < 1950 || year > 2022)
+        {
+            return BadRequest();
+        }
+        
+        IEnumerable<RaceResultDto> raceResults = await
+            _raceResultService.GetDriverRaceResultsByYear(id, year);
+
+        if (raceResults is null)
+        {
+            return NotFound();
+        }
+
+        return Ok(raceResults);
+    }
 }

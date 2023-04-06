@@ -1,48 +1,54 @@
 ﻿using API.Data;
-using API.Data.Models;
 using API.Data.DTOs;
-using API.Exceptions;
+using API.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Services;
 
 public interface ITeamService
 {
-	Task<IEnumerable<TeamDto>> GetTeams(int year);
+    Task<IEnumerable<TeamDto>> GetTeams();
+    Task<TeamDto> GetTeamById(int id);
 }
 
 public class TeamService : ITeamService
 {
-	private readonly F1WebAPIContext _context;
+    private readonly F1WebAPIContext _context;
 
-	public TeamService(F1WebAPIContext context)
-	{
-		_context = context;
-	}
+    public TeamService(F1WebAPIContext context)
+    {
+        _context = context;
+    }
 
-	public async Task<IEnumerable<TeamDto>> GetTeams(int year)
-	{
-		if (year < 1958 || year > 2022)
-		{
-			throw new ArgumentException("The year must be between 1958 and 2022");
-		}
+    public async Task<IEnumerable<TeamDto>> GetTeams()
+    {
+        List<Team> teams = await _context.Teams.Select(t => t).ToListAsync();
 
-		List<Team> teams = await
-			_context.Teams.Where(t => t.StandingsYear.StandingsYearId == year).ToListAsync();
+        return teams.Select(t =>
+        {
+            return new TeamDto
+            {
+                TeamId = t.TeamId,
+                Name = t.Name
+            };
+        });
+    }
 
-		if (teams.Count is 0)
-		{
-			throw new ArgumentNullException();
-		}
+    public async Task<TeamDto> GetTeamById(int id)
+    {
+        Team team = await _context.Teams.FindAsync(id);
 
-		return teams.Select(t =>
-		{
-			return new TeamDto
-			{
-				Position = t.Position,
-				Name = t.Name,
-				Points = t.Points
-			};
-		});
-	}
+        if (team != null)
+        {
+            return new TeamDto
+            {
+                TeamId = team.TeamId,
+                Name = team.Name
+            };
+        }
+        else
+        {
+            return null;
+        }
+    }
 }
