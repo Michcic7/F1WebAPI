@@ -1,26 +1,19 @@
-using API.Bootstrap;
-using API.Data;
-using API.Data.Models;
+using API.ExtensionMethods.BuilderServices;
 using API.Services;
-using Hellang.Middleware.ProblemDetails;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var services = builder.Services;
-
-services
+builder.Services
 	.AddSwagger()
 	.AddDbContext(builder)
+	.AddControllersConfiguration()
+	.AddProblemDetailsConfiguration()
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
-    .AddTransient<ICircuitService, CircuitService>()
+	.AddTransient<ICircuitService, CircuitService>()
 	.AddTransient<IDriverStandingService, DriverStandingService>()
 	.AddTransient<ITeamStandingService, TeamStandingService>()
-	.AddTransient<IRaceResultService, RaceResultService>()
-    .AddControllers();
+	.AddTransient<IRaceResultService, RaceResultService>();
 
 var app = builder.Build();
 

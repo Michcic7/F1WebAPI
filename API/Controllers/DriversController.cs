@@ -1,8 +1,9 @@
 ﻿using API.Data.DTOs;
-using API.Data.Models;
+using API.Data.DTOs.DTOsWithMetadata;
+using API.ProblemDetailsErrors;
+using API.HelperMethods;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 
 namespace API.Controllers;
 
@@ -10,7 +11,7 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class DriversController : ControllerBase
 {
-    private const int maxPageSize = 40;
+    private const int _maxPageSize = 40;
 
     private readonly IDriverService _driverService;
     private readonly IDriverStandingService _driverStandingService;
@@ -30,31 +31,28 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverDto>>> GetDrivers(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
     {
-        if (pageSize <= 0 || page <= 0)
+        ActionResult validationResult = ValidatePaginationInput(page, pageSize, _maxPageSize);
+        if (validationResult != null)
         {
-            return BadRequest();
+            return validationResult;
         }
 
         IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
 
-        if (!string.IsNullOrEmpty(name))
+        drivers = FilterDriversByName(name, drivers);
+        
+        CalculateMetadata(pageSize, drivers, out int totalDrivers, out int totalPages);
+
+        ActionResult validationSelectedPageResult = ValidatePageInput(page, totalPages);
+        
+        if (validationSelectedPageResult != null)
         {
-            drivers = drivers.Where(d => 
-                d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) || 
-                d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
+            return validationSelectedPageResult;
         }
 
-        int totalDrivers = drivers.Count();
-        int totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
+        IEnumerable<DriverDto> paginatedDrivers = PaginateDrivers(page, pageSize, drivers);
 
-        if (page > totalPages)
-        {
-            return BadRequest();
-        }
-
-        IEnumerable<DriverDto> paginatedDrivers = drivers.Skip((page - 1) * pageSize).Take(pageSize);
-
-        var response = new
+        PaginatedDriversResponseDto response = new()
         {
             TotalDrivers = totalDrivers,
             TotalPages = totalPages,
@@ -70,15 +68,18 @@ public class DriversController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<DriverDto>> GetDriverById(int id)
     {
-        if (id <= 0)
+        var validationResult = ValidateDriverId(id);
+
+        if (validationResult != null)
         {
-            return BadRequest();
+            return validationResult;
         }
-        
+
         DriverDto driver = await _driverService.GetDriverById(id);
 
         if (driver is null)
         {
+            ProblemDetailsHelper.SetDriverIdError(HttpContext, DriverIdErrorType.NotExistingId);
             return NotFound();
         }
 
@@ -89,9 +90,10 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
         [FromQuery] int year = 2022)
     {
-        if (year < 1950 || year > 2022)
+        var validationResult = ValidateYear(year);
+        if (validationResult != null)
         {
-            return BadRequest();
+            return validationResult;
         }
         
         IEnumerable<DriverStandingDto> driverStandings = await 
@@ -104,11 +106,18 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverAllStandingsById(
         int id)
     {
+        var validationResult = ValidateDriverId(id);
+        if (validationResult != null)
+        {
+            return validationResult;
+        }
+
         IEnumerable<DriverStandingDto> driverStandings = await
             _driverStandingService.GetDriverAllStandingsById(id);
 
         if (driverStandings is null)
         {
+            ProblemDetailsHelper.SetStandingsMissingError(HttpContext, StandingType.DriverStanding);
             return NotFound();
         }
 
@@ -133,5 +142,90 @@ public class DriversController : ControllerBase
         }
 
         return Ok(raceResults);
+    }
+
+    
+    private IEnumerable<DriverDto> FilterDriversByName(
+        string name, IEnumerable<DriverDto> drivers)
+    {
+        if (!string.IsNullOrEmpty(name))
+        {
+            drivers = drivers.Where(d =>
+                d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) ||
+                d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return drivers;
+    }
+
+    private void CalculateMetadata(int pageSize, IEnumerable<DriverDto> drivers, out int totalDrivers, out int totalPages)
+    {
+        totalDrivers = drivers.Count();
+        totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
+    }
+
+    private IEnumerable<DriverDto> PaginateDrivers(
+        int page, int pageSize, IEnumerable<DriverDto> drivers)
+    {
+        return drivers.Skip((page - 1) * pageSize).Take(pageSize);
+    }
+
+    private ActionResult ValidatePaginationInput(int page, int pageSize, int maxPageSize)
+    {
+        if (page <= 0)
+        {
+            ProblemDetailsHelper.SetPageNumberError(
+                HttpContext, PageNumberErrorType.ZeroOrNegativePageNumber);
+            return BadRequest();
+        }
+
+        if (pageSize > maxPageSize)
+        {
+            ProblemDetailsHelper.SetPageSizeError(HttpContext, PageSizeErrorType.PageSizeTooBig);
+            return BadRequest();
+        }
+
+        if (pageSize <= 0)
+        {
+            ProblemDetailsHelper.SetPageSizeError(HttpContext, PageSizeErrorType.PageSizeTooSmall);
+            return BadRequest();
+        }
+
+        return null;
+    }
+
+    private ActionResult ValidatePageInput(int page, int totalPages)
+    {
+        if (page > totalPages)
+        {
+            ProblemDetailsHelper.SetPageNumberError(
+                HttpContext, PageNumberErrorType.NotExistingPageNumber);
+            return BadRequest();
+        }
+
+        return null;
+    }
+
+    private ActionResult ValidateDriverId(int id)
+    {
+        if (id <= 0)
+        {
+            ProblemDetailsHelper.SetDriverIdError(HttpContext, DriverIdErrorType.ZeroOrNegativeId);
+            return BadRequest();
+        }
+
+        return null;
+    }
+
+    private ActionResult ValidateYear(int year)
+    {
+        if (year < 1950 || year > 2022)
+        {
+            ProblemDetailsHelper.SetStandingYearError(
+                HttpContext, StandingYearErrorType.DriverStanding);
+            return BadRequest();
+        }
+
+        return null;
     }
 }
