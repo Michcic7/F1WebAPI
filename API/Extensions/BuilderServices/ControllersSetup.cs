@@ -1,4 +1,4 @@
-﻿namespace API.ExtensionMethods.BuilderServices;
+﻿namespace API.Extensions.BuilderServices;
 
 public static class ControllersSetup
 {
@@ -7,7 +7,7 @@ public static class ControllersSetup
     {
         services.AddControllers().ConfigureApiBehaviorOptions(options =>
         {
-            //options.SuppressMapClientErrors = true;
+            options.SuppressMapClientErrors = true;
         });
 
         return services;

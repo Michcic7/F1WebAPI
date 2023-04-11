@@ -1,5 +1,6 @@
-using API.ExtensionMethods.BuilderServices;
+using API.Extensions.BuilderServices;
 using API.Services;
+using Hellang.Middleware.ProblemDetails;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
     //seeder.SeedInitialData();
 }
 
+app.UseProblemDetails();
 app.UseHttpsRedirection();
 app.MapControllers();
 

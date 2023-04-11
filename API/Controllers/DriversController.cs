@@ -4,6 +4,7 @@ using API.ProblemDetailsErrors;
 using API.HelperMethods;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
+using API.Data.Models;
 
 namespace API.Controllers;
 
@@ -31,16 +32,22 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverDto>>> GetDrivers(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
     {
-        ActionResult validationResult = ValidatePaginationInput(page, pageSize, _maxPageSize);
-        if (validationResult != null)
-        {
-            return validationResult;
-        }
+        //if (page <= 0)
+        //{
+        //    ProblemDetailsHelper.SetPageNumberError(
+        //        HttpContext, PageNumberErrorType.ZeroOrNegativePageNumber);
+        //    return BadRequest();
+        //}
 
-        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers();
+        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers(page, pageSize, name);
 
-        drivers = FilterDriversByName(name, drivers);
-        
+        //if (!string.IsNullOrEmpty(name))
+        //{
+        //    drivers = drivers.Where(d =>
+        //        d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) ||
+        //        d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
+        //}
+
         CalculateMetadata(pageSize, drivers, out int totalDrivers, out int totalPages);
 
         ActionResult validationSelectedPageResult = ValidatePageInput(page, totalPages);
@@ -68,32 +75,45 @@ public class DriversController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<DriverDto>> GetDriverById(int id)
     {
-        var validationResult = ValidateDriverId(id);
-
-        if (validationResult != null)
-        {
-            return validationResult;
-        }
-
-        DriverDto driver = await _driverService.GetDriverById(id);
-
-        if (driver is null)
-        {
-            ProblemDetailsHelper.SetDriverIdError(HttpContext, DriverIdErrorType.NotExistingId);
-            return NotFound();
-        }
+        DriverDto driver = await _driverService.GetDriverById(id, HttpContext);
 
         return Ok(driver);
     }
+
+    //[HttpGet("{id}")]
+    //public async Task<ActionResult<DriverDto>> GetDriverById(int id)
+    //{
+    //    if (id <= 0)
+    //    {
+    //        EntityProblemDetails<Driver> problemDetails = new(
+    //            id.ToString(), EntityProblemDetailsType.NonPositiveId, HttpContext);
+
+    //        return BadRequest(problemDetails);
+    //    }
+
+    //    DriverDto driver = await _driverService.GetDriverById(id);
+
+    //    if (driver == null)
+    //    {
+    //        EntityProblemDetails<Driver> problemDetails = new(
+    //            id.ToString(), EntityProblemDetailsType.NotFoundId, HttpContext);
+
+    //        return NotFound(problemDetails);
+    //    }
+
+    //    return Ok(driver);
+    //}
 
     [HttpGet("DriverStanding")]
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
         [FromQuery] int year = 2022)
     {
-        var validationResult = ValidateYear(year);
-        if (validationResult != null)
+        if (year < 1950 || year > 2022)
         {
-            return validationResult;
+            YearProblemDetails<DriverStanding> problemDetails = new(
+                YearProblemDetailsType.DriverStanding, HttpContext);
+
+            return BadRequest(problemDetails);
         }
         
         IEnumerable<DriverStandingDto> driverStandings = await 
@@ -106,10 +126,12 @@ public class DriversController : ControllerBase
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverAllStandingsById(
         int id)
     {
-        var validationResult = ValidateDriverId(id);
-        if (validationResult != null)
+        if (id <= 0)
         {
-            return validationResult;
+            EntityProblemDetails<Driver> problemDetails = new(
+                id.ToString(), EntityProblemDetailsType.NonPositiveId, HttpContext);
+
+            return BadRequest(problemDetails);
         }
 
         IEnumerable<DriverStandingDto> driverStandings = await
@@ -172,12 +194,7 @@ public class DriversController : ControllerBase
 
     private ActionResult ValidatePaginationInput(int page, int pageSize, int maxPageSize)
     {
-        if (page <= 0)
-        {
-            ProblemDetailsHelper.SetPageNumberError(
-                HttpContext, PageNumberErrorType.ZeroOrNegativePageNumber);
-            return BadRequest();
-        }
+        
 
         if (pageSize > maxPageSize)
         {
