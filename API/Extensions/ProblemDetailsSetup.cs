@@ -2,7 +2,7 @@
 using API.CustomExceptions;
 using API.CustomExceptions.CustomProblemDetails;
 
-namespace API.Extensions.BuilderServices;
+namespace API.Extensions;
 
 public static class ProblemDetailsSetup
 {
@@ -15,6 +15,8 @@ public static class ProblemDetailsSetup
 
             MapInvalidDriverId(options);
             MapDriverNotFound(options);
+            MapNonPositivePageNumber(options);
+            MapPageNumberExceededTotalPages(options);
         });
 
         return services;
@@ -32,7 +34,7 @@ public static class ProblemDetailsSetup
             Instance = exception.Instance
         });
     }
-    
+
     private static void MapDriverNotFound(
         Hellang.Middleware.ProblemDetails.ProblemDetailsOptions options)
     {
@@ -45,6 +47,35 @@ public static class ProblemDetailsSetup
             Instance = exception.Instance
         });
     }
+
+    private static void MapNonPositivePageNumber(
+        Hellang.Middleware.ProblemDetails.ProblemDetailsOptions options)
+    {
+        options.Map<NonPositivePageNumberException>(
+            exception => new NonPositivePageNumberDetails
+            {
+                Type = exception.Type,
+                Title = exception.Title,
+                Status = exception.Status,
+                Detail = exception.Detail,
+                Instance = exception.Instance
+            });
+    }
+
+    private static void MapPageNumberExceededTotalPages(
+        Hellang.Middleware.ProblemDetails.ProblemDetailsOptions options)
+    {
+        options.Map<PageNumberExceededTotalPagesException>(
+            exception => new PageNumberExceededTotalPagesDetails
+            {
+                Type = exception.Type,
+                Title = exception.Title,
+                Status = exception.Status,
+                Detail = exception.Detail,
+                Instance = exception.Instance
+            });
+    }
+
 
     //public static IServiceCollection AddProblemDetailsConfiguration(
     //        this IServiceCollection services)

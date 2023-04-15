@@ -1,4 +1,4 @@
-﻿namespace API.Extensions.BuilderServices;
+﻿namespace API.Extensions;
 
 public static class ControllersSetup
 {

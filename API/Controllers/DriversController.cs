@@ -29,47 +29,13 @@ public class DriversController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<DriverDto>>> GetDrivers(
+    public async Task<ActionResult<PaginatedDriversDto>> GetDrivers(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
     {
-        //if (page <= 0)
-        //{
-        //    ProblemDetailsHelper.SetPageNumberError(
-        //        HttpContext, PageNumberErrorType.ZeroOrNegativePageNumber);
-        //    return BadRequest();
-        //}
+        PaginatedDriversDto drivers = await _driverService
+            .GetDrivers(page, pageSize, _maxPageSize, name, HttpContext);
 
-        IEnumerable<DriverDto> drivers = await _driverService.GetDrivers(page, pageSize, name);
-
-        //if (!string.IsNullOrEmpty(name))
-        //{
-        //    drivers = drivers.Where(d =>
-        //        d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) ||
-        //        d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
-        //}
-
-        CalculateMetadata(pageSize, drivers, out int totalDrivers, out int totalPages);
-
-        ActionResult validationSelectedPageResult = ValidatePageInput(page, totalPages);
-        
-        if (validationSelectedPageResult != null)
-        {
-            return validationSelectedPageResult;
-        }
-
-        IEnumerable<DriverDto> paginatedDrivers = PaginateDrivers(page, pageSize, drivers);
-
-        PaginatedDriversResponseDto response = new()
-        {
-            TotalDrivers = totalDrivers,
-            TotalPages = totalPages,
-            CurrentPage = page,
-            PageSize = pageSize,
-            NameFilter = name,
-            Drivers = paginatedDrivers
-        };
-
-        return Ok(response);
+        return Ok(drivers);
     }
 
     [HttpGet("{id}")]
@@ -79,30 +45,6 @@ public class DriversController : ControllerBase
 
         return Ok(driver);
     }
-
-    //[HttpGet("{id}")]
-    //public async Task<ActionResult<DriverDto>> GetDriverById(int id)
-    //{
-    //    if (id <= 0)
-    //    {
-    //        EntityProblemDetails<Driver> problemDetails = new(
-    //            id.ToString(), EntityProblemDetailsType.NonPositiveId, HttpContext);
-
-    //        return BadRequest(problemDetails);
-    //    }
-
-    //    DriverDto driver = await _driverService.GetDriverById(id);
-
-    //    if (driver == null)
-    //    {
-    //        EntityProblemDetails<Driver> problemDetails = new(
-    //            id.ToString(), EntityProblemDetailsType.NotFoundId, HttpContext);
-
-    //        return NotFound(problemDetails);
-    //    }
-
-    //    return Ok(driver);
-    //}
 
     [HttpGet("DriverStanding")]
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(

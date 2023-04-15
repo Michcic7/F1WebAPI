@@ -1,4 +1,4 @@
-using API.Extensions.BuilderServices;
+using API.Extensions;
 using API.Services;
 using Hellang.Middleware.ProblemDetails;
 

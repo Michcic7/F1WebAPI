@@ -1,7 +1,7 @@
 ﻿using API.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Extensions.BuilderServices;
+namespace API.Extensions;
 
 public static class DbContextSetup
 {

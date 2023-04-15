@@ -1,6 +1,6 @@
 ﻿namespace API.Data.DTOs.DTOsWithMetadata;
 
-public class PaginatedDriversResponseDto
+public class PaginatedDriversDto
 {
     public int TotalDrivers { get; set; }
     public int TotalPages { get; set; }

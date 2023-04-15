@@ -1,6 +1,7 @@
 ﻿using API.CustomExceptions;
 using API.Data;
 using API.Data.DTOs;
+using API.Data.DTOs.DTOsWithMetadata;
 using API.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,8 +9,8 @@ namespace API.Services;
 
 public interface IDriverService
 {
-    Task<IEnumerable<DriverDto>> GetDrivers(
-        int page, int pageSize, int maxPageSize, string nameFilter);    
+    Task<PaginatedDriversDto> GetDrivers(
+        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context);    
     Task<DriverDto> GetDriverById(int id, HttpContext context);
 }
 
@@ -22,12 +23,12 @@ public class DriverService : IDriverService
         _context = context;
     }
 
-    public async Task<IEnumerable<DriverDto>> GetDrivers(
-        int page, int pageSize, int maxPageSize, string nameFilter)
+    public async Task<PaginatedDriversDto> GetDrivers(
+        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context)
     {
         if (page <= 0)
         {
-            throw new NotImplementedException();
+            throw new NonPositivePageNumberException(context.Request.Path);
         }
 
         if (pageSize > maxPageSize)
@@ -37,13 +38,15 @@ public class DriverService : IDriverService
         
         IQueryable<Driver> query = _context.Drivers;
 
+        // Apply name filter to a query.
         if (!string.IsNullOrEmpty(nameFilter))
         {
-            query = query.Where(d => 
-                d.FirstName.StartsWith(nameFilter, StringComparison.OrdinalIgnoreCase) || 
-                d.LastName.StartsWith(nameFilter, StringComparison.OrdinalIgnoreCase));
+            query = query.Where(d =>
+                d.FirstName.ToLower().Contains(nameFilter.ToLower()) ||
+                d.LastName.ToLower().Contains(nameFilter.ToLower()));
         }
 
+        // Chain the query further and iterate over it.
         List<DriverDto> drivers = await query
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
@@ -55,7 +58,26 @@ public class DriverService : IDriverService
             })
             .ToListAsync();
 
-        return drivers;
+        // Calculate metadata.
+        int totalDrivers = await query.CountAsync();
+        int totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
+
+        if (page > totalPages)
+        {
+            throw new PageNumberExceededTotalPagesException(context.Request.Path);
+        }
+
+        PaginatedDriversDto driversWithMetadata = new()
+        {
+            TotalDrivers = totalDrivers,
+            TotalPages = totalPages,
+            CurrentPage = page,
+            PageSize = pageSize,
+            NameFilter = nameFilter?.ToLower(),
+            Drivers = drivers
+        };
+
+        return driversWithMetadata;
     }
 
     public async Task<DriverDto> GetDriverById(int id, HttpContext context)
