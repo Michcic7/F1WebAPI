@@ -2,7 +2,7 @@
 
 namespace API.CustomExceptions;
 
-public class DriverNotFoundException : Exception, IExceptionProperties
+public class DriverDidNotRaceInThatYearException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }
@@ -10,12 +10,12 @@ public class DriverNotFoundException : Exception, IExceptionProperties
     public string Detail { get; }
     public string Instance { get; }
 
-    public DriverNotFoundException(string instance, int driverId)
+    public DriverDidNotRaceInThatYearException(string instance)
     {
         Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4";
-        Title = "Driver not found.";
+        Title = "Race results not found.";
         Status = StatusCodes.Status404NotFound;
-        Detail = $"Driver with ID = {driverId} was not found.";
+        Detail = "Could not find race results for the given driver in the given year.";
         Instance = instance;
     }
 }

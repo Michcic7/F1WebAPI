@@ -1,6 +1,8 @@
-﻿namespace API.CustomExceptions;
+﻿using API.Interfaces;
 
-public class PageNumberExceededTotalPagesException : Exception
+namespace API.CustomExceptions;
+
+public class PageNumberExceededTotalPagesException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }

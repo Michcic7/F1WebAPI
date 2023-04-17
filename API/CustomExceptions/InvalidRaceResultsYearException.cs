@@ -2,7 +2,7 @@
 
 namespace API.CustomExceptions;
 
-public class NonPositivePageNumberException : Exception, IExceptionProperties
+public class InvalidRaceResultsYearException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }
@@ -10,12 +10,12 @@ public class NonPositivePageNumberException : Exception, IExceptionProperties
     public string Detail { get; }
     public string Instance { get; }
 
-    public NonPositivePageNumberException(string instance)
+    public InvalidRaceResultsYearException(string instance)
     {
         Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1";
-        Title = "Invalid page number.";
+        Title = "Invalid year.";
         Status = StatusCodes.Status400BadRequest;
-        Detail = "Requested page number must be greater than 0.";
+        Detail = "The requested year must be between 1950 and 2022";
         Instance = instance;
     }
 }

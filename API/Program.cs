@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Interfaces;
 using API.Services;
 using Hellang.Middleware.ProblemDetails;
 

@@ -3,16 +3,10 @@ using API.Data;
 using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
 using API.Data.Models;
+using API.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Services;
-
-public interface IDriverService
-{
-    Task<PaginatedDriversDto> GetDrivers(
-        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context);    
-    Task<DriverDto> GetDriverById(int id, HttpContext context);
-}
 
 public class DriverService : IDriverService
 {
@@ -35,28 +29,18 @@ public class DriverService : IDriverService
         {
             pageSize = maxPageSize;
         }
-        
+
         IQueryable<Driver> query = _context.Drivers;
 
         // Apply name filter to a query.
         if (!string.IsNullOrEmpty(nameFilter))
         {
-            query = query.Where(d =>
-                d.FirstName.ToLower().Contains(nameFilter.ToLower()) ||
-                d.LastName.ToLower().Contains(nameFilter.ToLower()));
-        }
+            nameFilter = nameFilter.ToLower();
 
-        // Chain the query further and iterate over it.
-        List<DriverDto> drivers = await query
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .Select(d => new DriverDto
-            {
-                DriverId = d.DriverId,
-                Name = d.FirstName + " " + d.LastName,
-                Nationality = d.Nationality
-            })
-            .ToListAsync();
+            query = query.Where(d =>
+                d.FirstName.ToLower().Contains(nameFilter) ||
+                d.LastName.ToLower().Contains(nameFilter));
+        }
 
         // Calculate metadata.
         int totalDrivers = await query.CountAsync();
@@ -67,7 +51,19 @@ public class DriverService : IDriverService
             throw new PageNumberExceededTotalPagesException(context.Request.Path);
         }
 
-        PaginatedDriversDto driversWithMetadata = new()
+        // Chain the query further and iterate over it.
+        IEnumerable<DriverDto> drivers = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(d => new DriverDto
+            {
+                DriverId = d.DriverId,
+                Name = d.FirstName + " " + d.LastName,
+                Nationality = d.Nationality
+            })
+            .ToListAsync();
+
+        return new PaginatedDriversDto
         {
             TotalDrivers = totalDrivers,
             TotalPages = totalPages,
@@ -76,8 +72,6 @@ public class DriverService : IDriverService
             NameFilter = nameFilter?.ToLower(),
             Drivers = drivers
         };
-
-        return driversWithMetadata;
     }
 
     public async Task<DriverDto> GetDriverById(int id, HttpContext context)
@@ -86,38 +80,121 @@ public class DriverService : IDriverService
         {
             throw new InvalidDriverIdException(context.Request.Path);
         }
-        
-        Driver driver = await _context.Drivers.FindAsync(id);
+
+        var driver = await _context.Drivers
+            .Where(d => d.DriverId == id)
+            .Select(d => new DriverDto
+            {
+                DriverId = d.DriverId,
+                Name = d.FirstName + " " + d.LastName,
+                Nationality = d.Nationality
+            })
+            .FirstOrDefaultAsync();
 
         if (driver == null)
         {
             throw new DriverNotFoundException(context.Request.Path, id);
         }
 
-        return new DriverDto
-        {
-            DriverId = driver.DriverId,
-            Name = driver.FirstName + " " + driver.LastName,
-            Nationality = driver.Nationality
-        };
+        return driver;
     }
 
-    //public async Task<DriverDto> GetDriverById(int id)
-    //{
-    //    Driver driver = await _context.Drivers.FindAsync(id);
+    public async Task<IEnumerable<DriverStandingDto>> GetDriverStanding(
+        int year, HttpContext context)
+    {
+        if (year < 1950 || year > 2022)
+        {
+            throw new InvalidDriverStandingYearException(context.Request.Path);
+        }
 
-    //    if (driver != null)
-    //    {
-    //        return new DriverDto
-    //        {
-    //            DriverId = driver.DriverId,
-    //            Name = driver.FirstName + " " + driver.LastName,
-    //            Nationality = driver.Nationality
-    //        };
-    //    }
-    //    else
-    //    {
-    //        return null;
-    //    }
-    //}
+        return await _context.DriverStandings
+            .Where(ds => ds.Year == year)
+            .Include(ds => ds.Driver)
+            .Include(ds => ds.Team)
+            .OrderBy(ds => ds.Position == 0 ? int.MaxValue : ds.Position)
+            .Select(ds => new DriverStandingDto
+            {
+                Position = ds.Position,
+                DriverName = ds.Driver.FirstName + " " + ds.Driver.LastName,
+                Nationality = ds.Driver.Nationality,
+                TeamName = ds.Team.Name,
+                Points = ds.Points,
+                Year = ds.Year
+            })
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<DriverStandingDto>> GetDriverAllStandingsByDriverId(
+        int id, HttpContext context)
+    {
+        if (id <= 0)
+        {
+            throw new InvalidDriverIdException(context.Request.Path);
+        }
+
+        bool hasDriverStandings = await _context.DriverStandings
+            .AnyAsync(ds => ds.DriverId == id);
+
+        if (!hasDriverStandings)
+        {
+            throw new DriverWithoutStandingsException(context.Request.Path);
+        }
+
+        return await _context.DriverStandings
+            .Where(ds => ds.DriverId == id)
+            .Include(ds => ds.Driver)
+            .Include(ds => ds.Team)
+            .OrderBy(ds => ds.Year)
+            .Select(ds => new DriverStandingDto
+            {
+                Position = ds.Position,
+                DriverName = ds.Driver.FirstName + " " + ds.Driver.LastName,
+                Nationality = ds.Driver.Nationality,
+                TeamName = ds.Team.Name,
+                Points = ds.Points,
+                Year = ds.Year
+            })
+            .ToListAsync();
+    }
+
+    public async Task<IEnumerable<RaceResultDto>> GetDriverRaceResultsByYear(
+        int id, int year, HttpContext context)
+    {
+        if (id <= 0)
+        {
+            throw new InvalidDriverIdException(context.Request.Path);
+        }
+
+        if (year < 1950 || year > 2022)
+        {
+            throw new InvalidDriverStandingYearException(context.Request.Path);
+        }
+
+        bool didRaceInThatYear = await _context.RaceResults
+            .AnyAsync(rr => rr.DriverId == id && rr.Year == year);
+
+        if (!didRaceInThatYear)
+        {
+            throw new DriverDidNotRaceInThatYearException(context.Request.Path);
+        }
+
+        return await _context.RaceResults
+            .Where(rr => rr.Year == year && rr.DriverId == id)
+            .Include(rr => rr.Driver)
+            .Include(rr => rr.Team)
+            .Include(rr => rr.Circuit)
+            .OrderBy(rr => rr.Date)
+            .Select(rr => new RaceResultDto
+            {
+                Position = rr.Position,
+                CircuitName = rr.Circuit.Name,
+                Date = rr.Date,
+                DriverName = rr.Driver.FirstName + " " + rr.Driver.LastName,
+                TeamName = rr.Team.Name,
+                Points = rr.Points,
+                Time = rr.Time,
+                Laps = rr.Laps
+            })
+            .ToListAsync();
+    }
 }

@@ -1,6 +1,8 @@
-﻿namespace API.CustomExceptions;
+﻿using API.Interfaces;
 
-public class InvalidDriverIdException : Exception
+namespace API.CustomExceptions;
+
+public class InvalidDriverIdException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }

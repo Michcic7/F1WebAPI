@@ -1,10 +1,8 @@
 ﻿using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
-using API.ProblemDetailsErrors;
-using API.HelperMethods;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
-using API.Data.Models;
+using API.Interfaces;
 
 namespace API.Controllers;
 
@@ -15,17 +13,10 @@ public class DriversController : ControllerBase
     private const int _maxPageSize = 40;
 
     private readonly IDriverService _driverService;
-    private readonly IDriverStandingService _driverStandingService;
-    private readonly IRaceResultService _raceResultService;
 
-    public DriversController(
-        IDriverService service, 
-        IDriverStandingService driverStandingService, 
-        IRaceResultService raceResultService)
+    public DriversController(IDriverService service)
     {
         _driverService = service;
-        _driverStandingService = driverStandingService;
-        _raceResultService = raceResultService;
     }
 
     [HttpGet]
@@ -49,41 +40,19 @@ public class DriversController : ControllerBase
     [HttpGet("DriverStanding")]
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
         [FromQuery] int year = 2022)
-    {
-        if (year < 1950 || year > 2022)
-        {
-            YearProblemDetails<DriverStanding> problemDetails = new(
-                YearProblemDetailsType.DriverStanding, HttpContext);
-
-            return BadRequest(problemDetails);
-        }
-        
+    {        
         IEnumerable<DriverStandingDto> driverStandings = await 
-            _driverStandingService.GetDriverStanding(year);
+            _driverService.GetDriverStanding(year, HttpContext);
 
         return Ok(driverStandings);
     }
 
     [HttpGet("{id}/DriverStandings")]
-    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverAllStandingsById(
+    public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverAllStandingsByDriverId(
         int id)
     {
-        if (id <= 0)
-        {
-            EntityProblemDetails<Driver> problemDetails = new(
-                id.ToString(), EntityProblemDetailsType.NonPositiveId, HttpContext);
-
-            return BadRequest(problemDetails);
-        }
-
         IEnumerable<DriverStandingDto> driverStandings = await
-            _driverStandingService.GetDriverAllStandingsById(id);
-
-        if (driverStandings is null)
-        {
-            ProblemDetailsHelper.SetStandingsMissingError(HttpContext, StandingType.DriverStanding);
-            return NotFound();
-        }
+            _driverService.GetDriverAllStandingsByDriverId(id, HttpContext);
 
         return Ok(driverStandings);
     }
@@ -91,100 +60,10 @@ public class DriversController : ControllerBase
     [HttpGet("{id}/RaceResults")]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetDriverRaceResultsByYear(
         int id, [FromQuery] int year = 2022)
-    {
-        if (year < 1950 || year > 2022)
-        {
-            return BadRequest();
-        }
-        
+    {        
         IEnumerable<RaceResultDto> raceResults = await
-            _raceResultService.GetDriverRaceResultsByYear(id, year);
-
-        if (raceResults is null)
-        {
-            return NotFound();
-        }
+            _driverService.GetDriverRaceResultsByYear(id, year, HttpContext);
 
         return Ok(raceResults);
-    }
-
-    
-    private IEnumerable<DriverDto> FilterDriversByName(
-        string name, IEnumerable<DriverDto> drivers)
-    {
-        if (!string.IsNullOrEmpty(name))
-        {
-            drivers = drivers.Where(d =>
-                d.Name.StartsWith(name, StringComparison.OrdinalIgnoreCase) ||
-                d.Name.EndsWith(name, StringComparison.OrdinalIgnoreCase));
-        }
-
-        return drivers;
-    }
-
-    private void CalculateMetadata(int pageSize, IEnumerable<DriverDto> drivers, out int totalDrivers, out int totalPages)
-    {
-        totalDrivers = drivers.Count();
-        totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
-    }
-
-    private IEnumerable<DriverDto> PaginateDrivers(
-        int page, int pageSize, IEnumerable<DriverDto> drivers)
-    {
-        return drivers.Skip((page - 1) * pageSize).Take(pageSize);
-    }
-
-    private ActionResult ValidatePaginationInput(int page, int pageSize, int maxPageSize)
-    {
-        
-
-        if (pageSize > maxPageSize)
-        {
-            ProblemDetailsHelper.SetPageSizeError(HttpContext, PageSizeErrorType.PageSizeTooBig);
-            return BadRequest();
-        }
-
-        if (pageSize <= 0)
-        {
-            ProblemDetailsHelper.SetPageSizeError(HttpContext, PageSizeErrorType.PageSizeTooSmall);
-            return BadRequest();
-        }
-
-        return null;
-    }
-
-    private ActionResult ValidatePageInput(int page, int totalPages)
-    {
-        if (page > totalPages)
-        {
-            ProblemDetailsHelper.SetPageNumberError(
-                HttpContext, PageNumberErrorType.NotExistingPageNumber);
-            return BadRequest();
-        }
-
-        return null;
-    }
-
-    private ActionResult ValidateDriverId(int id)
-    {
-        if (id <= 0)
-        {
-            ProblemDetailsHelper.SetDriverIdError(HttpContext, DriverIdErrorType.ZeroOrNegativeId);
-            return BadRequest();
-        }
-
-        return null;
-    }
-
-    private ActionResult ValidateYear(int year)
-    {
-        if (year < 1950 || year > 2022)
-        {
-            ProblemDetailsHelper.SetStandingYearError(
-                HttpContext, StandingYearErrorType.DriverStanding);
-            return BadRequest();
-        }
-
-        return null;
     }
 }

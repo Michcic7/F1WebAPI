@@ -2,7 +2,7 @@
 
 namespace API.CustomExceptions;
 
-public class DriverNotFoundException : Exception, IExceptionProperties
+public class DriverWithoutStandingsException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }
@@ -10,12 +10,12 @@ public class DriverNotFoundException : Exception, IExceptionProperties
     public string Detail { get; }
     public string Instance { get; }
 
-    public DriverNotFoundException(string instance, int driverId)
+    public DriverWithoutStandingsException(string instance)
     {
         Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4";
-        Title = "Driver not found.";
+        Title = "Standings not found.";
         Status = StatusCodes.Status404NotFound;
-        Detail = $"Driver with ID = {driverId} was not found.";
+        Detail = "Could not find standings for a driver with the given ID.";
         Instance = instance;
     }
 }
