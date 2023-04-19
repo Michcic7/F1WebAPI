@@ -2,7 +2,7 @@
 
 namespace API.CustomExceptions;
 
-public class DriverNotFoundException : Exception, IExceptionProperties
+public class TeamWithoutStandingsException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }
@@ -10,12 +10,12 @@ public class DriverNotFoundException : Exception, IExceptionProperties
     public string Detail { get; }
     public string Instance { get; }
 
-    public DriverNotFoundException(string instance, int driverId)
+    public TeamWithoutStandingsException(string instance)
     {
         Type = "https://httpstatuses.io/404";
-        Title = "Driver not found.";
+        Title = "Standings not found.";
         Status = StatusCodes.Status404NotFound;
-        Detail = $"Driver with ID = {driverId} was not found.";
+        Detail = "Could not find standings for the team with the given ID.";
         Instance = instance;
     }
 }

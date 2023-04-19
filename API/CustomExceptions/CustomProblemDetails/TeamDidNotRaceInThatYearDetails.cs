@@ -2,7 +2,6 @@
 
 namespace API.CustomExceptions.CustomProblemDetails;
 
-public class DriverNotFoundDetails : ProblemDetails
+public class TeamDidNotRaceInThatYearDetails : ProblemDetails
 {
-
 }

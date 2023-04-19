@@ -2,7 +2,7 @@
 
 namespace API.CustomExceptions;
 
-public class DriverWithoutStandingsException : Exception, IExceptionProperties
+public class TeamDidNotRaceInThatYearException : Exception, IExceptionProperties
 {
     public string Type { get; }
     public string Title { get; }
@@ -10,12 +10,12 @@ public class DriverWithoutStandingsException : Exception, IExceptionProperties
     public string Detail { get; }
     public string Instance { get; }
 
-    public DriverWithoutStandingsException(string instance)
+    public TeamDidNotRaceInThatYearException(string instance)
     {
         Type = "https://httpstatuses.io/404";
-        Title = "Standings not found.";
+        Title = "Race results not found.";
         Status = StatusCodes.Status404NotFound;
-        Detail = "Could not find standings for the driver with the given ID.";
+        Detail = "Could not find race results for the given team in the given year.";
         Instance = instance;
     }
 }

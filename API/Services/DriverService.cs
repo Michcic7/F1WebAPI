@@ -78,10 +78,10 @@ public class DriverService : IDriverService
     {
         if (id <= 0)
         {
-            throw new InvalidDriverIdException(context.Request.Path);
+            throw new InvalidEntityIdException(typeof(Driver) ,context.Request.Path);
         }
 
-        var driver = await _context.Drivers
+        DriverDto driver = await _context.Drivers
             .Where(d => d.DriverId == id)
             .Select(d => new DriverDto
             {
@@ -93,7 +93,7 @@ public class DriverService : IDriverService
 
         if (driver == null)
         {
-            throw new DriverNotFoundException(context.Request.Path, id);
+            throw new EntityNotFoundException(typeof(Driver), id, context.Request.Path);
         }
 
         return driver;
@@ -104,7 +104,7 @@ public class DriverService : IDriverService
     {
         if (year < 1950 || year > 2022)
         {
-            throw new InvalidDriverStandingYearException(context.Request.Path);
+            throw new InvalidYearException(typeof(DriverStanding), context.Request.Path);
         }
 
         return await _context.DriverStandings
@@ -129,7 +129,7 @@ public class DriverService : IDriverService
     {
         if (id <= 0)
         {
-            throw new InvalidDriverIdException(context.Request.Path);
+            throw new InvalidEntityIdException(typeof(Driver), context.Request.Path);
         }
 
         bool hasDriverStandings = await _context.DriverStandings
@@ -162,12 +162,12 @@ public class DriverService : IDriverService
     {
         if (id <= 0)
         {
-            throw new InvalidDriverIdException(context.Request.Path);
+            throw new InvalidEntityIdException(typeof(Driver), context.Request.Path);
         }
 
         if (year < 1950 || year > 2022)
         {
-            throw new InvalidDriverStandingYearException(context.Request.Path);
+            throw new InvalidYearException(typeof(RaceResult), context.Request.Path);
         }
 
         bool didRaceInThatYear = await _context.RaceResults

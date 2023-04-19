@@ -62,7 +62,6 @@ public class DriversController : ControllerBase
     [HttpGet("DriverStanding")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
         [FromQuery] int year = 2022)
     {        

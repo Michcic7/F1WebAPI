@@ -2,6 +2,6 @@
 
 namespace API.CustomExceptions.CustomProblemDetails;
 
-public class InvalidRaceResultsYearDetails : ProblemDetails
+public class TeamWithoutStandingsDetails : ProblemDetails
 {
 }

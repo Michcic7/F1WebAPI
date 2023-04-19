@@ -3,6 +3,7 @@ using API.CustomExceptions;
 using API.CustomExceptions.CustomProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
+using API.Data.Models;
 
 namespace API.Extensions;
 
@@ -18,13 +19,15 @@ public static class ProblemDetailsSetup
             MapException<NonPositivePageNumberException, NonPositivePageNumberDetails>(options);
             MapException<PageNumberExceededTotalPagesException, PageNumberExceededTotalPagesDetails>(options);
 
-            MapException<InvalidDriverIdException, InvalidDriverIdDetails>(options);
-            MapException<InvalidDriverStandingYearException, InvalidDriverStandingYearDetails>(options);
-            MapException<InvalidRaceResultsYearException, InvalidRaceResultsYearDetails>(options);
+            MapException<InvalidYearException, InvalidYearDetails>(options);
+            MapException<InvalidEntityIdException, InvalidEntityIdDetails>(options);
+            MapException<EntityNotFoundException, EntityNotFoundDetails>(options);
 
-            MapException<DriverNotFoundException, DriverNotFoundDetails>(options);
             MapException<DriverWithoutStandingsException, DriverWithoutStandingsDetails>(options);
+            MapException<TeamWithoutStandingsException, TeamWithoutStandingsDetails>(options);
+
             MapException<DriverDidNotRaceInThatYearException, DriverDidNotRaceInThatYearDetails>(options);
+            MapException<TeamDidNotRaceInThatYearException, TeamDidNotRaceInThatYearDetails>(options);
         });
 
         return services;

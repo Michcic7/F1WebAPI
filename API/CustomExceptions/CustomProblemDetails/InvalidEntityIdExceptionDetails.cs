@@ -2,7 +2,6 @@
 
 namespace API.CustomExceptions.CustomProblemDetails;
 
-public class InvalidDriverIdDetails : ProblemDetails
+public class InvalidEntityIdDetails : ProblemDetails
 {
-
 }

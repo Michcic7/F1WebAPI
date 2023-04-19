@@ -2,6 +2,6 @@
 
 namespace API.CustomExceptions.CustomProblemDetails;
 
-public class InvalidDriverStandingYearDetails : ProblemDetails
+public class InvalidYearDetails : ProblemDetails
 {
 }
