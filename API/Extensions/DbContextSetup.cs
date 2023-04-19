@@ -17,9 +17,10 @@ public static class DbContextSetup
         //	});
 
         services
-            .AddDbContext<F1WebAPIContext>(options => options.UseNpgsql(
-                Environment.GetEnvironmentVariable("F1WebAPIConnectionString",
-                                                   EnvironmentVariableTarget.Machine)));
+            .AddDbContext<F1WebAPIContext>(options => 
+                options.UseNpgsql(
+                    Environment.GetEnvironmentVariable(
+                        "F1WebAPIConnectionString", EnvironmentVariableTarget.Machine)));
 
         return services;
     }

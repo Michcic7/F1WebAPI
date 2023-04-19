@@ -12,7 +12,7 @@ public class PageNumberExceededTotalPagesException : Exception, IExceptionProper
 
     public PageNumberExceededTotalPagesException(string instance)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1";
+        Type = "https://httpstatuses.io/400";
         Title = "Invalid page number.";
         Status = StatusCodes.Status400BadRequest;
         Detail = "Requested page number must be less than total number of pages.";

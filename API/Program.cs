@@ -10,10 +10,10 @@ builder.Services
 	.AddDbContext(builder)
 	.AddControllersConfiguration()
 	.AddProblemDetailsConfiguration()
+	.AddRateLimiterConfiguration()
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
 	.AddTransient<ICircuitService, CircuitService>()
-	.AddTransient<IDriverStandingService, DriverStandingService>()
 	.AddTransient<ITeamStandingService, TeamStandingService>()
 	.AddTransient<IRaceResultService, RaceResultService>();
 
@@ -30,6 +30,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseProblemDetails();
 app.UseHttpsRedirection();
+app.UseRateLimiter();
+
 app.MapControllers();
 
 app.Run();

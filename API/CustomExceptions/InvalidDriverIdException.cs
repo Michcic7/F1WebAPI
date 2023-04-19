@@ -12,7 +12,7 @@ public class InvalidDriverIdException : Exception, IExceptionProperties
 
     public InvalidDriverIdException(string instance)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1";
+        Type = "https://httpstatuses.io/400";
         Title = "Invalid ID.";
         Status = StatusCodes.Status400BadRequest;
         Detail = "Driver ID must be greater than 0.";

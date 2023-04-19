@@ -33,7 +33,7 @@ public class DriverService : IDriverService
         IQueryable<Driver> query = _context.Drivers;
 
         // Apply name filter to a query.
-        if (!string.IsNullOrEmpty(nameFilter))
+        if (!string.IsNullOrWhiteSpace(nameFilter))
         {
             nameFilter = nameFilter.ToLower();
 

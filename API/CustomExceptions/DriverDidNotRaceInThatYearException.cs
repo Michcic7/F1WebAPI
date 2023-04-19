@@ -12,7 +12,7 @@ public class DriverDidNotRaceInThatYearException : Exception, IExceptionProperti
 
     public DriverDidNotRaceInThatYearException(string instance)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4";
+        Type = "https://httpstatuses.io/404";
         Title = "Race results not found.";
         Status = StatusCodes.Status404NotFound;
         Detail = "Could not find race results for the given driver in the given year.";

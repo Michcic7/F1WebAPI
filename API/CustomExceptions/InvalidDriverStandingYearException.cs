@@ -12,7 +12,7 @@ public class InvalidDriverStandingYearException : Exception, IExceptionPropertie
 
     public InvalidDriverStandingYearException(string instance)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1";
+        Type = "https://httpstatuses.io/400";
         Title = "Invalid year.";
         Status = StatusCodes.Status400BadRequest;
         Detail = "The requested year must be between 1950 and 2022.";

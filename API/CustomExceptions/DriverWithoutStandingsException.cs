@@ -12,7 +12,7 @@ public class DriverWithoutStandingsException : Exception, IExceptionProperties
 
     public DriverWithoutStandingsException(string instance)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4";
+        Type = "https://httpstatuses.io/404";
         Title = "Standings not found.";
         Status = StatusCodes.Status404NotFound;
         Detail = "Could not find standings for a driver with the given ID.";

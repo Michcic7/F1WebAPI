@@ -12,7 +12,7 @@ public class DriverNotFoundException : Exception, IExceptionProperties
 
     public DriverNotFoundException(string instance, int driverId)
     {
-        Type = "https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4";
+        Type = "https://httpstatuses.io/404";
         Title = "Driver not found.";
         Status = StatusCodes.Status404NotFound;
         Detail = $"Driver with ID = {driverId} was not found.";
