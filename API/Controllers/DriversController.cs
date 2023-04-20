@@ -38,7 +38,7 @@ public class DriversController : ControllerBase
     }
 
     /// <summary>
-    /// Get a driver by ID.
+    /// Get a driver by the ID.
     /// </summary>
     /// <param name="id">The ID of the driver.</param>
     /// <returns></returns>

@@ -174,6 +174,7 @@ public class TeamService : ITeamService
             .Include(rr => rr.Team)
             .Include(rr => rr.Circuit)
             .OrderBy(rr => rr.Date)
+            // Move DNFs to the bottom of the list
             .ThenBy(rr => rr.Position == 0 ? int.MaxValue : rr.Position)
             .Select(rr => new RaceResultDto()
             {

@@ -13,9 +13,7 @@ builder.Services
 	.AddRateLimiterConfiguration()
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
-	.AddTransient<ICircuitService, CircuitService>()
-	.AddTransient<ITeamStandingService, TeamStandingService>()
-	.AddTransient<IRaceResultService, RaceResultService>();
+	.AddTransient<ICircuitService, CircuitService>();
 
 var app = builder.Build();
 

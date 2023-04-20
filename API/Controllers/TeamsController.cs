@@ -38,7 +38,7 @@ public class TeamsController : ControllerBase
     }
 
     /// <summary>
-    /// Get a team by ID.
+    /// Get a team by the ID.
     /// </summary>
     /// <param name="id">The ID of the team.</param>
     /// <returns></returns>

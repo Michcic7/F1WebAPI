@@ -111,6 +111,7 @@ public class DriverService : IDriverService
             .Where(ds => ds.Year == year)
             .Include(ds => ds.Driver)
             .Include(ds => ds.Team)
+            // Move DNFs to the bottom of the list
             .OrderBy(ds => ds.Position == 0 ? int.MaxValue : ds.Position)
             .Select(ds => new DriverStandingDto
             {
