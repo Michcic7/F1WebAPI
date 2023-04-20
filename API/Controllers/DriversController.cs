@@ -1,6 +1,5 @@
 ﻿using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
-using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
 
@@ -24,7 +23,7 @@ public class DriversController : ControllerBase
     /// </summary>
     /// <param name="page">The page number.</param>
     /// <param name="pageSize">How many drivers to include per page.</param>
-    /// <param name="name">Name or surname to filter drivers.</param>
+    /// <param name="name">The name or surname to filter drivers.</param>
     /// <returns></returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -41,7 +40,7 @@ public class DriversController : ControllerBase
     /// <summary>
     /// Get a driver by ID.
     /// </summary>
-    /// <param name="id">The ID of a driver.</param>
+    /// <param name="id">The ID of the driver.</param>
     /// <returns></returns>
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -55,7 +54,7 @@ public class DriversController : ControllerBase
     }
 
     /// <summary>
-    /// Get the drivers' championship standing from a given year.
+    /// Get the drivers' championship standing from the given year.
     /// </summary>
     /// <param name="year">The year of the championship.</param>
     /// <returns></returns>
@@ -74,7 +73,7 @@ public class DriversController : ControllerBase
     /// <summary>
     /// Get all championships the given driver participated in.
     /// </summary>
-    /// <param name="id">The ID of a driver.</param>
+    /// <param name="id">The ID of the driver.</param>
     /// <returns></returns>
     [HttpGet("{id}/DriverStandings")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -90,10 +89,10 @@ public class DriversController : ControllerBase
     }
 
     /// <summary>
-    /// Get all race results of the given driver from a given year.
+    /// Get all race results of the given driver from the given year.
     /// </summary>
-    /// <param name="id">The ID of a driver.</param>
-    /// <param name="year">The year</param>
+    /// <param name="id">The ID of the driver.</param>
+    /// <param name="year">The year of races.</param>
     /// <returns></returns>
     [HttpGet("{id}/RaceResults")]
     [ProducesResponseType(StatusCodes.Status200OK)]

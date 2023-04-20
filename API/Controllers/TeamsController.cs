@@ -1,7 +1,6 @@
 ﻿using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
 using API.Interfaces;
-using API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -19,7 +18,16 @@ public class TeamsController : ControllerBase
         _teamService = service;
     }
 
+    /// <summary>
+    /// Get all teams.
+    /// </summary>
+    /// <param name="page">The page number.</param>
+    /// <param name="pageSize">How many teams to include per page.</param>
+    /// <param name="name">The name to filter teams.</param>
+    /// <returns></returns>
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PaginatedTeamsDto>> GetTeams(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
     {
@@ -29,7 +37,15 @@ public class TeamsController : ControllerBase
         return Ok(teams);
     }
 
+    /// <summary>
+    /// Get a team by ID.
+    /// </summary>
+    /// <param name="id">The ID of the team.</param>
+    /// <returns></returns>
     [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<TeamDto>> GetTeamById(int id)
     {
         TeamDto team = await _teamService.GetTeamById(id, HttpContext);
@@ -37,7 +53,14 @@ public class TeamsController : ControllerBase
         return Ok(team);
     }
 
-    [HttpGet("TeamStanding")]    
+    /// <summary>
+    /// Get the teams' championship standing from the given year.
+    /// </summary>
+    /// <param name="year">The year of the championship.</param>
+    /// <returns></returns>
+    [HttpGet("TeamStanding")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<TeamStandingDto>>> GetTeamStandings(
         [FromQuery] int year = 2022)
     {        
@@ -47,7 +70,15 @@ public class TeamsController : ControllerBase
         return Ok(teamStandings);
     }
 
+    /// <summary>
+    /// Get all championships the given team participated in.
+    /// </summary>
+    /// <param name="id">The ID of the team.</param>
+    /// <returns></returns>
     [HttpGet("{id}/TeamStandings")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<TeamStandingDto>>> GetTeamAllStandingsById(
         int id)
     {
@@ -57,7 +88,16 @@ public class TeamsController : ControllerBase
         return Ok(teamStandings);
     }
 
+    /// <summary>
+    /// Get all race results of the given team from the given year.
+    /// </summary>
+    /// <param name="id">The ID of the team.</param>
+    /// <param name="year">The year of races.</param>
+    /// <returns></returns>
     [HttpGet("{id}/RaceResults")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetTeamRaceResultsByYear(
         int id, [FromQuery] int year = 2022)
     {
