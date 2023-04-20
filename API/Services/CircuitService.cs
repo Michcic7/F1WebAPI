@@ -112,6 +112,14 @@ public class CircuitService : ICircuitService
             throw new InvalidYearException(typeof(RaceResult), context.Request.Path);
         }
 
+        bool wereRacesInThatYear = await _context.RaceResults
+            .AnyAsync(rr => rr.CircuitId == id && rr.Year == year);
+
+        if (!wereRacesInThatYear)
+        {
+            throw new CircuitNoRaceInThatYearException(context.Request.Path);
+        }
+
         return await _context.RaceResults
             .Where(rr => rr.Year == year && rr.CircuitId == id)
             .Include(rr => rr.Driver)

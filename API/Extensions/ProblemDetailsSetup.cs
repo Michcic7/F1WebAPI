@@ -28,6 +28,7 @@ public static class ProblemDetailsSetup
 
             MapException<DriverDidNotRaceInThatYearException, DriverDidNotRaceInThatYearDetails>(options);
             MapException<TeamDidNotRaceInThatYearException, TeamDidNotRaceInThatYearDetails>(options);
+            MapException<CircuitNoRaceInThatYearException, CircuitNoRaceInThatYearDetails>(options);
         });
 
         return services;
