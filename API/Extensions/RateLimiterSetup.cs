@@ -1,6 +1,4 @@
-﻿using API.CustomExceptions;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.RateLimiting;
 
 namespace API.Extensions;
@@ -11,7 +9,7 @@ public static class RateLimiterSetup
     {
         services.AddRateLimiter(options =>
         {
-            int permitLimit = 10;
+            int permitLimit = 50;
 
             options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(
                 httpContext => RateLimitPartition.GetFixedWindowLimiter(
