@@ -1,4 +1,5 @@
 ﻿using API.Data.Models;
+using API.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -6,24 +7,26 @@ namespace API.Data;
 
 public class DataSeeder
 {
+    private readonly string _jsonFolder = Path.Combine(
+        DirectoryHelper.GetProjectFolderPath(), "Data", "Json");
+
     public void SeedInitialData()
     {
-        List<Driver> drivers = DeserializeDrivers();
-        List<Team> teams = DeserializeTeams();
-        List<Circuit> circuits = DeserializeCircuits();
-
-        List<DriverStanding> driverStandings = DeserializeDriverStandings();
-        List<TeamStanding> teamStandings = DeserializeTeamStandings();
-        List<RaceResult> raceResults = DeserializeRaceResults();
-
         using (var context = new F1WebAPIContext())
         {
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+            List<Driver> drivers = DeserializeDrivers();
+            List<Team> teams = DeserializeTeams();
+            List<Circuit> circuits = DeserializeCircuits();
+
+            List<DriverStanding> driverStandings = DeserializeDriverStandings();
+            List<TeamStanding> teamStandings = DeserializeTeamStandings();
+            List<RaceResult> raceResults = DeserializeRaceResults();
 
             context.Drivers.AddRange(drivers);
             context.Teams.AddRange(teams);
             context.Circuits.AddRange(circuits);
+
+            //context.NationalityCodes.AddRange(nationalityCodes);
 
 
             // preserve json relationships in DriverStanding
@@ -158,17 +161,17 @@ public class DataSeeder
 
             context.SaveChanges();
         }
+
+        Console.WriteLine("Database created and seeded.");
     }
 
     private List<RaceResult> DeserializeRaceResults()
     {
         List<RaceResult> raceResults = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\raceResults.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "raceResults.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             raceResults = JsonConvert.DeserializeObject<List<RaceResult>>(json);
@@ -188,11 +191,9 @@ public class DataSeeder
     {
         List<TeamStanding> teamStandings = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\teamStandings.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "teamStandings.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             teamStandings = JsonConvert.DeserializeObject<List<TeamStanding>>(json);
@@ -210,11 +211,9 @@ public class DataSeeder
     {
         List<DriverStanding> driverStandings = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\driverStandings.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "driverStandings.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             driverStandings = JsonConvert.DeserializeObject<List<DriverStanding>>(json);
@@ -233,11 +232,9 @@ public class DataSeeder
     {
         List<Circuit> circuits = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\circuits.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "circuits.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             circuits = JsonConvert.DeserializeObject<List<Circuit>>(json);
@@ -250,11 +247,9 @@ public class DataSeeder
     {
         List<Team> teams = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\teams.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "teams.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             teams = JsonConvert.DeserializeObject<List<Team>>(json);
@@ -267,11 +262,9 @@ public class DataSeeder
     {
         List<Driver> drivers = new();
 
-        string basePath = Environment.CurrentDirectory;
-        string relativePath = @"\Data\Json\drivers.json";
-        string fullPath = Path.Combine(basePath + relativePath);
+        string path = Path.Combine(_jsonFolder, "drivers.json");
 
-        using (StreamReader reader = new(fullPath))
+        using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
             drivers = JsonConvert.DeserializeObject<List<Driver>>(json);

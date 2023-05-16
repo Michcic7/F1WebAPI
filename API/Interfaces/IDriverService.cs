@@ -6,7 +6,8 @@ namespace API.Interfaces;
 public interface IDriverService
 {
     Task<PaginatedDriversDto> GetDrivers(
-        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context);
+        int page, int pageSize, int maxPageSize, string nameFilter, 
+        string nationalityFilter, HttpContext context);
 
     Task<DriverDto> GetDriverById(int id, HttpContext context);
 

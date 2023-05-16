@@ -5,6 +5,7 @@ using API.Data.DTOs.DTOsWithMetadata;
 using API.Data.Models;
 using API.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace API.Services;
 
@@ -18,7 +19,8 @@ public class DriverService : IDriverService
     }
 
     public async Task<PaginatedDriversDto> GetDrivers(
-        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context)
+        int page, int pageSize, int maxPageSize, 
+        string nameFilter, string nationalityFilter, HttpContext context)
     {
         if (page <= 0)
         {
@@ -42,14 +44,18 @@ public class DriverService : IDriverService
                 d.LastName.ToLower().Contains(nameFilter));
         }
 
+        // Apply nationality filter to a query.
+        if (!string.IsNullOrWhiteSpace(nationalityFilter))
+        {
+            nationalityFilter = nationalityFilter.ToLower();
+
+            query = query.Where(d =>
+                d.Nationality.ToLower().Contains(nationalityFilter));
+        }
+
         // Calculate metadata.
         int totalDrivers = await query.CountAsync();
         int totalPages = (int)Math.Ceiling((double)totalDrivers / pageSize);
-
-        if (page > totalPages)
-        {
-            throw new PageNumberExceededTotalPagesException(context.Request.Path);
-        }
 
         // Chain the query further and iterate over it.
         IEnumerable<DriverDto> drivers = await query
@@ -62,6 +68,16 @@ public class DriverService : IDriverService
                 Nationality = d.Nationality
             })
             .ToListAsync();
+
+        if (page != 1 && page > totalPages)
+        {
+            throw new PageNumberExceededTotalPagesException(context.Request.Path);
+        }
+
+        if (drivers.Count() == 0)
+        {
+            throw new FilteredEntitiesNotFoundException(typeof(Driver), context.Request.Path);
+        }
 
         return new PaginatedDriversDto
         {
@@ -78,7 +94,7 @@ public class DriverService : IDriverService
     {
         if (id <= 0)
         {
-            throw new InvalidEntityIdException(typeof(Driver) ,context.Request.Path);
+            throw new InvalidEntityIdException(typeof(Driver), context.Request.Path);
         }
 
         DriverDto driver = await _context.Drivers

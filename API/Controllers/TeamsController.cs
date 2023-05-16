@@ -10,6 +10,7 @@ namespace API.Controllers;
 public class TeamsController : ControllerBase
 {
     private const int _maxPageSize = 40;
+    private const int _defaultYear = 2023;
 
     private readonly ITeamService _teamService;
 
@@ -62,7 +63,7 @@ public class TeamsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<TeamStandingDto>>> GetTeamStandings(
-        [FromQuery] int year = 2022)
+        [FromQuery] int year = _defaultYear)
     {        
         IEnumerable<TeamStandingDto> teamStandings = await
             _teamService.GetTeamStanding(year, HttpContext);
@@ -99,7 +100,7 @@ public class TeamsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetTeamRaceResultsByYear(
-        int id, [FromQuery] int year = 2022)
+        int id, [FromQuery] int year = _defaultYear)
     {
         IEnumerable<RaceResultDto> raceResults = await 
             _teamService.GetTeamRaceResultsByYear(id, year, HttpContext);

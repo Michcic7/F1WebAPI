@@ -1416,7 +1416,7 @@
       "TeamId": 6,
       "Name": "Ferrari"
     },
-    "Points": 0.0,
+    "Points": 72.5,
     "Year": 1975
   },
   {
@@ -1466,7 +1466,7 @@
       "TeamId": 145,
       "Name": "Shadow Ford"
     },
-    "Points": 0.0,
+    "Points": 9.5,
     "Year": 1975
   },
   {
@@ -1486,7 +1486,7 @@
       "TeamId": 132,
       "Name": "March Ford"
     },
-    "Points": 0.0,
+    "Points": 7.5,
     "Year": 1975
   },
   {
@@ -2566,7 +2566,7 @@
       "TeamId": 184,
       "Name": "McLaren TAG"
     },
-    "Points": 0.0,
+    "Points": 143.5,
     "Year": 1984
   },
   {
@@ -2576,7 +2576,7 @@
       "TeamId": 6,
       "Name": "Ferrari"
     },
-    "Points": 0.0,
+    "Points": 57.5,
     "Year": 1984
   },
   {
@@ -2616,7 +2616,7 @@
       "TeamId": 185,
       "Name": "Williams Honda"
     },
-    "Points": 0.0,
+    "Points": 25.5,
     "Year": 1984
   },
   {
@@ -3396,7 +3396,7 @@
       "TeamId": 6,
       "Name": "Ferrari"
     },
-    "Points": 0.0,
+    "Points": 55.5,
     "Year": 1991
   },
   {
@@ -3406,7 +3406,7 @@
       "TeamId": 197,
       "Name": "Benetton Ford"
     },
-    "Points": 0.0,
+    "Points": 38.5,
     "Year": 1991
   },
   {
@@ -5266,7 +5266,7 @@
       "TeamId": 297,
       "Name": "RBR Renault"
     },
-    "Points": 0.0,
+    "Points": 153.5,
     "Year": 2009
   },
   {
@@ -5296,7 +5296,7 @@
       "TeamId": 279,
       "Name": "Toyota"
     },
-    "Points": 0.0,
+    "Points": 59.5,
     "Year": 2009
   },
   {
@@ -5316,7 +5316,7 @@
       "TeamId": 290,
       "Name": "Williams Toyota"
     },
-    "Points": 0.0,
+    "Points": 34.5,
     "Year": 2009
   },
   {
@@ -6546,7 +6546,7 @@
       "TeamId": 298,
       "Name": "Mercedes"
     },
-    "Points": 0.0,
+    "Points": 613.5,
     "Year": 2021
   },
   {
@@ -6556,7 +6556,7 @@
       "TeamId": 317,
       "Name": "Red Bull Racing Honda"
     },
-    "Points": 0.0,
+    "Points": 585.5,
     "Year": 2021
   },
   {
@@ -6566,7 +6566,7 @@
       "TeamId": 6,
       "Name": "Ferrari"
     },
-    "Points": 0.0,
+    "Points": 323.5,
     "Year": 2021
   },
   {
@@ -6738,5 +6738,105 @@
     },
     "Points": 8.0,
     "Year": 2022
+  },
+  {
+    "TeamStandingId": 675,
+    "Position": 1,
+    "Team": {
+      "TeamId": 327,
+      "Name": "Red Bull Racing Honda RBPT"
+    },
+    "Points": 224.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 676,
+    "Position": 2,
+    "Team": {
+      "TeamId": 325,
+      "Name": "Aston Martin Aramco Mercedes"
+    },
+    "Points": 102.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 677,
+    "Position": 3,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 96.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 678,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 78.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 679,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 14.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 680,
+    "Position": 6,
+    "Team": {
+      "TeamId": 322,
+      "Name": "Alpine Renault"
+    },
+    "Points": 14.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 681,
+    "Position": 7,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 682,
+    "Position": 8,
+    "Team": {
+      "TeamId": 323,
+      "Name": "Alfa Romeo Ferrari"
+    },
+    "Points": 6.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 683,
+    "Position": 9,
+    "Team": {
+      "TeamId": 328,
+      "Name": "AlphaTauri Honda RBPT"
+    },
+    "Points": 2.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 684,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 1.0,
+    "Year": 2023
   }
 ]

@@ -568,5 +568,10 @@
     "CircuitId": 114,
     "Name": "Marina Bay Street Circuit",
     "Location": "Marina Bay"
+  },
+  {
+    "CircuitId": 115,
+    "Name": "Las Vegas",
+    "Location": "Las Vegas"
   }
 ]

@@ -99,6 +99,23 @@ namespace API.Migrations
                     b.ToTable("DriverStandings");
                 });
 
+            modelBuilder.Entity("API.Data.Models.NationalityCode", b =>
+                {
+                    b.Property<int>("NationalityCodeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("NationalityCodeId"));
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("NationalityCodeId");
+
+                    b.ToTable("NationalityCodes");
+                });
+
             modelBuilder.Entity("API.Data.Models.RaceResult", b =>
                 {
                     b.Property<int>("RaceResultId")

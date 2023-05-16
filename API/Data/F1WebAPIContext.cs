@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 using API.Data.Models;
 
 namespace API.Data;
@@ -15,17 +14,17 @@ public class F1WebAPIContext : DbContext
     {
 	}
         
-    public virtual DbSet<Driver> Drivers { get; set; } = default!;
-    public virtual DbSet<Team> Teams { get; set; } = default!;
-    public virtual DbSet<Circuit> Circuits { get; set; } = default!;
-    public virtual DbSet<DriverStanding> DriverStandings { get; set; } = default!;
-    public virtual DbSet<TeamStanding> TeamStandings { get; set; } = default!;
-    public virtual DbSet<RaceResult> RaceResults { get; set; } = default!;
+    public virtual DbSet<Driver> Drivers { get; set; }
+    public virtual DbSet<Team> Teams { get; set; }
+    public virtual DbSet<Circuit> Circuits { get; set; }
+    public virtual DbSet<DriverStanding> DriverStandings { get; set; }
+    public virtual DbSet<TeamStanding> TeamStandings { get; set; }
+    public virtual DbSet<RaceResult> RaceResults { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)        
     {
         optionsBuilder.UseNpgsql(Environment.GetEnvironmentVariable(
-            "F1WebAPIConnectionString", EnvironmentVariableTarget.Machine));
+            "F1WebAPIConnectionString", EnvironmentVariableTarget.User));
 
         optionsBuilder.EnableSensitiveDataLogging(true);
     }

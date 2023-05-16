@@ -1,0 +1,998 @@
+[
+  {
+    "NationalityCodeId": 1,
+    "Country": "AFG"
+  },
+  {
+    "NationalityCodeId": 2,
+    "Country": "ALA"
+  },
+  {
+    "NationalityCodeId": 3,
+    "Country": "ALB"
+  },
+  {
+    "NationalityCodeId": 4,
+    "Country": "DZA"
+  },
+  {
+    "NationalityCodeId": 5,
+    "Country": "ASM"
+  },
+  {
+    "NationalityCodeId": 6,
+    "Country": "AND"
+  },
+  {
+    "NationalityCodeId": 7,
+    "Country": "AGO"
+  },
+  {
+    "NationalityCodeId": 8,
+    "Country": "AIA"
+  },
+  {
+    "NationalityCodeId": 9,
+    "Country": "ATA"
+  },
+  {
+    "NationalityCodeId": 10,
+    "Country": "ATG"
+  },
+  {
+    "NationalityCodeId": 11,
+    "Country": "ARG"
+  },
+  {
+    "NationalityCodeId": 12,
+    "Country": "ARM"
+  },
+  {
+    "NationalityCodeId": 13,
+    "Country": "ABW"
+  },
+  {
+    "NationalityCodeId": 14,
+    "Country": "AUS"
+  },
+  {
+    "NationalityCodeId": 15,
+    "Country": "AUT"
+  },
+  {
+    "NationalityCodeId": 16,
+    "Country": "AZE"
+  },
+  {
+    "NationalityCodeId": 17,
+    "Country": "BHS"
+  },
+  {
+    "NationalityCodeId": 18,
+    "Country": "BHR"
+  },
+  {
+    "NationalityCodeId": 19,
+    "Country": "BGD"
+  },
+  {
+    "NationalityCodeId": 20,
+    "Country": "BRB"
+  },
+  {
+    "NationalityCodeId": 21,
+    "Country": "BLR"
+  },
+  {
+    "NationalityCodeId": 22,
+    "Country": "BEL"
+  },
+  {
+    "NationalityCodeId": 23,
+    "Country": "BLZ"
+  },
+  {
+    "NationalityCodeId": 24,
+    "Country": "BEN"
+  },
+  {
+    "NationalityCodeId": 25,
+    "Country": "BMU"
+  },
+  {
+    "NationalityCodeId": 26,
+    "Country": "BTN"
+  },
+  {
+    "NationalityCodeId": 27,
+    "Country": "BOL"
+  },
+  {
+    "NationalityCodeId": 28,
+    "Country": "BES"
+  },
+  {
+    "NationalityCodeId": 29,
+    "Country": "BIH"
+  },
+  {
+    "NationalityCodeId": 30,
+    "Country": "BWA"
+  },
+  {
+    "NationalityCodeId": 31,
+    "Country": "BVT"
+  },
+  {
+    "NationalityCodeId": 32,
+    "Country": "BRA"
+  },
+  {
+    "NationalityCodeId": 33,
+    "Country": "IOT"
+  },
+  {
+    "NationalityCodeId": 34,
+    "Country": "BRN"
+  },
+  {
+    "NationalityCodeId": 35,
+    "Country": "BGR"
+  },
+  {
+    "NationalityCodeId": 36,
+    "Country": "BFA"
+  },
+  {
+    "NationalityCodeId": 37,
+    "Country": "BDI"
+  },
+  {
+    "NationalityCodeId": 38,
+    "Country": "CPV"
+  },
+  {
+    "NationalityCodeId": 39,
+    "Country": "KHM"
+  },
+  {
+    "NationalityCodeId": 40,
+    "Country": "CMR"
+  },
+  {
+    "NationalityCodeId": 41,
+    "Country": "CAN"
+  },
+  {
+    "NationalityCodeId": 42,
+    "Country": "CYM"
+  },
+  {
+    "NationalityCodeId": 43,
+    "Country": "CAF"
+  },
+  {
+    "NationalityCodeId": 44,
+    "Country": "TCD"
+  },
+  {
+    "NationalityCodeId": 45,
+    "Country": "CHL"
+  },
+  {
+    "NationalityCodeId": 46,
+    "Country": "CHN"
+  },
+  {
+    "NationalityCodeId": 47,
+    "Country": "CXR"
+  },
+  {
+    "NationalityCodeId": 48,
+    "Country": "CCK"
+  },
+  {
+    "NationalityCodeId": 49,
+    "Country": "COL"
+  },
+  {
+    "NationalityCodeId": 50,
+    "Country": "COM"
+  },
+  {
+    "NationalityCodeId": 51,
+    "Country": "COD"
+  },
+  {
+    "NationalityCodeId": 52,
+    "Country": "COG"
+  },
+  {
+    "NationalityCodeId": 53,
+    "Country": "COK"
+  },
+  {
+    "NationalityCodeId": 54,
+    "Country": "CRI"
+  },
+  {
+    "NationalityCodeId": 55,
+    "Country": "CIV"
+  },
+  {
+    "NationalityCodeId": 56,
+    "Country": "HRV"
+  },
+  {
+    "NationalityCodeId": 57,
+    "Country": "CUB"
+  },
+  {
+    "NationalityCodeId": 58,
+    "Country": "CUW"
+  },
+  {
+    "NationalityCodeId": 59,
+    "Country": "CYP"
+  },
+  {
+    "NationalityCodeId": 60,
+    "Country": "CZE"
+  },
+  {
+    "NationalityCodeId": 61,
+    "Country": "DNK"
+  },
+  {
+    "NationalityCodeId": 62,
+    "Country": "DJI"
+  },
+  {
+    "NationalityCodeId": 63,
+    "Country": "DMA"
+  },
+  {
+    "NationalityCodeId": 64,
+    "Country": "DOM"
+  },
+  {
+    "NationalityCodeId": 65,
+    "Country": "ECU"
+  },
+  {
+    "NationalityCodeId": 66,
+    "Country": "EGY"
+  },
+  {
+    "NationalityCodeId": 67,
+    "Country": "SLV"
+  },
+  {
+    "NationalityCodeId": 68,
+    "Country": "GNQ"
+  },
+  {
+    "NationalityCodeId": 69,
+    "Country": "ERI"
+  },
+  {
+    "NationalityCodeId": 70,
+    "Country": "EST"
+  },
+  {
+    "NationalityCodeId": 71,
+    "Country": "SWZ"
+  },
+  {
+    "NationalityCodeId": 72,
+    "Country": "ETH"
+  },
+  {
+    "NationalityCodeId": 73,
+    "Country": "FLK"
+  },
+  {
+    "NationalityCodeId": 74,
+    "Country": "FRO"
+  },
+  {
+    "NationalityCodeId": 75,
+    "Country": "FJI"
+  },
+  {
+    "NationalityCodeId": 76,
+    "Country": "FIN"
+  },
+  {
+    "NationalityCodeId": 77,
+    "Country": "FRA"
+  },
+  {
+    "NationalityCodeId": 78,
+    "Country": "GUF"
+  },
+  {
+    "NationalityCodeId": 79,
+    "Country": "PYF"
+  },
+  {
+    "NationalityCodeId": 80,
+    "Country": "ATF"
+  },
+  {
+    "NationalityCodeId": 81,
+    "Country": "GAB"
+  },
+  {
+    "NationalityCodeId": 82,
+    "Country": "GMB"
+  },
+  {
+    "NationalityCodeId": 83,
+    "Country": "GEO"
+  },
+  {
+    "NationalityCodeId": 84,
+    "Country": "DEU"
+  },
+  {
+    "NationalityCodeId": 85,
+    "Country": "GHA"
+  },
+  {
+    "NationalityCodeId": 86,
+    "Country": "GIB"
+  },
+  {
+    "NationalityCodeId": 87,
+    "Country": "GRC"
+  },
+  {
+    "NationalityCodeId": 88,
+    "Country": "GRL"
+  },
+  {
+    "NationalityCodeId": 89,
+    "Country": "GRD"
+  },
+  {
+    "NationalityCodeId": 90,
+    "Country": "GLP"
+  },
+  {
+    "NationalityCodeId": 91,
+    "Country": "GUM"
+  },
+  {
+    "NationalityCodeId": 92,
+    "Country": "GTM"
+  },
+  {
+    "NationalityCodeId": 93,
+    "Country": "GGY"
+  },
+  {
+    "NationalityCodeId": 94,
+    "Country": "GIN"
+  },
+  {
+    "NationalityCodeId": 95,
+    "Country": "GNB"
+  },
+  {
+    "NationalityCodeId": 96,
+    "Country": "GUY"
+  },
+  {
+    "NationalityCodeId": 97,
+    "Country": "HTI"
+  },
+  {
+    "NationalityCodeId": 98,
+    "Country": "HMD"
+  },
+  {
+    "NationalityCodeId": 99,
+    "Country": "VAT"
+  },
+  {
+    "NationalityCodeId": 100,
+    "Country": "HND"
+  },
+  {
+    "NationalityCodeId": 101,
+    "Country": "HKG"
+  },
+  {
+    "NationalityCodeId": 102,
+    "Country": "HUN"
+  },
+  {
+    "NationalityCodeId": 103,
+    "Country": "ISL"
+  },
+  {
+    "NationalityCodeId": 104,
+    "Country": "IND"
+  },
+  {
+    "NationalityCodeId": 105,
+    "Country": "IDN"
+  },
+  {
+    "NationalityCodeId": 106,
+    "Country": "IRN"
+  },
+  {
+    "NationalityCodeId": 107,
+    "Country": "IRQ"
+  },
+  {
+    "NationalityCodeId": 108,
+    "Country": "IRL"
+  },
+  {
+    "NationalityCodeId": 109,
+    "Country": "IMN"
+  },
+  {
+    "NationalityCodeId": 110,
+    "Country": "ISR"
+  },
+  {
+    "NationalityCodeId": 111,
+    "Country": "ITA"
+  },
+  {
+    "NationalityCodeId": 112,
+    "Country": "JAM"
+  },
+  {
+    "NationalityCodeId": 113,
+    "Country": "JPN"
+  },
+  {
+    "NationalityCodeId": 114,
+    "Country": "JEY"
+  },
+  {
+    "NationalityCodeId": 115,
+    "Country": "JOR"
+  },
+  {
+    "NationalityCodeId": 116,
+    "Country": "KAZ"
+  },
+  {
+    "NationalityCodeId": 117,
+    "Country": "KEN"
+  },
+  {
+    "NationalityCodeId": 118,
+    "Country": "KIR"
+  },
+  {
+    "NationalityCodeId": 119,
+    "Country": "PRK"
+  },
+  {
+    "NationalityCodeId": 120,
+    "Country": "KOR"
+  },
+  {
+    "NationalityCodeId": 121,
+    "Country": "KWT"
+  },
+  {
+    "NationalityCodeId": 122,
+    "Country": "KGZ"
+  },
+  {
+    "NationalityCodeId": 123,
+    "Country": "LAO"
+  },
+  {
+    "NationalityCodeId": 124,
+    "Country": "LVA"
+  },
+  {
+    "NationalityCodeId": 125,
+    "Country": "LBN"
+  },
+  {
+    "NationalityCodeId": 126,
+    "Country": "LSO"
+  },
+  {
+    "NationalityCodeId": 127,
+    "Country": "LBR"
+  },
+  {
+    "NationalityCodeId": 128,
+    "Country": "LBY"
+  },
+  {
+    "NationalityCodeId": 129,
+    "Country": "LIE"
+  },
+  {
+    "NationalityCodeId": 130,
+    "Country": "LTU"
+  },
+  {
+    "NationalityCodeId": 131,
+    "Country": "LUX"
+  },
+  {
+    "NationalityCodeId": 132,
+    "Country": "MAC"
+  },
+  {
+    "NationalityCodeId": 133,
+    "Country": "MKD"
+  },
+  {
+    "NationalityCodeId": 134,
+    "Country": "MDG"
+  },
+  {
+    "NationalityCodeId": 135,
+    "Country": "MWI"
+  },
+  {
+    "NationalityCodeId": 136,
+    "Country": "MYS"
+  },
+  {
+    "NationalityCodeId": 137,
+    "Country": "MDV"
+  },
+  {
+    "NationalityCodeId": 138,
+    "Country": "MLI"
+  },
+  {
+    "NationalityCodeId": 139,
+    "Country": "MLT"
+  },
+  {
+    "NationalityCodeId": 140,
+    "Country": "MHL"
+  },
+  {
+    "NationalityCodeId": 141,
+    "Country": "MTQ"
+  },
+  {
+    "NationalityCodeId": 142,
+    "Country": "MRT"
+  },
+  {
+    "NationalityCodeId": 143,
+    "Country": "MUS"
+  },
+  {
+    "NationalityCodeId": 144,
+    "Country": "MYT"
+  },
+  {
+    "NationalityCodeId": 145,
+    "Country": "MEX"
+  },
+  {
+    "NationalityCodeId": 146,
+    "Country": "FSM"
+  },
+  {
+    "NationalityCodeId": 147,
+    "Country": "MDA"
+  },
+  {
+    "NationalityCodeId": 148,
+    "Country": "MCO"
+  },
+  {
+    "NationalityCodeId": 149,
+    "Country": "MNG"
+  },
+  {
+    "NationalityCodeId": 150,
+    "Country": "MNE"
+  },
+  {
+    "NationalityCodeId": 151,
+    "Country": "MSR"
+  },
+  {
+    "NationalityCodeId": 152,
+    "Country": "MAR"
+  },
+  {
+    "NationalityCodeId": 153,
+    "Country": "MOZ"
+  },
+  {
+    "NationalityCodeId": 154,
+    "Country": "MMR"
+  },
+  {
+    "NationalityCodeId": 155,
+    "Country": "NAM"
+  },
+  {
+    "NationalityCodeId": 156,
+    "Country": "NRU"
+  },
+  {
+    "NationalityCodeId": 157,
+    "Country": "NPL"
+  },
+  {
+    "NationalityCodeId": 158,
+    "Country": "NLD"
+  },
+  {
+    "NationalityCodeId": 159,
+    "Country": "NCL"
+  },
+  {
+    "NationalityCodeId": 160,
+    "Country": "NZL"
+  },
+  {
+    "NationalityCodeId": 161,
+    "Country": "NIC"
+  },
+  {
+    "NationalityCodeId": 162,
+    "Country": "NER"
+  },
+  {
+    "NationalityCodeId": 163,
+    "Country": "NGA"
+  },
+  {
+    "NationalityCodeId": 164,
+    "Country": "NIU"
+  },
+  {
+    "NationalityCodeId": 165,
+    "Country": "NFK"
+  },
+  {
+    "NationalityCodeId": 166,
+    "Country": "MNP"
+  },
+  {
+    "NationalityCodeId": 167,
+    "Country": "NOR"
+  },
+  {
+    "NationalityCodeId": 168,
+    "Country": "OMN"
+  },
+  {
+    "NationalityCodeId": 169,
+    "Country": "PAK"
+  },
+  {
+    "NationalityCodeId": 170,
+    "Country": "PLW"
+  },
+  {
+    "NationalityCodeId": 171,
+    "Country": "PSE"
+  },
+  {
+    "NationalityCodeId": 172,
+    "Country": "PAN"
+  },
+  {
+    "NationalityCodeId": 173,
+    "Country": "PNG"
+  },
+  {
+    "NationalityCodeId": 174,
+    "Country": "PRY"
+  },
+  {
+    "NationalityCodeId": 175,
+    "Country": "PER"
+  },
+  {
+    "NationalityCodeId": 176,
+    "Country": "PHL"
+  },
+  {
+    "NationalityCodeId": 177,
+    "Country": "PCN"
+  },
+  {
+    "NationalityCodeId": 178,
+    "Country": "POL"
+  },
+  {
+    "NationalityCodeId": 179,
+    "Country": "PRT"
+  },
+  {
+    "NationalityCodeId": 180,
+    "Country": "PRI"
+  },
+  {
+    "NationalityCodeId": 181,
+    "Country": "QAT"
+  },
+  {
+    "NationalityCodeId": 182,
+    "Country": "REU"
+  },
+  {
+    "NationalityCodeId": 183,
+    "Country": "ROU"
+  },
+  {
+    "NationalityCodeId": 184,
+    "Country": "RUS"
+  },
+  {
+    "NationalityCodeId": 185,
+    "Country": "RWA"
+  },
+  {
+    "NationalityCodeId": 186,
+    "Country": "BLM"
+  },
+  {
+    "NationalityCodeId": 187,
+    "Country": "SHN"
+  },
+  {
+    "NationalityCodeId": 188,
+    "Country": "KNA"
+  },
+  {
+    "NationalityCodeId": 189,
+    "Country": "LCA"
+  },
+  {
+    "NationalityCodeId": 190,
+    "Country": "MAF"
+  },
+  {
+    "NationalityCodeId": 191,
+    "Country": "SPM"
+  },
+  {
+    "NationalityCodeId": 192,
+    "Country": "VCT"
+  },
+  {
+    "NationalityCodeId": 193,
+    "Country": "WSM"
+  },
+  {
+    "NationalityCodeId": 194,
+    "Country": "SMR"
+  },
+  {
+    "NationalityCodeId": 195,
+    "Country": "STP"
+  },
+  {
+    "NationalityCodeId": 196,
+    "Country": "SAU"
+  },
+  {
+    "NationalityCodeId": 197,
+    "Country": "SEN"
+  },
+  {
+    "NationalityCodeId": 198,
+    "Country": "SRB"
+  },
+  {
+    "NationalityCodeId": 199,
+    "Country": "SYC"
+  },
+  {
+    "NationalityCodeId": 200,
+    "Country": "SLE"
+  },
+  {
+    "NationalityCodeId": 201,
+    "Country": "SGP"
+  },
+  {
+    "NationalityCodeId": 202,
+    "Country": "SXM"
+  },
+  {
+    "NationalityCodeId": 203,
+    "Country": "SVK"
+  },
+  {
+    "NationalityCodeId": 204,
+    "Country": "SVN"
+  },
+  {
+    "NationalityCodeId": 205,
+    "Country": "SLB"
+  },
+  {
+    "NationalityCodeId": 206,
+    "Country": "SOM"
+  },
+  {
+    "NationalityCodeId": 207,
+    "Country": "ZAF"
+  },
+  {
+    "NationalityCodeId": 208,
+    "Country": "SGS"
+  },
+  {
+    "NationalityCodeId": 209,
+    "Country": "SSD"
+  },
+  {
+    "NationalityCodeId": 210,
+    "Country": "ESP"
+  },
+  {
+    "NationalityCodeId": 211,
+    "Country": "LKA"
+  },
+  {
+    "NationalityCodeId": 212,
+    "Country": "SDN"
+  },
+  {
+    "NationalityCodeId": 213,
+    "Country": "SUR"
+  },
+  {
+    "NationalityCodeId": 214,
+    "Country": "SJM"
+  },
+  {
+    "NationalityCodeId": 215,
+    "Country": "SWE"
+  },
+  {
+    "NationalityCodeId": 216,
+    "Country": "CHE"
+  },
+  {
+    "NationalityCodeId": 217,
+    "Country": "SYR"
+  },
+  {
+    "NationalityCodeId": 218,
+    "Country": "TWN"
+  },
+  {
+    "NationalityCodeId": 219,
+    "Country": "TJK"
+  },
+  {
+    "NationalityCodeId": 220,
+    "Country": "TZA"
+  },
+  {
+    "NationalityCodeId": 221,
+    "Country": "THA"
+  },
+  {
+    "NationalityCodeId": 222,
+    "Country": "TLS"
+  },
+  {
+    "NationalityCodeId": 223,
+    "Country": "TGO"
+  },
+  {
+    "NationalityCodeId": 224,
+    "Country": "TKL"
+  },
+  {
+    "NationalityCodeId": 225,
+    "Country": "TON"
+  },
+  {
+    "NationalityCodeId": 226,
+    "Country": "TTO"
+  },
+  {
+    "NationalityCodeId": 227,
+    "Country": "TUN"
+  },
+  {
+    "NationalityCodeId": 228,
+    "Country": "TUR"
+  },
+  {
+    "NationalityCodeId": 229,
+    "Country": "TKM"
+  },
+  {
+    "NationalityCodeId": 230,
+    "Country": "TCA"
+  },
+  {
+    "NationalityCodeId": 231,
+    "Country": "TUV"
+  },
+  {
+    "NationalityCodeId": 232,
+    "Country": "UGA"
+  },
+  {
+    "NationalityCodeId": 233,
+    "Country": "UKR"
+  },
+  {
+    "NationalityCodeId": 234,
+    "Country": "ARE"
+  },
+  {
+    "NationalityCodeId": 235,
+    "Country": "GBR"
+  },
+  {
+    "NationalityCodeId": 236,
+    "Country": "UMI"
+  },
+  {
+    "NationalityCodeId": 237,
+    "Country": "USA"
+  },
+  {
+    "NationalityCodeId": 238,
+    "Country": "URY"
+  },
+  {
+    "NationalityCodeId": 239,
+    "Country": "UZB"
+  },
+  {
+    "NationalityCodeId": 240,
+    "Country": "VUT"
+  },
+  {
+    "NationalityCodeId": 241,
+    "Country": "VEN"
+  },
+  {
+    "NationalityCodeId": 242,
+    "Country": "VNM"
+  },
+  {
+    "NationalityCodeId": 243,
+    "Country": "VGB"
+  },
+  {
+    "NationalityCodeId": 244,
+    "Country": "VIR"
+  },
+  {
+    "NationalityCodeId": 245,
+    "Country": "WLF"
+  },
+  {
+    "NationalityCodeId": 246,
+    "Country": "ESH"
+  },
+  {
+    "NationalityCodeId": 247,
+    "Country": "YEM"
+  },
+  {
+    "NationalityCodeId": 248,
+    "Country": "ZMB"
+  },
+  {
+    "NationalityCodeId": 249,
+    "Country": "ZWE"
+  }
+]

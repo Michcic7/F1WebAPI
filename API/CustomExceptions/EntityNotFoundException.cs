@@ -1,5 +1,4 @@
-﻿using API.Data.Models;
-using API.Interfaces;
+﻿using API.Interfaces;
 
 namespace API.CustomExceptions;
 
@@ -20,13 +19,3 @@ public class EntityNotFoundException : Exception, IExceptionProperties
         Instance = instance;
     }
 }
-
-
-//public EntityNotFoundException(Type entityType, string instance)
-//{
-//    Type = "https://httpstatuses.io/404";
-//    Title = $"{typeof(T).Name} not found.";
-//    Status = StatusCodes.Status404NotFound;
-//    Detail = $"{typeof(T).Name} with ID = {entityId} was not found.";
-//    Instance = instance;
-//}

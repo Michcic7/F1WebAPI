@@ -1,3 +1,4 @@
+using API.Data;
 using API.Extensions;
 using API.Interfaces;
 using API.Services;
@@ -22,8 +23,16 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 
-    //DataSeeder seeder = new();
-    //seeder.SeedInitialData();
+	using (var scope = app.Services.CreateScope())
+	{
+		var dbContext = scope.ServiceProvider.GetRequiredService<F1WebAPIContext>();
+
+		if (dbContext.Database.EnsureCreated())
+		{
+            DataSeeder seeder = new();
+            seeder.SeedInitialData();
+        }
+    }
 }
 
 app.UseProblemDetails();

@@ -44,12 +44,7 @@ public class CircuitService : ICircuitService
         // Calculate metadata.
         int totalCircuits = await query.CountAsync();
         int totalPages = (int)Math.Ceiling((double)totalCircuits / pageSize);
-
-        if (page > totalPages)
-        {
-            throw new PageNumberExceededTotalPagesException(context.Request.Path);
-        }
-
+        
         // Chain the query further and iterate over it.
         IEnumerable<CircuitDto> circuits = await query
             .Skip((page - 1) * pageSize)
@@ -62,6 +57,15 @@ public class CircuitService : ICircuitService
             })
             .ToListAsync();
 
+        if (page != 1 && page > totalPages)
+        {
+            throw new PageNumberExceededTotalPagesException(context.Request.Path);
+        }
+
+        if (circuits.Count() == 0)
+        {
+            throw new FilteredEntitiesNotFoundException(typeof(Circuit), context.Request.Path);
+        }
 
         return new PaginatedCircuitsDto
         {

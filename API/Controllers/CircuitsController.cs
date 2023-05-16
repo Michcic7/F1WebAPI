@@ -10,6 +10,7 @@ namespace API.Controllers;
 public class CircuitsController : ControllerBase
 {
     private const int _maxPageSize = 40;
+    private const int _defaultYear = 2023;
 
     private readonly ICircuitService _circuitService;
 
@@ -64,7 +65,7 @@ public class CircuitsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetCircuitRaceResultsByYear(
-        int id, [FromQuery] int year = 2022)
+        int id, [FromQuery] int year = _defaultYear)
     {
         IEnumerable<RaceResultDto> raceResults = await
             _circuitService.GetCircuitRaceResultsByYear(id, year, HttpContext);

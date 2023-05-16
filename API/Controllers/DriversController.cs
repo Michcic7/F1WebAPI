@@ -10,6 +10,7 @@ namespace API.Controllers;
 public class DriversController : ControllerBase
 {
     private const int _maxPageSize = 40;
+    private const int _defaultYear = 2023;
 
     private readonly IDriverService _driverService;
 
@@ -24,15 +25,17 @@ public class DriversController : ControllerBase
     /// <param name="page">The page number.</param>
     /// <param name="pageSize">How many drivers to include per page.</param>
     /// <param name="name">The name or surname to filter drivers.</param>
+    /// <param name="nationality">The three-letter code to filter drivers.</param>
     /// <returns></returns>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PaginatedDriversDto>> GetDrivers(
-        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
+        [FromQuery] int page = 1, [FromQuery] int pageSize = 20,
+        [FromQuery] string name = null, [FromQuery] string nationality = null)
     {
         PaginatedDriversDto drivers = await _driverService
-            .GetDrivers(page, pageSize, _maxPageSize, name, HttpContext);
+            .GetDrivers(page, pageSize, _maxPageSize, name, nationality, HttpContext);
 
         return Ok(drivers);
     }
@@ -62,7 +65,7 @@ public class DriversController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<DriverStandingDto>>> GetDriverStanding(
-        [FromQuery] int year = 2022)
+        [FromQuery] int year = _defaultYear)
     {        
         IEnumerable<DriverStandingDto> driverStandings = await 
             _driverService.GetDriverStanding(year, HttpContext);
@@ -99,7 +102,7 @@ public class DriversController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetDriverRaceResultsByYear(
-        int id, [FromQuery] int year = 2022)
+        int id, [FromQuery] int year = _defaultYear)
     {        
         IEnumerable<RaceResultDto> raceResults = await
             _driverService.GetDriverRaceResultsByYear(id, year, HttpContext);

@@ -43,12 +43,7 @@ public class TeamService : ITeamService
         // Calculate metadata.
         int totalTeams = await query.CountAsync();
         int totalPages = (int)Math.Ceiling((double)totalTeams / pageSize);
-
-        if (page > totalPages)
-        {
-            throw new PageNumberExceededTotalPagesException(context.Request.Path);
-        }
-
+        
         // Chain the query further and iterate over it.
         IEnumerable<TeamDto> teams = await query
             .Skip((page - 1) * pageSize)
@@ -59,6 +54,16 @@ public class TeamService : ITeamService
                 Name = t.Name
             })
             .ToListAsync();
+
+        if (page != 1 && page > totalPages)
+        {
+            throw new PageNumberExceededTotalPagesException(context.Request.Path);
+        }
+
+        if (teams.Count() == 0)
+        {
+            throw new FilteredEntitiesNotFoundException(typeof(Team), context.Request.Path);
+        }
 
         return new PaginatedTeamsDto
         {

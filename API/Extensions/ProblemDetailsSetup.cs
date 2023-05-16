@@ -3,7 +3,6 @@ using API.CustomExceptions;
 using API.CustomExceptions.CustomProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
-using API.Data.Models;
 
 namespace API.Extensions;
 
@@ -29,6 +28,8 @@ public static class ProblemDetailsSetup
             MapException<DriverDidNotRaceInThatYearException, DriverDidNotRaceInThatYearDetails>(options);
             MapException<TeamDidNotRaceInThatYearException, TeamDidNotRaceInThatYearDetails>(options);
             MapException<CircuitNoRaceInThatYearException, CircuitNoRaceInThatYearDetails>(options);
+
+            MapException<FilteredEntitiesNotFoundException, FilteredEntitiesNotFoundDetails>(options);
         });
 
         return services;
