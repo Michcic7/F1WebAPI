@@ -1,0 +1,6842 @@
+[
+  {
+    "TeamStandingId": 1,
+    "Position": 1,
+    "Team": {
+      "TeamId": 62,
+      "Name": "Vanwall"
+    },
+    "Points": 48.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 2,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 40.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 3,
+    "Position": 3,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 31.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 4,
+    "Position": 4,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 18.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 5,
+    "Position": 5,
+    "Team": {
+      "TeamId": 4,
+      "Name": "Maserati"
+    },
+    "Points": 6.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 6,
+    "Position": 6,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 3.0,
+    "Year": 1958
+  },
+  {
+    "TeamStandingId": 7,
+    "Position": 1,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 40.0,
+    "Year": 1959
+  },
+  {
+    "TeamStandingId": 8,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 32.0,
+    "Year": 1959
+  },
+  {
+    "TeamStandingId": 9,
+    "Position": 3,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 18.0,
+    "Year": 1959
+  },
+  {
+    "TeamStandingId": 10,
+    "Position": 4,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 5.0,
+    "Year": 1959
+  },
+  {
+    "TeamStandingId": 11,
+    "Position": 1,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 48.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 12,
+    "Position": 2,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 34.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 13,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 26.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 14,
+    "Position": 4,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 8.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 15,
+    "Position": 5,
+    "Team": {
+      "TeamId": 74,
+      "Name": "Cooper Maserati"
+    },
+    "Points": 3.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 16,
+    "Position": 6,
+    "Team": {
+      "TeamId": 86,
+      "Name": "Cooper Castellotti"
+    },
+    "Points": 3.0,
+    "Year": 1960
+  },
+  {
+    "TeamStandingId": 17,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 40.0,
+    "Year": 1961
+  },
+  {
+    "TeamStandingId": 18,
+    "Position": 2,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 32.0,
+    "Year": 1961
+  },
+  {
+    "TeamStandingId": 19,
+    "Position": 3,
+    "Team": {
+      "TeamId": 73,
+      "Name": "Porsche"
+    },
+    "Points": 22.0,
+    "Year": 1961
+  },
+  {
+    "TeamStandingId": 20,
+    "Position": 4,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 14.0,
+    "Year": 1961
+  },
+  {
+    "TeamStandingId": 21,
+    "Position": 5,
+    "Team": {
+      "TeamId": 87,
+      "Name": "BRM Climax"
+    },
+    "Points": 7.0,
+    "Year": 1961
+  },
+  {
+    "TeamStandingId": 22,
+    "Position": 1,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 42.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 23,
+    "Position": 2,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 36.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 24,
+    "Position": 3,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 29.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 25,
+    "Position": 4,
+    "Team": {
+      "TeamId": 95,
+      "Name": "Lola Climax"
+    },
+    "Points": 19.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 26,
+    "Position": 5,
+    "Team": {
+      "TeamId": 73,
+      "Name": "Porsche"
+    },
+    "Points": 18.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 27,
+    "Position": 6,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 18.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 28,
+    "Position": 7,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 6.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 29,
+    "Position": 8,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 1.0,
+    "Year": 1962
+  },
+  {
+    "TeamStandingId": 30,
+    "Position": 1,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 54.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 31,
+    "Position": 2,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 36.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 32,
+    "Position": 3,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 28.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 33,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 26.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 34,
+    "Position": 5,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 25.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 35,
+    "Position": 6,
+    "Team": {
+      "TeamId": 104,
+      "Name": "BRP BRM"
+    },
+    "Points": 6.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 36,
+    "Position": 7,
+    "Team": {
+      "TeamId": 73,
+      "Name": "Porsche"
+    },
+    "Points": 5.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 37,
+    "Position": 8,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 4.0,
+    "Year": 1963
+  },
+  {
+    "TeamStandingId": 38,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 45.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 39,
+    "Position": 2,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 42.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 40,
+    "Position": 3,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 37.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 41,
+    "Position": 4,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 30.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 42,
+    "Position": 5,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 16.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 43,
+    "Position": 6,
+    "Team": {
+      "TeamId": 109,
+      "Name": "Brabham BRM"
+    },
+    "Points": 7.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 44,
+    "Position": 7,
+    "Team": {
+      "TeamId": 104,
+      "Name": "BRP BRM"
+    },
+    "Points": 5.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 45,
+    "Position": 8,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 3.0,
+    "Year": 1964
+  },
+  {
+    "TeamStandingId": 46,
+    "Position": 1,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 54.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 47,
+    "Position": 2,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 45.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 48,
+    "Position": 3,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 27.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 49,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 26.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 50,
+    "Position": 5,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 14.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 51,
+    "Position": 6,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 11.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 52,
+    "Position": 7,
+    "Team": {
+      "TeamId": 109,
+      "Name": "Brabham BRM"
+    },
+    "Points": 5.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 53,
+    "Position": 8,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 2.0,
+    "Year": 1965
+  },
+  {
+    "TeamStandingId": 54,
+    "Position": 1,
+    "Team": {
+      "TeamId": 114,
+      "Name": "Brabham Repco"
+    },
+    "Points": 42.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 55,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 31.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 56,
+    "Position": 3,
+    "Team": {
+      "TeamId": 74,
+      "Name": "Cooper Maserati"
+    },
+    "Points": 30.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 57,
+    "Position": 4,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 22.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 58,
+    "Position": 5,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 13.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 59,
+    "Position": 6,
+    "Team": {
+      "TeamId": 72,
+      "Name": "Lotus Climax"
+    },
+    "Points": 8.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 60,
+    "Position": 7,
+    "Team": {
+      "TeamId": 116,
+      "Name": "Eagle Climax"
+    },
+    "Points": 4.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 61,
+    "Position": 8,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 3.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 62,
+    "Position": 9,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 2.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 63,
+    "Position": 10,
+    "Team": {
+      "TeamId": 109,
+      "Name": "Brabham BRM"
+    },
+    "Points": 1.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 64,
+    "Position": 11,
+    "Team": {
+      "TeamId": 117,
+      "Name": "McLaren Serenissima"
+    },
+    "Points": 1.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 65,
+    "Position": 12,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 1.0,
+    "Year": 1966
+  },
+  {
+    "TeamStandingId": 66,
+    "Position": 1,
+    "Team": {
+      "TeamId": 114,
+      "Name": "Brabham Repco"
+    },
+    "Points": 63.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 67,
+    "Position": 2,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 44.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 68,
+    "Position": 3,
+    "Team": {
+      "TeamId": 74,
+      "Name": "Cooper Maserati"
+    },
+    "Points": 28.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 69,
+    "Position": 4,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 20.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 70,
+    "Position": 5,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 20.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 71,
+    "Position": 6,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 17.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 72,
+    "Position": 7,
+    "Team": {
+      "TeamId": 122,
+      "Name": "Eagle Weslake"
+    },
+    "Points": 13.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 73,
+    "Position": 8,
+    "Team": {
+      "TeamId": 69,
+      "Name": "Cooper Climax"
+    },
+    "Points": 6.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 74,
+    "Position": 9,
+    "Team": {
+      "TeamId": 96,
+      "Name": "Lotus BRM"
+    },
+    "Points": 6.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 75,
+    "Position": 10,
+    "Team": {
+      "TeamId": 124,
+      "Name": "McLaren BRM"
+    },
+    "Points": 3.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 76,
+    "Position": 11,
+    "Team": {
+      "TeamId": 98,
+      "Name": "Brabham Climax"
+    },
+    "Points": 2.0,
+    "Year": 1967
+  },
+  {
+    "TeamStandingId": 77,
+    "Position": 1,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 62.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 78,
+    "Position": 2,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 49.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 79,
+    "Position": 3,
+    "Team": {
+      "TeamId": 125,
+      "Name": "Matra Ford"
+    },
+    "Points": 45.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 80,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 32.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 81,
+    "Position": 5,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 28.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 82,
+    "Position": 6,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 14.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 83,
+    "Position": 7,
+    "Team": {
+      "TeamId": 130,
+      "Name": "Cooper BRM"
+    },
+    "Points": 14.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 84,
+    "Position": 8,
+    "Team": {
+      "TeamId": 114,
+      "Name": "Brabham Repco"
+    },
+    "Points": 10.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 85,
+    "Position": 9,
+    "Team": {
+      "TeamId": 131,
+      "Name": "Matra"
+    },
+    "Points": 8.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 86,
+    "Position": 10,
+    "Team": {
+      "TeamId": 128,
+      "Name": "Mclaren BRM"
+    },
+    "Points": 3.0,
+    "Year": 1968
+  },
+  {
+    "TeamStandingId": 87,
+    "Position": 1,
+    "Team": {
+      "TeamId": 125,
+      "Name": "Matra Ford"
+    },
+    "Points": 66.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 88,
+    "Position": 2,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 49.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 89,
+    "Position": 3,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 47.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 90,
+    "Position": 4,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 38.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 91,
+    "Position": 5,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 7.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 92,
+    "Position": 6,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 7.0,
+    "Year": 1969
+  },
+  {
+    "TeamStandingId": 93,
+    "Position": 1,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 59.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 94,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 52.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 95,
+    "Position": 3,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 48.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 96,
+    "Position": 4,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 35.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 97,
+    "Position": 5,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 35.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 98,
+    "Position": 6,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 23.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 99,
+    "Position": 7,
+    "Team": {
+      "TeamId": 131,
+      "Name": "Matra"
+    },
+    "Points": 23.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 100,
+    "Position": 8,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 3.0,
+    "Year": 1970
+  },
+  {
+    "TeamStandingId": 101,
+    "Position": 1,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 73.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 102,
+    "Position": 2,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 36.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 103,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 33.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 104,
+    "Position": 4,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 33.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 105,
+    "Position": 5,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 21.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 106,
+    "Position": 6,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 10.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 107,
+    "Position": 7,
+    "Team": {
+      "TeamId": 131,
+      "Name": "Matra"
+    },
+    "Points": 9.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 108,
+    "Position": 8,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 8.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 109,
+    "Position": 9,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 5.0,
+    "Year": 1971
+  },
+  {
+    "TeamStandingId": 110,
+    "Position": 1,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 61.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 111,
+    "Position": 2,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 51.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 112,
+    "Position": 3,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 47.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 113,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 33.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 114,
+    "Position": 5,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 18.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 115,
+    "Position": 6,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 15.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 116,
+    "Position": 7,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 14.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 117,
+    "Position": 8,
+    "Team": {
+      "TeamId": 131,
+      "Name": "Matra"
+    },
+    "Points": 12.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 118,
+    "Position": 9,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 7.0,
+    "Year": 1972
+  },
+  {
+    "TeamStandingId": 119,
+    "Position": 1,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 92.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 120,
+    "Position": 2,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 82.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 121,
+    "Position": 3,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 58.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 122,
+    "Position": 4,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 22.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 123,
+    "Position": 5,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 14.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 124,
+    "Position": 6,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 12.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 125,
+    "Position": 7,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 12.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 126,
+    "Position": 8,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 9.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 127,
+    "Position": 9,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 7.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 128,
+    "Position": 10,
+    "Team": {
+      "TeamId": 144,
+      "Name": "Iso Marlboro Ford"
+    },
+    "Points": 2.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 129,
+    "Position": 11,
+    "Team": {
+      "TeamId": 141,
+      "Name": "Tecno"
+    },
+    "Points": 1.0,
+    "Year": 1973
+  },
+  {
+    "TeamStandingId": 130,
+    "Position": 1,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 73.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 131,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 65.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 132,
+    "Position": 3,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 52.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 133,
+    "Position": 4,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 42.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 134,
+    "Position": 5,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 35.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 135,
+    "Position": 6,
+    "Team": {
+      "TeamId": 148,
+      "Name": "Hesketh Ford"
+    },
+    "Points": 15.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 136,
+    "Position": 7,
+    "Team": {
+      "TeamId": 40,
+      "Name": "BRM"
+    },
+    "Points": 10.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 137,
+    "Position": 8,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 7.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 138,
+    "Position": 9,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 6.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 139,
+    "Position": 10,
+    "Team": {
+      "TeamId": 144,
+      "Name": "Iso Marlboro Ford"
+    },
+    "Points": 4.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 140,
+    "Position": 11,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 3.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 141,
+    "Position": 12,
+    "Team": {
+      "TeamId": 147,
+      "Name": "Lola Ford"
+    },
+    "Points": 1.0,
+    "Year": 1974
+  },
+  {
+    "TeamStandingId": 142,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 72.5,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 143,
+    "Position": 2,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 54.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 144,
+    "Position": 3,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 53.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 145,
+    "Position": 4,
+    "Team": {
+      "TeamId": 148,
+      "Name": "Hesketh Ford"
+    },
+    "Points": 33.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 146,
+    "Position": 5,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 25.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 147,
+    "Position": 6,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 9.5,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 148,
+    "Position": 7,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 9.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 149,
+    "Position": 8,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 7.5,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 150,
+    "Position": 9,
+    "Team": {
+      "TeamId": 154,
+      "Name": "Frank Williams Racing Cars/Williams"
+    },
+    "Points": 6.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 151,
+    "Position": 10,
+    "Team": {
+      "TeamId": 152,
+      "Name": "Parnelli Ford"
+    },
+    "Points": 5.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 152,
+    "Position": 11,
+    "Team": {
+      "TeamId": 156,
+      "Name": "Hill Ford"
+    },
+    "Points": 3.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 153,
+    "Position": 12,
+    "Team": {
+      "TeamId": 153,
+      "Name": "Penske Ford"
+    },
+    "Points": 2.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 154,
+    "Position": 13,
+    "Team": {
+      "TeamId": 146,
+      "Name": "Ensign Ford"
+    },
+    "Points": 1.0,
+    "Year": 1975
+  },
+  {
+    "TeamStandingId": 155,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 83.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 156,
+    "Position": 2,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 74.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 157,
+    "Position": 3,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 71.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 158,
+    "Position": 4,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 29.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 159,
+    "Position": 5,
+    "Team": {
+      "TeamId": 153,
+      "Name": "Penske Ford"
+    },
+    "Points": 20.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 160,
+    "Position": 6,
+    "Team": {
+      "TeamId": 161,
+      "Name": "Ligier Matra"
+    },
+    "Points": 20.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 161,
+    "Position": 7,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 19.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 162,
+    "Position": 8,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 10.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 163,
+    "Position": 9,
+    "Team": {
+      "TeamId": 160,
+      "Name": "Brabham Alfa Romeo"
+    },
+    "Points": 9.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 164,
+    "Position": 10,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 7.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 165,
+    "Position": 11,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 3.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 166,
+    "Position": 12,
+    "Team": {
+      "TeamId": 146,
+      "Name": "Ensign Ford"
+    },
+    "Points": 2.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 167,
+    "Position": 13,
+    "Team": {
+      "TeamId": 152,
+      "Name": "Parnelli Ford"
+    },
+    "Points": 1.0,
+    "Year": 1976
+  },
+  {
+    "TeamStandingId": 168,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 95.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 169,
+    "Position": 2,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 62.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 170,
+    "Position": 3,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 60.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 171,
+    "Position": 4,
+    "Team": {
+      "TeamId": 164,
+      "Name": "Wolf Ford"
+    },
+    "Points": 55.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 172,
+    "Position": 5,
+    "Team": {
+      "TeamId": 160,
+      "Name": "Brabham Alfa Romeo"
+    },
+    "Points": 27.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 173,
+    "Position": 6,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 27.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 174,
+    "Position": 7,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 23.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 175,
+    "Position": 8,
+    "Team": {
+      "TeamId": 161,
+      "Name": "Ligier Matra"
+    },
+    "Points": 18.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 176,
+    "Position": 9,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 11.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 177,
+    "Position": 10,
+    "Team": {
+      "TeamId": 146,
+      "Name": "Ensign Ford"
+    },
+    "Points": 10.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 178,
+    "Position": 11,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 6.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 179,
+    "Position": 12,
+    "Team": {
+      "TeamId": 153,
+      "Name": "Penske Ford"
+    },
+    "Points": 1.0,
+    "Year": 1977
+  },
+  {
+    "TeamStandingId": 180,
+    "Position": 1,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 86.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 181,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 58.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 182,
+    "Position": 3,
+    "Team": {
+      "TeamId": 160,
+      "Name": "Brabham Alfa Romeo"
+    },
+    "Points": 53.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 183,
+    "Position": 4,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 38.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 184,
+    "Position": 5,
+    "Team": {
+      "TeamId": 164,
+      "Name": "Wolf Ford"
+    },
+    "Points": 24.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 185,
+    "Position": 6,
+    "Team": {
+      "TeamId": 161,
+      "Name": "Ligier Matra"
+    },
+    "Points": 19.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 186,
+    "Position": 7,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 17.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 187,
+    "Position": 8,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 15.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 188,
+    "Position": 9,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 11.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 189,
+    "Position": 10,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 11.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 190,
+    "Position": 11,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 6.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 191,
+    "Position": 12,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 3.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 192,
+    "Position": 13,
+    "Team": {
+      "TeamId": 135,
+      "Name": "Surtees Ford"
+    },
+    "Points": 1.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 193,
+    "Position": 14,
+    "Team": {
+      "TeamId": 146,
+      "Name": "Ensign Ford"
+    },
+    "Points": 1.0,
+    "Year": 1978
+  },
+  {
+    "TeamStandingId": 194,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 113.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 195,
+    "Position": 2,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 75.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 196,
+    "Position": 3,
+    "Team": {
+      "TeamId": 173,
+      "Name": "Ligier Ford"
+    },
+    "Points": 61.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 197,
+    "Position": 4,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 39.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 198,
+    "Position": 5,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 28.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 199,
+    "Position": 6,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 26.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 200,
+    "Position": 7,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 15.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 201,
+    "Position": 8,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 7.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 202,
+    "Position": 9,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 5.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 203,
+    "Position": 10,
+    "Team": {
+      "TeamId": 145,
+      "Name": "Shadow Ford"
+    },
+    "Points": 3.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 204,
+    "Position": 11,
+    "Team": {
+      "TeamId": 167,
+      "Name": "ATS Ford"
+    },
+    "Points": 2.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 205,
+    "Position": 12,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 1.0,
+    "Year": 1979
+  },
+  {
+    "TeamStandingId": 206,
+    "Position": 1,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 120.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 207,
+    "Position": 2,
+    "Team": {
+      "TeamId": 173,
+      "Name": "Ligier Ford"
+    },
+    "Points": 66.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 208,
+    "Position": 3,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 55.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 209,
+    "Position": 4,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 38.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 210,
+    "Position": 5,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 14.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 211,
+    "Position": 6,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 12.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 212,
+    "Position": 7,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 11.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 213,
+    "Position": 8,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 11.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 214,
+    "Position": 9,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 11.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 215,
+    "Position": 10,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 216,
+    "Position": 11,
+    "Team": {
+      "TeamId": 1,
+      "Name": "Alfa Romeo"
+    },
+    "Points": 4.0,
+    "Year": 1980
+  },
+  {
+    "TeamStandingId": 217,
+    "Position": 1,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 95.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 218,
+    "Position": 2,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 61.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 219,
+    "Position": 3,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 54.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 220,
+    "Position": 4,
+    "Team": {
+      "TeamId": 161,
+      "Name": "Ligier Matra"
+    },
+    "Points": 44.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 221,
+    "Position": 5,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 34.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 222,
+    "Position": 6,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 28.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 223,
+    "Position": 7,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 22.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 224,
+    "Position": 8,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 10.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 225,
+    "Position": 9,
+    "Team": {
+      "TeamId": 1,
+      "Name": "Alfa Romeo"
+    },
+    "Points": 10.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 226,
+    "Position": 10,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 10.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 227,
+    "Position": 11,
+    "Team": {
+      "TeamId": 146,
+      "Name": "Ensign Ford"
+    },
+    "Points": 5.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 228,
+    "Position": 12,
+    "Team": {
+      "TeamId": 171,
+      "Name": "Theodore Ford"
+    },
+    "Points": 1.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 229,
+    "Position": 13,
+    "Team": {
+      "TeamId": 167,
+      "Name": "ATS Ford"
+    },
+    "Points": 1.0,
+    "Year": 1981
+  },
+  {
+    "TeamStandingId": 230,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 74.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 231,
+    "Position": 2,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 69.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 232,
+    "Position": 3,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 62.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 233,
+    "Position": 4,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 58.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 234,
+    "Position": 5,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 30.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 235,
+    "Position": 6,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 25.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 236,
+    "Position": 7,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 22.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 237,
+    "Position": 8,
+    "Team": {
+      "TeamId": 161,
+      "Name": "Ligier Matra"
+    },
+    "Points": 20.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 238,
+    "Position": 9,
+    "Team": {
+      "TeamId": 108,
+      "Name": "Brabham Ford"
+    },
+    "Points": 19.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 239,
+    "Position": 10,
+    "Team": {
+      "TeamId": 1,
+      "Name": "Alfa Romeo"
+    },
+    "Points": 7.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 240,
+    "Position": 11,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 5.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 241,
+    "Position": 12,
+    "Team": {
+      "TeamId": 167,
+      "Name": "ATS Ford"
+    },
+    "Points": 4.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 242,
+    "Position": 13,
+    "Team": {
+      "TeamId": 175,
+      "Name": "Osella Ford"
+    },
+    "Points": 3.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 243,
+    "Position": 14,
+    "Team": {
+      "TeamId": 155,
+      "Name": "Fittipaldi Ford"
+    },
+    "Points": 1.0,
+    "Year": 1982
+  },
+  {
+    "TeamStandingId": 244,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 89.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 245,
+    "Position": 2,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 79.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 246,
+    "Position": 3,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 72.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 247,
+    "Position": 4,
+    "Team": {
+      "TeamId": 168,
+      "Name": "Williams Ford"
+    },
+    "Points": 36.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 248,
+    "Position": 5,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 34.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 249,
+    "Position": 6,
+    "Team": {
+      "TeamId": 1,
+      "Name": "Alfa Romeo"
+    },
+    "Points": 18.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 250,
+    "Position": 7,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 12.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 251,
+    "Position": 8,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 11.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 252,
+    "Position": 9,
+    "Team": {
+      "TeamId": 177,
+      "Name": "Toleman Hart"
+    },
+    "Points": 10.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 253,
+    "Position": 10,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 4.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 254,
+    "Position": 11,
+    "Team": {
+      "TeamId": 185,
+      "Name": "Williams Honda"
+    },
+    "Points": 2.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 255,
+    "Position": 12,
+    "Team": {
+      "TeamId": 171,
+      "Name": "Theodore Ford"
+    },
+    "Points": 1.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 256,
+    "Position": 13,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 1.0,
+    "Year": 1983
+  },
+  {
+    "TeamStandingId": 257,
+    "Position": 1,
+    "Team": {
+      "TeamId": 184,
+      "Name": "McLaren TAG"
+    },
+    "Points": 143.5,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 258,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 57.5,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 259,
+    "Position": 3,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 47.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 260,
+    "Position": 4,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 38.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 261,
+    "Position": 5,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 34.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 262,
+    "Position": 6,
+    "Team": {
+      "TeamId": 185,
+      "Name": "Williams Honda"
+    },
+    "Points": 25.5,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 263,
+    "Position": 7,
+    "Team": {
+      "TeamId": 177,
+      "Name": "Toleman Hart"
+    },
+    "Points": 16.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 264,
+    "Position": 8,
+    "Team": {
+      "TeamId": 1,
+      "Name": "Alfa Romeo"
+    },
+    "Points": 11.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 265,
+    "Position": 9,
+    "Team": {
+      "TeamId": 189,
+      "Name": "Arrows BMW"
+    },
+    "Points": 3.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 266,
+    "Position": 10,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 3.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 267,
+    "Position": 11,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 3.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 268,
+    "Position": 12,
+    "Team": {
+      "TeamId": 182,
+      "Name": "Osella Alfa Romeo"
+    },
+    "Points": 2.0,
+    "Year": 1984
+  },
+  {
+    "TeamStandingId": 269,
+    "Position": 1,
+    "Team": {
+      "TeamId": 184,
+      "Name": "McLaren TAG"
+    },
+    "Points": 90.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 270,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 82.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 271,
+    "Position": 3,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 71.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 272,
+    "Position": 4,
+    "Team": {
+      "TeamId": 185,
+      "Name": "Williams Honda"
+    },
+    "Points": 71.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 273,
+    "Position": 5,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 26.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 274,
+    "Position": 6,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 23.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 275,
+    "Position": 7,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 16.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 276,
+    "Position": 8,
+    "Team": {
+      "TeamId": 189,
+      "Name": "Arrows BMW"
+    },
+    "Points": 14.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 277,
+    "Position": 9,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 4.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 278,
+    "Position": 10,
+    "Team": {
+      "TeamId": 193,
+      "Name": "Tyrrell Renault"
+    },
+    "Points": 3.0,
+    "Year": 1985
+  },
+  {
+    "TeamStandingId": 279,
+    "Position": 1,
+    "Team": {
+      "TeamId": 185,
+      "Name": "Williams Honda"
+    },
+    "Points": 141.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 280,
+    "Position": 2,
+    "Team": {
+      "TeamId": 184,
+      "Name": "McLaren TAG"
+    },
+    "Points": 96.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 281,
+    "Position": 3,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 58.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 282,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 37.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 283,
+    "Position": 5,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 29.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 284,
+    "Position": 6,
+    "Team": {
+      "TeamId": 195,
+      "Name": "Benetton BMW"
+    },
+    "Points": 19.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 285,
+    "Position": 7,
+    "Team": {
+      "TeamId": 193,
+      "Name": "Tyrrell Renault"
+    },
+    "Points": 11.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 286,
+    "Position": 8,
+    "Team": {
+      "TeamId": 147,
+      "Name": "Lola Ford"
+    },
+    "Points": 6.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 287,
+    "Position": 9,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 2.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 288,
+    "Position": 10,
+    "Team": {
+      "TeamId": 189,
+      "Name": "Arrows BMW"
+    },
+    "Points": 1.0,
+    "Year": 1986
+  },
+  {
+    "TeamStandingId": 289,
+    "Position": 1,
+    "Team": {
+      "TeamId": 185,
+      "Name": "Williams Honda"
+    },
+    "Points": 137.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 290,
+    "Position": 2,
+    "Team": {
+      "TeamId": 184,
+      "Name": "McLaren TAG"
+    },
+    "Points": 76.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 291,
+    "Position": 3,
+    "Team": {
+      "TeamId": 198,
+      "Name": "Lotus Honda"
+    },
+    "Points": 64.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 292,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 53.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 293,
+    "Position": 5,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 28.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 294,
+    "Position": 6,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 11.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 295,
+    "Position": 7,
+    "Team": {
+      "TeamId": 200,
+      "Name": "Arrows Megatron"
+    },
+    "Points": 11.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 296,
+    "Position": 8,
+    "Team": {
+      "TeamId": 178,
+      "Name": "Brabham BMW"
+    },
+    "Points": 10.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 297,
+    "Position": 9,
+    "Team": {
+      "TeamId": 147,
+      "Name": "Lola Ford"
+    },
+    "Points": 3.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 298,
+    "Position": 10,
+    "Team": {
+      "TeamId": 191,
+      "Name": "Zakspeed"
+    },
+    "Points": 2.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 299,
+    "Position": 11,
+    "Team": {
+      "TeamId": 132,
+      "Name": "March Ford"
+    },
+    "Points": 1.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 300,
+    "Position": 12,
+    "Team": {
+      "TeamId": 201,
+      "Name": "Ligier Megatron"
+    },
+    "Points": 1.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 301,
+    "Position": 13,
+    "Team": {
+      "TeamId": 199,
+      "Name": "AGS Ford"
+    },
+    "Points": 1.0,
+    "Year": 1987
+  },
+  {
+    "TeamStandingId": 302,
+    "Position": 1,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 199.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 303,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 65.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 304,
+    "Position": 3,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 39.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 305,
+    "Position": 4,
+    "Team": {
+      "TeamId": 200,
+      "Name": "Arrows Megatron"
+    },
+    "Points": 23.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 306,
+    "Position": 5,
+    "Team": {
+      "TeamId": 198,
+      "Name": "Lotus Honda"
+    },
+    "Points": 23.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 307,
+    "Position": 6,
+    "Team": {
+      "TeamId": 208,
+      "Name": "March Judd"
+    },
+    "Points": 22.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 308,
+    "Position": 7,
+    "Team": {
+      "TeamId": 207,
+      "Name": "Williams Judd"
+    },
+    "Points": 20.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 309,
+    "Position": 8,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 5.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 310,
+    "Position": 9,
+    "Team": {
+      "TeamId": 205,
+      "Name": "Rial Ford"
+    },
+    "Points": 3.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 311,
+    "Position": 10,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 1.0,
+    "Year": 1988
+  },
+  {
+    "TeamStandingId": 312,
+    "Position": 1,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 141.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 313,
+    "Position": 2,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 77.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 314,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 59.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 315,
+    "Position": 4,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 39.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 316,
+    "Position": 5,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 16.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 317,
+    "Position": 6,
+    "Team": {
+      "TeamId": 211,
+      "Name": "Lotus Judd"
+    },
+    "Points": 15.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 318,
+    "Position": 7,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 13.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 319,
+    "Position": 8,
+    "Team": {
+      "TeamId": 209,
+      "Name": "Dallara Ford"
+    },
+    "Points": 8.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 320,
+    "Position": 9,
+    "Team": {
+      "TeamId": 215,
+      "Name": "Brabham Judd"
+    },
+    "Points": 8.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 321,
+    "Position": 10,
+    "Team": {
+      "TeamId": 216,
+      "Name": "Onyx Ford"
+    },
+    "Points": 6.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 322,
+    "Position": 11,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 6.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 323,
+    "Position": 12,
+    "Team": {
+      "TeamId": 208,
+      "Name": "March Judd"
+    },
+    "Points": 4.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 324,
+    "Position": 13,
+    "Team": {
+      "TeamId": 205,
+      "Name": "Rial Ford"
+    },
+    "Points": 3.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 325,
+    "Position": 14,
+    "Team": {
+      "TeamId": 173,
+      "Name": "Ligier Ford"
+    },
+    "Points": 3.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 326,
+    "Position": 15,
+    "Team": {
+      "TeamId": 199,
+      "Name": "AGS Ford"
+    },
+    "Points": 1.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 327,
+    "Position": 16,
+    "Team": {
+      "TeamId": 212,
+      "Name": "Lola Lamborghini"
+    },
+    "Points": 1.0,
+    "Year": 1989
+  },
+  {
+    "TeamStandingId": 328,
+    "Position": 1,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 121.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 329,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 110.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 330,
+    "Position": 3,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 71.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 331,
+    "Position": 4,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 57.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 332,
+    "Position": 5,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 16.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 333,
+    "Position": 6,
+    "Team": {
+      "TeamId": 212,
+      "Name": "Lola Lamborghini"
+    },
+    "Points": 11.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 334,
+    "Position": 7,
+    "Team": {
+      "TeamId": 218,
+      "Name": "Leyton House Judd"
+    },
+    "Points": 7.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 335,
+    "Position": 8,
+    "Team": {
+      "TeamId": 219,
+      "Name": "Lotus Lamborghini"
+    },
+    "Points": 3.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 336,
+    "Position": 9,
+    "Team": {
+      "TeamId": 170,
+      "Name": "Arrows Ford"
+    },
+    "Points": 2.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 337,
+    "Position": 10,
+    "Team": {
+      "TeamId": 215,
+      "Name": "Brabham Judd"
+    },
+    "Points": 2.0,
+    "Year": 1990
+  },
+  {
+    "TeamStandingId": 338,
+    "Position": 1,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 139.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 339,
+    "Position": 2,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 125.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 340,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 55.5,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 341,
+    "Position": 4,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 38.5,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 342,
+    "Position": 5,
+    "Team": {
+      "TeamId": 223,
+      "Name": "Jordan Ford"
+    },
+    "Points": 13.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 343,
+    "Position": 6,
+    "Team": {
+      "TeamId": 220,
+      "Name": "Tyrrell Honda"
+    },
+    "Points": 12.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 344,
+    "Position": 7,
+    "Team": {
+      "TeamId": 222,
+      "Name": "Minardi Ferrari"
+    },
+    "Points": 6.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 345,
+    "Position": 8,
+    "Team": {
+      "TeamId": 228,
+      "Name": "Dallara Judd"
+    },
+    "Points": 5.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 346,
+    "Position": 9,
+    "Team": {
+      "TeamId": 211,
+      "Name": "Lotus Judd"
+    },
+    "Points": 3.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 347,
+    "Position": 10,
+    "Team": {
+      "TeamId": 224,
+      "Name": "Brabham Yamaha"
+    },
+    "Points": 3.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 348,
+    "Position": 11,
+    "Team": {
+      "TeamId": 147,
+      "Name": "Lola Ford"
+    },
+    "Points": 2.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 349,
+    "Position": 12,
+    "Team": {
+      "TeamId": 226,
+      "Name": "Leyton House Ilmor"
+    },
+    "Points": 1.0,
+    "Year": 1991
+  },
+  {
+    "TeamStandingId": 350,
+    "Position": 1,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 164.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 351,
+    "Position": 2,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 99.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 352,
+    "Position": 3,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 91.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 353,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 21.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 354,
+    "Position": 5,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 13.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 355,
+    "Position": 6,
+    "Team": {
+      "TeamId": 233,
+      "Name": "Tyrrell Ilmor"
+    },
+    "Points": 8.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 356,
+    "Position": 7,
+    "Team": {
+      "TeamId": 230,
+      "Name": "Footwork Mugen Honda"
+    },
+    "Points": 6.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 357,
+    "Position": 8,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 6.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 358,
+    "Position": 9,
+    "Team": {
+      "TeamId": 236,
+      "Name": "March Ilmor"
+    },
+    "Points": 3.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 359,
+    "Position": 10,
+    "Team": {
+      "TeamId": 234,
+      "Name": "Dallara Ferrari"
+    },
+    "Points": 2.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 360,
+    "Position": 11,
+    "Team": {
+      "TeamId": 231,
+      "Name": "Jordan Yamaha"
+    },
+    "Points": 1.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 361,
+    "Position": 12,
+    "Team": {
+      "TeamId": 235,
+      "Name": "Minardi Lamborghini"
+    },
+    "Points": 1.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 362,
+    "Position": 13,
+    "Team": {
+      "TeamId": 232,
+      "Name": "Venturi Lamborghini"
+    },
+    "Points": 1.0,
+    "Year": 1992
+  },
+  {
+    "TeamStandingId": 363,
+    "Position": 1,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 168.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 364,
+    "Position": 2,
+    "Team": {
+      "TeamId": 115,
+      "Name": "McLaren Ford"
+    },
+    "Points": 84.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 365,
+    "Position": 3,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 72.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 366,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 28.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 367,
+    "Position": 5,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 23.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 368,
+    "Position": 6,
+    "Team": {
+      "TeamId": 107,
+      "Name": "Lotus Ford"
+    },
+    "Points": 12.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 369,
+    "Position": 7,
+    "Team": {
+      "TeamId": 238,
+      "Name": "Sauber"
+    },
+    "Points": 12.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 370,
+    "Position": 8,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 7.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 371,
+    "Position": 9,
+    "Team": {
+      "TeamId": 230,
+      "Name": "Footwork Mugen Honda"
+    },
+    "Points": 4.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 372,
+    "Position": 10,
+    "Team": {
+      "TeamId": 240,
+      "Name": "Larrousse Lamborghini"
+    },
+    "Points": 3.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 373,
+    "Position": 11,
+    "Team": {
+      "TeamId": 241,
+      "Name": "Jordan Hart"
+    },
+    "Points": 3.0,
+    "Year": 1993
+  },
+  {
+    "TeamStandingId": 374,
+    "Position": 1,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 118.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 375,
+    "Position": 2,
+    "Team": {
+      "TeamId": 197,
+      "Name": "Benetton Ford"
+    },
+    "Points": 103.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 376,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 71.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 377,
+    "Position": 4,
+    "Team": {
+      "TeamId": 247,
+      "Name": "McLaren Peugeot"
+    },
+    "Points": 42.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 378,
+    "Position": 5,
+    "Team": {
+      "TeamId": 241,
+      "Name": "Jordan Hart"
+    },
+    "Points": 28.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 379,
+    "Position": 6,
+    "Team": {
+      "TeamId": 187,
+      "Name": "Ligier Renault"
+    },
+    "Points": 13.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 380,
+    "Position": 7,
+    "Team": {
+      "TeamId": 242,
+      "Name": "Tyrrell Yamaha"
+    },
+    "Points": 13.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 381,
+    "Position": 8,
+    "Team": {
+      "TeamId": 243,
+      "Name": "Sauber Mercedes"
+    },
+    "Points": 12.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 382,
+    "Position": 9,
+    "Team": {
+      "TeamId": 248,
+      "Name": "Footwork Ford"
+    },
+    "Points": 9.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 383,
+    "Position": 10,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 5.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 384,
+    "Position": 11,
+    "Team": {
+      "TeamId": 245,
+      "Name": "Larrousse Ford"
+    },
+    "Points": 2.0,
+    "Year": 1994
+  },
+  {
+    "TeamStandingId": 385,
+    "Position": 1,
+    "Team": {
+      "TeamId": 250,
+      "Name": "Benetton Renault"
+    },
+    "Points": 137.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 386,
+    "Position": 2,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 112.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 387,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 73.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 388,
+    "Position": 4,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 30.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 389,
+    "Position": 5,
+    "Team": {
+      "TeamId": 252,
+      "Name": "Ligier Mugen Honda"
+    },
+    "Points": 24.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 390,
+    "Position": 6,
+    "Team": {
+      "TeamId": 256,
+      "Name": "Jordan Peugeot"
+    },
+    "Points": 21.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 391,
+    "Position": 7,
+    "Team": {
+      "TeamId": 255,
+      "Name": "Sauber Ford"
+    },
+    "Points": 18.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 392,
+    "Position": 8,
+    "Team": {
+      "TeamId": 254,
+      "Name": "Footwork Hart"
+    },
+    "Points": 5.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 393,
+    "Position": 9,
+    "Team": {
+      "TeamId": 242,
+      "Name": "Tyrrell Yamaha"
+    },
+    "Points": 5.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 394,
+    "Position": 10,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 1.0,
+    "Year": 1995
+  },
+  {
+    "TeamStandingId": 395,
+    "Position": 1,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 175.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 396,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 70.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 397,
+    "Position": 3,
+    "Team": {
+      "TeamId": 250,
+      "Name": "Benetton Renault"
+    },
+    "Points": 68.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 398,
+    "Position": 4,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 49.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 399,
+    "Position": 5,
+    "Team": {
+      "TeamId": 256,
+      "Name": "Jordan Peugeot"
+    },
+    "Points": 22.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 400,
+    "Position": 6,
+    "Team": {
+      "TeamId": 252,
+      "Name": "Ligier Mugen Honda"
+    },
+    "Points": 15.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 401,
+    "Position": 7,
+    "Team": {
+      "TeamId": 255,
+      "Name": "Sauber Ford"
+    },
+    "Points": 11.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 402,
+    "Position": 8,
+    "Team": {
+      "TeamId": 242,
+      "Name": "Tyrrell Yamaha"
+    },
+    "Points": 5.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 403,
+    "Position": 9,
+    "Team": {
+      "TeamId": 254,
+      "Name": "Footwork Hart"
+    },
+    "Points": 1.0,
+    "Year": 1996
+  },
+  {
+    "TeamStandingId": 404,
+    "Position": 1,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 123.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 405,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 102.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 406,
+    "Position": 3,
+    "Team": {
+      "TeamId": 250,
+      "Name": "Benetton Renault"
+    },
+    "Points": 67.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 407,
+    "Position": 4,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 63.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 408,
+    "Position": 5,
+    "Team": {
+      "TeamId": 256,
+      "Name": "Jordan Peugeot"
+    },
+    "Points": 33.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 409,
+    "Position": 6,
+    "Team": {
+      "TeamId": 257,
+      "Name": "Prost Mugen Honda"
+    },
+    "Points": 21.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 410,
+    "Position": 7,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 16.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 411,
+    "Position": 8,
+    "Team": {
+      "TeamId": 260,
+      "Name": "Arrows Yamaha"
+    },
+    "Points": 9.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 412,
+    "Position": 9,
+    "Team": {
+      "TeamId": 261,
+      "Name": "Stewart Ford"
+    },
+    "Points": 6.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 413,
+    "Position": 10,
+    "Team": {
+      "TeamId": 137,
+      "Name": "Tyrrell Ford"
+    },
+    "Points": 2.0,
+    "Year": 1997
+  },
+  {
+    "TeamStandingId": 414,
+    "Position": 1,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 156.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 415,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 133.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 416,
+    "Position": 3,
+    "Team": {
+      "TeamId": 262,
+      "Name": "Williams Mecachrome"
+    },
+    "Points": 38.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 417,
+    "Position": 4,
+    "Team": {
+      "TeamId": 264,
+      "Name": "Jordan Mugen Honda"
+    },
+    "Points": 34.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 418,
+    "Position": 5,
+    "Team": {
+      "TeamId": 263,
+      "Name": "Benetton Playlife"
+    },
+    "Points": 33.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 419,
+    "Position": 6,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 10.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 420,
+    "Position": 7,
+    "Team": {
+      "TeamId": 266,
+      "Name": "Arrows"
+    },
+    "Points": 6.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 421,
+    "Position": 8,
+    "Team": {
+      "TeamId": 261,
+      "Name": "Stewart Ford"
+    },
+    "Points": 5.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 422,
+    "Position": 9,
+    "Team": {
+      "TeamId": 265,
+      "Name": "Prost Peugeot"
+    },
+    "Points": 1.0,
+    "Year": 1998
+  },
+  {
+    "TeamStandingId": 423,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 128.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 424,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 124.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 425,
+    "Position": 3,
+    "Team": {
+      "TeamId": 264,
+      "Name": "Jordan Mugen Honda"
+    },
+    "Points": 61.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 426,
+    "Position": 4,
+    "Team": {
+      "TeamId": 261,
+      "Name": "Stewart Ford"
+    },
+    "Points": 36.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 427,
+    "Position": 5,
+    "Team": {
+      "TeamId": 267,
+      "Name": "Williams Supertec"
+    },
+    "Points": 35.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 428,
+    "Position": 6,
+    "Team": {
+      "TeamId": 263,
+      "Name": "Benetton Playlife"
+    },
+    "Points": 16.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 429,
+    "Position": 7,
+    "Team": {
+      "TeamId": 265,
+      "Name": "Prost Peugeot"
+    },
+    "Points": 9.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 430,
+    "Position": 8,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 5.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 431,
+    "Position": 9,
+    "Team": {
+      "TeamId": 190,
+      "Name": "Minardi Ford"
+    },
+    "Points": 1.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 432,
+    "Position": 10,
+    "Team": {
+      "TeamId": 266,
+      "Name": "Arrows"
+    },
+    "Points": 1.0,
+    "Year": 1999
+  },
+  {
+    "TeamStandingId": 433,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 170.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 434,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 152.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 435,
+    "Position": 3,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 36.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 436,
+    "Position": 4,
+    "Team": {
+      "TeamId": 263,
+      "Name": "Benetton Playlife"
+    },
+    "Points": 20.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 437,
+    "Position": 5,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 20.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 438,
+    "Position": 6,
+    "Team": {
+      "TeamId": 264,
+      "Name": "Jordan Mugen Honda"
+    },
+    "Points": 17.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 439,
+    "Position": 7,
+    "Team": {
+      "TeamId": 272,
+      "Name": "Arrows Supertec"
+    },
+    "Points": 7.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 440,
+    "Position": 8,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 6.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 441,
+    "Position": 9,
+    "Team": {
+      "TeamId": 273,
+      "Name": "Jaguar Cosworth"
+    },
+    "Points": 4.0,
+    "Year": 2000
+  },
+  {
+    "TeamStandingId": 442,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 179.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 443,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 102.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 444,
+    "Position": 3,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 80.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 445,
+    "Position": 4,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 21.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 446,
+    "Position": 5,
+    "Team": {
+      "TeamId": 274,
+      "Name": "Jordan Honda"
+    },
+    "Points": 19.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 447,
+    "Position": 6,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 17.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 448,
+    "Position": 7,
+    "Team": {
+      "TeamId": 250,
+      "Name": "Benetton Renault"
+    },
+    "Points": 10.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 449,
+    "Position": 8,
+    "Team": {
+      "TeamId": 273,
+      "Name": "Jaguar Cosworth"
+    },
+    "Points": 9.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 450,
+    "Position": 9,
+    "Team": {
+      "TeamId": 275,
+      "Name": "Prost Acer"
+    },
+    "Points": 4.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 451,
+    "Position": 10,
+    "Team": {
+      "TeamId": 276,
+      "Name": "Arrows Asiatech"
+    },
+    "Points": 1.0,
+    "Year": 2001
+  },
+  {
+    "TeamStandingId": 452,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 221.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 453,
+    "Position": 2,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 92.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 454,
+    "Position": 3,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 65.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 455,
+    "Position": 4,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 23.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 456,
+    "Position": 5,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 11.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 457,
+    "Position": 6,
+    "Team": {
+      "TeamId": 274,
+      "Name": "Jordan Honda"
+    },
+    "Points": 9.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 458,
+    "Position": 7,
+    "Team": {
+      "TeamId": 273,
+      "Name": "Jaguar Cosworth"
+    },
+    "Points": 8.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 459,
+    "Position": 8,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 7.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 460,
+    "Position": 9,
+    "Team": {
+      "TeamId": 278,
+      "Name": "Minardi Asiatech"
+    },
+    "Points": 2.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 461,
+    "Position": 10,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 2.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 462,
+    "Position": 11,
+    "Team": {
+      "TeamId": 280,
+      "Name": "Arrows Cosworth"
+    },
+    "Points": 2.0,
+    "Year": 2002
+  },
+  {
+    "TeamStandingId": 463,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 158.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 464,
+    "Position": 2,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 144.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 465,
+    "Position": 3,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 142.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 466,
+    "Position": 4,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 88.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 467,
+    "Position": 5,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 26.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 468,
+    "Position": 6,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 19.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 469,
+    "Position": 7,
+    "Team": {
+      "TeamId": 273,
+      "Name": "Jaguar Cosworth"
+    },
+    "Points": 18.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 470,
+    "Position": 8,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 16.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 471,
+    "Position": 9,
+    "Team": {
+      "TeamId": 223,
+      "Name": "Jordan Ford"
+    },
+    "Points": 13.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 472,
+    "Position": 10,
+    "Team": {
+      "TeamId": 281,
+      "Name": "Minardi Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2003
+  },
+  {
+    "TeamStandingId": 473,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 262.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 474,
+    "Position": 2,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 119.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 475,
+    "Position": 3,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 105.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 476,
+    "Position": 4,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 88.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 477,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 69.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 478,
+    "Position": 6,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 34.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 479,
+    "Position": 7,
+    "Team": {
+      "TeamId": 273,
+      "Name": "Jaguar Cosworth"
+    },
+    "Points": 10.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 480,
+    "Position": 8,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 9.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 481,
+    "Position": 9,
+    "Team": {
+      "TeamId": 223,
+      "Name": "Jordan Ford"
+    },
+    "Points": 5.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 482,
+    "Position": 10,
+    "Team": {
+      "TeamId": 281,
+      "Name": "Minardi Cosworth"
+    },
+    "Points": 1.0,
+    "Year": 2004
+  },
+  {
+    "TeamStandingId": 483,
+    "Position": 1,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 191.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 484,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 182.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 485,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 100.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 486,
+    "Position": 4,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 88.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 487,
+    "Position": 5,
+    "Team": {
+      "TeamId": 269,
+      "Name": "Williams BMW"
+    },
+    "Points": 66.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 488,
+    "Position": 6,
+    "Team": {
+      "TeamId": 270,
+      "Name": "BAR Honda"
+    },
+    "Points": 38.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 489,
+    "Position": 7,
+    "Team": {
+      "TeamId": 282,
+      "Name": "RBR Cosworth"
+    },
+    "Points": 34.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 490,
+    "Position": 8,
+    "Team": {
+      "TeamId": 258,
+      "Name": "Sauber Petronas"
+    },
+    "Points": 20.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 491,
+    "Position": 9,
+    "Team": {
+      "TeamId": 283,
+      "Name": "Jordan Toyota"
+    },
+    "Points": 12.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 492,
+    "Position": 10,
+    "Team": {
+      "TeamId": 281,
+      "Name": "Minardi Cosworth"
+    },
+    "Points": 7.0,
+    "Year": 2005
+  },
+  {
+    "TeamStandingId": 493,
+    "Position": 1,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 206.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 494,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 201.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 495,
+    "Position": 3,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 110.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 496,
+    "Position": 4,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 86.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 497,
+    "Position": 5,
+    "Team": {
+      "TeamId": 287,
+      "Name": "Sauber BMW"
+    },
+    "Points": 36.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 498,
+    "Position": 6,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 35.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 499,
+    "Position": 7,
+    "Team": {
+      "TeamId": 285,
+      "Name": "RBR Ferrari"
+    },
+    "Points": 16.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 500,
+    "Position": 8,
+    "Team": {
+      "TeamId": 284,
+      "Name": "Williams Cosworth"
+    },
+    "Points": 11.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 501,
+    "Position": 9,
+    "Team": {
+      "TeamId": 286,
+      "Name": "STR Cosworth"
+    },
+    "Points": 1.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 502,
+    "Position": 10,
+    "Team": {
+      "TeamId": 288,
+      "Name": "MF1 Toyota"
+    },
+    "Points": 0.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 503,
+    "Position": 11,
+    "Team": {
+      "TeamId": 289,
+      "Name": "Super Aguri Honda"
+    },
+    "Points": 0.0,
+    "Year": 2006
+  },
+  {
+    "TeamStandingId": 504,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 204.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 505,
+    "Position": 2,
+    "Team": {
+      "TeamId": 287,
+      "Name": "Sauber BMW"
+    },
+    "Points": 101.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 506,
+    "Position": 3,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 51.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 507,
+    "Position": 4,
+    "Team": {
+      "TeamId": 290,
+      "Name": "Williams Toyota"
+    },
+    "Points": 33.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 508,
+    "Position": 5,
+    "Team": {
+      "TeamId": 291,
+      "Name": "Red Bull Renault"
+    },
+    "Points": 24.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 509,
+    "Position": 6,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 13.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 510,
+    "Position": 7,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 511,
+    "Position": 8,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 6.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 512,
+    "Position": 9,
+    "Team": {
+      "TeamId": 289,
+      "Name": "Super Aguri Honda"
+    },
+    "Points": 4.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 513,
+    "Position": 10,
+    "Team": {
+      "TeamId": 293,
+      "Name": "Spyker Ferrari"
+    },
+    "Points": 1.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 514,
+    "Position": 0,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 0.0,
+    "Year": 2007
+  },
+  {
+    "TeamStandingId": 515,
+    "Position": 1,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 172.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 516,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 151.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 517,
+    "Position": 3,
+    "Team": {
+      "TeamId": 287,
+      "Name": "Sauber BMW"
+    },
+    "Points": 135.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 518,
+    "Position": 4,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 80.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 519,
+    "Position": 5,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 56.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 520,
+    "Position": 6,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 39.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 521,
+    "Position": 7,
+    "Team": {
+      "TeamId": 291,
+      "Name": "Red Bull Renault"
+    },
+    "Points": 29.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 522,
+    "Position": 8,
+    "Team": {
+      "TeamId": 290,
+      "Name": "Williams Toyota"
+    },
+    "Points": 26.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 523,
+    "Position": 9,
+    "Team": {
+      "TeamId": 112,
+      "Name": "Honda"
+    },
+    "Points": 14.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 524,
+    "Position": 10,
+    "Team": {
+      "TeamId": 294,
+      "Name": "Force India Ferrari"
+    },
+    "Points": 0.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 525,
+    "Position": 11,
+    "Team": {
+      "TeamId": 289,
+      "Name": "Super Aguri Honda"
+    },
+    "Points": 0.0,
+    "Year": 2008
+  },
+  {
+    "TeamStandingId": 526,
+    "Position": 1,
+    "Team": {
+      "TeamId": 295,
+      "Name": "Brawn Mercedes"
+    },
+    "Points": 172.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 527,
+    "Position": 2,
+    "Team": {
+      "TeamId": 297,
+      "Name": "RBR Renault"
+    },
+    "Points": 153.5,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 528,
+    "Position": 3,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 71.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 529,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 70.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 530,
+    "Position": 5,
+    "Team": {
+      "TeamId": 279,
+      "Name": "Toyota"
+    },
+    "Points": 59.5,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 531,
+    "Position": 6,
+    "Team": {
+      "TeamId": 287,
+      "Name": "Sauber BMW"
+    },
+    "Points": 36.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 532,
+    "Position": 7,
+    "Team": {
+      "TeamId": 290,
+      "Name": "Williams Toyota"
+    },
+    "Points": 34.5,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 533,
+    "Position": 8,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 26.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 534,
+    "Position": 9,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 13.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 535,
+    "Position": 10,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 2009
+  },
+  {
+    "TeamStandingId": 536,
+    "Position": 1,
+    "Team": {
+      "TeamId": 297,
+      "Name": "RBR Renault"
+    },
+    "Points": 498.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 537,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 454.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 538,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 396.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 539,
+    "Position": 4,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 214.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 540,
+    "Position": 5,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 163.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 541,
+    "Position": 6,
+    "Team": {
+      "TeamId": 284,
+      "Name": "Williams Cosworth"
+    },
+    "Points": 69.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 542,
+    "Position": 7,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 68.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 543,
+    "Position": 8,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 44.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 544,
+    "Position": 9,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 13.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 545,
+    "Position": 10,
+    "Team": {
+      "TeamId": 299,
+      "Name": "Lotus Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 546,
+    "Position": 11,
+    "Team": {
+      "TeamId": 301,
+      "Name": "HRT Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 547,
+    "Position": 12,
+    "Team": {
+      "TeamId": 302,
+      "Name": "Virgin Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2010
+  },
+  {
+    "TeamStandingId": 548,
+    "Position": 1,
+    "Team": {
+      "TeamId": 303,
+      "Name": "Red Bull Racing Renault"
+    },
+    "Points": 650.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 549,
+    "Position": 2,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 497.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 550,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 375.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 551,
+    "Position": 4,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 165.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 552,
+    "Position": 5,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 73.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 553,
+    "Position": 6,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 69.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 554,
+    "Position": 7,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 44.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 555,
+    "Position": 8,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 41.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 556,
+    "Position": 9,
+    "Team": {
+      "TeamId": 284,
+      "Name": "Williams Cosworth"
+    },
+    "Points": 5.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 557,
+    "Position": 10,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 0.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 558,
+    "Position": 11,
+    "Team": {
+      "TeamId": 301,
+      "Name": "HRT Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 559,
+    "Position": 12,
+    "Team": {
+      "TeamId": 302,
+      "Name": "Virgin Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2011
+  },
+  {
+    "TeamStandingId": 560,
+    "Position": 1,
+    "Team": {
+      "TeamId": 303,
+      "Name": "Red Bull Racing Renault"
+    },
+    "Points": 460.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 561,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 400.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 562,
+    "Position": 3,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 378.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 563,
+    "Position": 4,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 303.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 564,
+    "Position": 5,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 142.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 565,
+    "Position": 6,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 126.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 566,
+    "Position": 7,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 109.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 567,
+    "Position": 8,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 76.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 568,
+    "Position": 9,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 26.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 569,
+    "Position": 10,
+    "Team": {
+      "TeamId": 305,
+      "Name": "Caterham Renault"
+    },
+    "Points": 0.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 570,
+    "Position": 11,
+    "Team": {
+      "TeamId": 304,
+      "Name": "Marussia Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 571,
+    "Position": 12,
+    "Team": {
+      "TeamId": 301,
+      "Name": "HRT Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2012
+  },
+  {
+    "TeamStandingId": 572,
+    "Position": 1,
+    "Team": {
+      "TeamId": 303,
+      "Name": "Red Bull Racing Renault"
+    },
+    "Points": 596.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 573,
+    "Position": 2,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 360.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 574,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 354.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 575,
+    "Position": 4,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 315.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 576,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 122.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 577,
+    "Position": 6,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 77.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 578,
+    "Position": 7,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 57.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 579,
+    "Position": 8,
+    "Team": {
+      "TeamId": 292,
+      "Name": "STR Ferrari"
+    },
+    "Points": 33.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 580,
+    "Position": 9,
+    "Team": {
+      "TeamId": 213,
+      "Name": "Williams Renault"
+    },
+    "Points": 5.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 581,
+    "Position": 10,
+    "Team": {
+      "TeamId": 304,
+      "Name": "Marussia Cosworth"
+    },
+    "Points": 0.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 582,
+    "Position": 11,
+    "Team": {
+      "TeamId": 305,
+      "Name": "Caterham Renault"
+    },
+    "Points": 0.0,
+    "Year": 2013
+  },
+  {
+    "TeamStandingId": 583,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 701.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 584,
+    "Position": 2,
+    "Team": {
+      "TeamId": 303,
+      "Name": "Red Bull Racing Renault"
+    },
+    "Points": 405.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 585,
+    "Position": 3,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 320.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 586,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 216.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 587,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 181.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 588,
+    "Position": 6,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 155.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 589,
+    "Position": 7,
+    "Team": {
+      "TeamId": 307,
+      "Name": "STR Renault"
+    },
+    "Points": 30.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 590,
+    "Position": 8,
+    "Team": {
+      "TeamId": 181,
+      "Name": "Lotus Renault"
+    },
+    "Points": 10.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 591,
+    "Position": 9,
+    "Team": {
+      "TeamId": 308,
+      "Name": "Marussia Ferrari"
+    },
+    "Points": 2.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 592,
+    "Position": 10,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 0.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 593,
+    "Position": 11,
+    "Team": {
+      "TeamId": 305,
+      "Name": "Caterham Renault"
+    },
+    "Points": 0.0,
+    "Year": 2014
+  },
+  {
+    "TeamStandingId": 594,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 703.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 595,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 428.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 596,
+    "Position": 3,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 257.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 597,
+    "Position": 4,
+    "Team": {
+      "TeamId": 303,
+      "Name": "Red Bull Racing Renault"
+    },
+    "Points": 187.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 598,
+    "Position": 5,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 136.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 599,
+    "Position": 6,
+    "Team": {
+      "TeamId": 309,
+      "Name": "Lotus Mercedes"
+    },
+    "Points": 78.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 600,
+    "Position": 7,
+    "Team": {
+      "TeamId": 307,
+      "Name": "STR Renault"
+    },
+    "Points": 67.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 601,
+    "Position": 8,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 36.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 602,
+    "Position": 9,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 27.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 603,
+    "Position": 10,
+    "Team": {
+      "TeamId": 308,
+      "Name": "Marussia Ferrari"
+    },
+    "Points": 0.0,
+    "Year": 2015
+  },
+  {
+    "TeamStandingId": 604,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 765.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 605,
+    "Position": 2,
+    "Team": {
+      "TeamId": 310,
+      "Name": "Red Bull Racing TAG Heuer"
+    },
+    "Points": 468.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 606,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 398.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 607,
+    "Position": 4,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 173.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 608,
+    "Position": 5,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 138.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 609,
+    "Position": 6,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 76.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 610,
+    "Position": 7,
+    "Team": {
+      "TeamId": 312,
+      "Name": "Toro Rosso Ferrari"
+    },
+    "Points": 63.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 611,
+    "Position": 8,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 29.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 612,
+    "Position": 9,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 8.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 613,
+    "Position": 10,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 2.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 614,
+    "Position": 11,
+    "Team": {
+      "TeamId": 313,
+      "Name": "MRT Mercedes"
+    },
+    "Points": 1.0,
+    "Year": 2016
+  },
+  {
+    "TeamStandingId": 615,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 668.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 616,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 522.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 617,
+    "Position": 3,
+    "Team": {
+      "TeamId": 310,
+      "Name": "Red Bull Racing TAG Heuer"
+    },
+    "Points": 368.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 618,
+    "Position": 4,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 187.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 619,
+    "Position": 5,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 83.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 620,
+    "Position": 6,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 57.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 621,
+    "Position": 7,
+    "Team": {
+      "TeamId": 314,
+      "Name": "Toro Rosso"
+    },
+    "Points": 53.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 622,
+    "Position": 8,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 47.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 623,
+    "Position": 9,
+    "Team": {
+      "TeamId": 203,
+      "Name": "McLaren Honda"
+    },
+    "Points": 30.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 624,
+    "Position": 10,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 5.0,
+    "Year": 2017
+  },
+  {
+    "TeamStandingId": 625,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 655.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 626,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 571.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 627,
+    "Position": 3,
+    "Team": {
+      "TeamId": 310,
+      "Name": "Red Bull Racing TAG Heuer"
+    },
+    "Points": 419.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 628,
+    "Position": 4,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 122.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 629,
+    "Position": 5,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 93.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 630,
+    "Position": 6,
+    "Team": {
+      "TeamId": 315,
+      "Name": "McLaren Renault"
+    },
+    "Points": 62.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 631,
+    "Position": 7,
+    "Team": {
+      "TeamId": 296,
+      "Name": "Force India Mercedes"
+    },
+    "Points": 52.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 632,
+    "Position": 8,
+    "Team": {
+      "TeamId": 300,
+      "Name": "Sauber Ferrari"
+    },
+    "Points": 48.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 633,
+    "Position": 9,
+    "Team": {
+      "TeamId": 316,
+      "Name": "Scuderia Toro Rosso Honda"
+    },
+    "Points": 33.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 634,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 7.0,
+    "Year": 2018
+  },
+  {
+    "TeamStandingId": 635,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 739.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 636,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 504.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 637,
+    "Position": 3,
+    "Team": {
+      "TeamId": 317,
+      "Name": "Red Bull Racing Honda"
+    },
+    "Points": 417.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 638,
+    "Position": 4,
+    "Team": {
+      "TeamId": 315,
+      "Name": "McLaren Renault"
+    },
+    "Points": 145.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 639,
+    "Position": 5,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 91.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 640,
+    "Position": 6,
+    "Team": {
+      "TeamId": 316,
+      "Name": "Scuderia Toro Rosso Honda"
+    },
+    "Points": 85.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 641,
+    "Position": 7,
+    "Team": {
+      "TeamId": 319,
+      "Name": "Racing Point BWT Mercedes"
+    },
+    "Points": 73.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 642,
+    "Position": 8,
+    "Team": {
+      "TeamId": 318,
+      "Name": "Alfa Romeo Racing Ferrari"
+    },
+    "Points": 57.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 643,
+    "Position": 9,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 28.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 644,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 1.0,
+    "Year": 2019
+  },
+  {
+    "TeamStandingId": 645,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 573.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 646,
+    "Position": 2,
+    "Team": {
+      "TeamId": 317,
+      "Name": "Red Bull Racing Honda"
+    },
+    "Points": 319.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 647,
+    "Position": 3,
+    "Team": {
+      "TeamId": 315,
+      "Name": "McLaren Renault"
+    },
+    "Points": 202.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 648,
+    "Position": 4,
+    "Team": {
+      "TeamId": 319,
+      "Name": "Racing Point BWT Mercedes"
+    },
+    "Points": 195.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 649,
+    "Position": 5,
+    "Team": {
+      "TeamId": 166,
+      "Name": "Renault"
+    },
+    "Points": 181.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 650,
+    "Position": 6,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 131.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 651,
+    "Position": 7,
+    "Team": {
+      "TeamId": 320,
+      "Name": "AlphaTauri Honda"
+    },
+    "Points": 107.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 652,
+    "Position": 8,
+    "Team": {
+      "TeamId": 318,
+      "Name": "Alfa Romeo Racing Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 653,
+    "Position": 9,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 3.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 654,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 0.0,
+    "Year": 2020
+  },
+  {
+    "TeamStandingId": 655,
+    "Position": 1,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 613.5,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 656,
+    "Position": 2,
+    "Team": {
+      "TeamId": 317,
+      "Name": "Red Bull Racing Honda"
+    },
+    "Points": 585.5,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 657,
+    "Position": 3,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 323.5,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 658,
+    "Position": 4,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 275.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 659,
+    "Position": 5,
+    "Team": {
+      "TeamId": 322,
+      "Name": "Alpine Renault"
+    },
+    "Points": 155.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 660,
+    "Position": 6,
+    "Team": {
+      "TeamId": 320,
+      "Name": "AlphaTauri Honda"
+    },
+    "Points": 142.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 661,
+    "Position": 7,
+    "Team": {
+      "TeamId": 321,
+      "Name": "Aston Martin Mercedes"
+    },
+    "Points": 77.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 662,
+    "Position": 8,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 23.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 663,
+    "Position": 9,
+    "Team": {
+      "TeamId": 318,
+      "Name": "Alfa Romeo Racing Ferrari"
+    },
+    "Points": 13.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 664,
+    "Position": 10,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 0.0,
+    "Year": 2021
+  },
+  {
+    "TeamStandingId": 665,
+    "Position": 1,
+    "Team": {
+      "TeamId": 326,
+      "Name": "Red Bull Racing RBPT"
+    },
+    "Points": 759.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 666,
+    "Position": 2,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 554.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 667,
+    "Position": 3,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 515.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 668,
+    "Position": 4,
+    "Team": {
+      "TeamId": 322,
+      "Name": "Alpine Renault"
+    },
+    "Points": 173.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 669,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 159.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 670,
+    "Position": 6,
+    "Team": {
+      "TeamId": 323,
+      "Name": "Alfa Romeo Ferrari"
+    },
+    "Points": 55.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 671,
+    "Position": 7,
+    "Team": {
+      "TeamId": 325,
+      "Name": "Aston Martin Aramco Mercedes"
+    },
+    "Points": 55.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 672,
+    "Position": 8,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 37.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 673,
+    "Position": 9,
+    "Team": {
+      "TeamId": 324,
+      "Name": "AlphaTauri RBPT"
+    },
+    "Points": 35.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 674,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 8.0,
+    "Year": 2022
+  },
+  {
+    "TeamStandingId": 675,
+    "Position": 1,
+    "Team": {
+      "TeamId": 327,
+      "Name": "Red Bull Racing Honda RBPT"
+    },
+    "Points": 224.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 676,
+    "Position": 2,
+    "Team": {
+      "TeamId": 325,
+      "Name": "Aston Martin Aramco Mercedes"
+    },
+    "Points": 102.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 677,
+    "Position": 3,
+    "Team": {
+      "TeamId": 298,
+      "Name": "Mercedes"
+    },
+    "Points": 96.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 678,
+    "Position": 4,
+    "Team": {
+      "TeamId": 6,
+      "Name": "Ferrari"
+    },
+    "Points": 78.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 679,
+    "Position": 5,
+    "Team": {
+      "TeamId": 251,
+      "Name": "McLaren Mercedes"
+    },
+    "Points": 14.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 680,
+    "Position": 6,
+    "Team": {
+      "TeamId": 322,
+      "Name": "Alpine Renault"
+    },
+    "Points": 14.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 681,
+    "Position": 7,
+    "Team": {
+      "TeamId": 311,
+      "Name": "Haas Ferrari"
+    },
+    "Points": 8.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 682,
+    "Position": 8,
+    "Team": {
+      "TeamId": 323,
+      "Name": "Alfa Romeo Ferrari"
+    },
+    "Points": 6.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 683,
+    "Position": 9,
+    "Team": {
+      "TeamId": 328,
+      "Name": "AlphaTauri Honda RBPT"
+    },
+    "Points": 2.0,
+    "Year": 2023
+  },
+  {
+    "TeamStandingId": 684,
+    "Position": 10,
+    "Team": {
+      "TeamId": 306,
+      "Name": "Williams Mercedes"
+    },
+    "Points": 1.0,
+    "Year": 2023
+  }
+]
