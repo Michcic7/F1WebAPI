@@ -1,8 +1,8 @@
 ﻿namespace API.Data.DTOs;
 
-public class CircuitDto
+public record CircuitDto
 {
-    public int CircuitId { get; set; }
-    public string Name { get; set; }
-    public string Location { get; set; }
+    public required int CircuitId { get; init; }
+    public required string Name { get; init; }
+    public required string Location { get; init; }
 }

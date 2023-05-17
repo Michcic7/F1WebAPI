@@ -1,7 +1,7 @@
 ﻿namespace API.Data.DTOs;
 
-public class TeamDto
+public record TeamDto
 {
-	public int TeamId { get; set; }
-	public string Name { get; set; }
+	public required int TeamId { get; init; }
+	public required string Name { get; init; }
 }

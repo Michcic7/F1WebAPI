@@ -1,18 +1,18 @@
 ﻿namespace API.Data.Models;
 
-public class RaceResult
+public record RaceResult
 {
-    public int RaceResultId { get; set; }
-    public int Year { get; set; }
-    public int Position { get; set; }
-    public int CircuitId { get; set; }
-    public Circuit Circuit { get; set; }
-    public DateOnly Date { get; set; }
-    public int DriverId { get; set; }
-    public Driver Driver { get; set; }
-    public int TeamId { get; set; }
-    public Team Team { get; set; }
-    public int Laps { get; set; }
-    public string Time { get; set; }
-    public float Points { get; set; }
+    public required int RaceResultId { get; init; }
+    public required int Year { get; init; }
+    public required int Position { get; init; }
+    public required int CircuitId { get; init; }
+    public required Circuit Circuit { get; init; }
+    public required DateOnly Date { get; init; }
+    public required int DriverId { get; init; }
+    public required Driver Driver { get; init; }
+    public required int TeamId { get; init; }
+    public required Team Team { get; init; }
+    public required int Laps { get; init; }
+    public required string Time { get; init; }
+    public required float Points { get; init; }
 }

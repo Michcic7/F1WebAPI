@@ -1,8 +1,9 @@
 using API.Data;
-using API.Extensions;
+using API.ExtensionMethods;
 using API.Interfaces;
 using API.Services;
 using Hellang.Middleware.ProblemDetails;
+using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,15 +13,17 @@ builder.Services
 	.AddControllersConfiguration()
 	.AddProblemDetailsConfiguration()
 	.AddRateLimiterConfiguration()
+	.AddJwtConfiguration(builder)
 	.AddTransient<IDriverService, DriverService>()
 	.AddTransient<ITeamService, TeamService>()
-	.AddTransient<ICircuitService, CircuitService>();
+	.AddTransient<ICircuitService, CircuitService>()
+	.AddTransient<IAuthService, AuthService>();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
+	//app.UseSwagger();
 	app.UseSwaggerUI();
 
 	using (var scope = app.Services.CreateScope())
@@ -38,6 +41,9 @@ if (app.Environment.IsDevelopment())
 app.UseProblemDetails();
 app.UseHttpsRedirection();
 app.UseRateLimiter();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

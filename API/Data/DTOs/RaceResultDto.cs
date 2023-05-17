@@ -2,14 +2,14 @@
 
 namespace API.Data.DTOs;
 
-public class RaceResultDto
+public record RaceResultDto
 {
-    public int Position { get; set; }
-    public string CircuitName { get; set; }
-    public DateOnly Date { get; set; }
-    public string DriverName { get; set; }
-    public string TeamName { get; set; }
-    public int Laps { get; set; }
-    public string Time { get; set; }
-    public float Points { get; set; }
+    public required int Position { get; init; }
+    public required string CircuitName { get; init; }
+    public required DateOnly Date { get; init; }
+    public required string DriverName { get; init; }
+    public required string TeamName { get; init; }
+    public required int Laps { get; init; }
+    public required string Time { get; init; }
+    public required float Points { get; init; }
 }

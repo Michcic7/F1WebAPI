@@ -2,9 +2,11 @@
 using API.Data.DTOs.DTOsWithMetadata;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class DriversController : ControllerBase

@@ -1,13 +1,11 @@
-﻿using API.Data.Models;
+﻿namespace API.Data.DTOs;
 
-namespace API.Data.DTOs;
-
-public class DriverStandingDto
+public record DriverStandingDto
 {
-    public int Position { get; set; }
-    public string DriverName { get; set; }
-    public string Nationality { get; set; }
-    public string TeamName { get; set; }
-    public float Points { get; set; }
-    public int? Year { get; set; }
+    public required int Position { get; init; }
+    public required string DriverName { get; init; }
+    public required string Nationality { get; init; }
+    public required string TeamName { get; init; }
+    public required float Points { get; init; }
+    public required int? Year { get; init; }
 }

@@ -1,8 +1,8 @@
 ﻿namespace API.Data.DTOs;
 
-public class DriverDto
+public record DriverDto
 {
-	public int DriverId { get; set; }
-	public string Name { get; set; }
-	public string Nationality { get; set; }
+	public required int DriverId { get; init; }
+	public required string Name { get; init; }
+	public required string Nationality { get; init; }
 }

@@ -3,6 +3,7 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace API.Migrations
 {
     [DbContext(typeof(F1WebAPIContext))]
-    partial class F1WebAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20230516163514_AddUserTableDropCodesTable")]
+    partial class AddUserTableDropCodesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -146,28 +149,6 @@ namespace API.Migrations
                     b.ToTable("RaceResults");
                 });
 
-            modelBuilder.Entity("API.Data.Models.RefreshToken", b =>
-                {
-                    b.Property<int>("RefreshTokenId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("RefreshTokenId"));
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("RefreshTokenId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("RefreshTokens");
-                });
-
             modelBuilder.Entity("API.Data.Models.Team", b =>
                 {
                     b.Property<int>("TeamId")
@@ -279,17 +260,6 @@ namespace API.Migrations
                     b.Navigation("Team");
                 });
 
-            modelBuilder.Entity("API.Data.Models.RefreshToken", b =>
-                {
-                    b.HasOne("API.Data.Models.User", "User")
-                        .WithMany("RefreshTokens")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("API.Data.Models.TeamStanding", b =>
                 {
                     b.HasOne("API.Data.Models.Team", "Team")
@@ -318,11 +288,6 @@ namespace API.Migrations
                     b.Navigation("RaceResults");
 
                     b.Navigation("TeamStandings");
-                });
-
-            modelBuilder.Entity("API.Data.Models.User", b =>
-                {
-                    b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618
         }

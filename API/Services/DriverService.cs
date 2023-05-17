@@ -5,7 +5,6 @@ using API.Data.DTOs.DTOsWithMetadata;
 using API.Data.Models;
 using API.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Text.RegularExpressions;
 
 namespace API.Services;
 

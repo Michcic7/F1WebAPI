@@ -1,11 +1,9 @@
-﻿using API.Data.Models;
+﻿namespace API.Data.DTOs;
 
-namespace API.Data.DTOs;
-
-public class TeamStandingDto
+public record TeamStandingDto
 {
-    public int Position { get; set; }
-    public string Name { get; set; }
-    public float Points { get; set; }
-    public int Year { get; set; }
+    public required int Position { get; init; }
+    public required string Name { get; init; }
+    public required float Points { get; init; }
+    public required int Year { get; init; }
 }

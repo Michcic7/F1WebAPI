@@ -26,9 +26,6 @@ public class DataSeeder
             context.Teams.AddRange(teams);
             context.Circuits.AddRange(circuits);
 
-            //context.NationalityCodes.AddRange(nationalityCodes);
-
-
             // preserve json relationships in DriverStanding
             foreach (var driverStanding in driverStandings)
             {

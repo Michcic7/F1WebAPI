@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace API.Extensions;
+namespace API.ExtensionMethods;
 
 public static class SwaggerSetup
 {

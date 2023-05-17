@@ -4,7 +4,7 @@ using API.CustomExceptions.CustomProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
 
-namespace API.Extensions;
+namespace API.ExtensionMethods;
 
 public static class ProblemDetailsSetup
 {
@@ -21,6 +21,7 @@ public static class ProblemDetailsSetup
             MapException<InvalidYearException, InvalidYearDetails>(options);
             MapException<InvalidEntityIdException, InvalidEntityIdDetails>(options);
             MapException<EntityNotFoundException, EntityNotFoundDetails>(options);
+            MapException<FilteredEntitiesNotFoundException, FilteredEntitiesNotFoundDetails>(options);
 
             MapException<DriverWithoutStandingsException, DriverWithoutStandingsDetails>(options);
             MapException<TeamWithoutStandingsException, TeamWithoutStandingsDetails>(options);
@@ -29,7 +30,7 @@ public static class ProblemDetailsSetup
             MapException<TeamDidNotRaceInThatYearException, TeamDidNotRaceInThatYearDetails>(options);
             MapException<CircuitNoRaceInThatYearException, CircuitNoRaceInThatYearDetails>(options);
 
-            MapException<FilteredEntitiesNotFoundException, FilteredEntitiesNotFoundDetails>(options);
+
         });
 
         return services;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.RateLimiting;
 
-namespace API.Extensions;
+namespace API.ExtensionMethods;
 
 public static class RateLimiterSetup
 {
