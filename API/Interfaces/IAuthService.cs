@@ -6,7 +6,7 @@ namespace API.Interfaces;
 public interface IAuthService
 {
     IEnumerable<User> GetUsers();
-    Task<AuthenticationResult> Login(UserDto request);
-    Task<RegistrationResult> Register(UserDto request);
-    Task<AuthenticationResult> Refresh(AuthenticationResult oldToken);
+    Task<RegistrationResult> Register(UserDto request, HttpContext httpContext);
+    Task<AuthenticationResult> Login(UserDto request, HttpContext httpContext);
+    Task<AccessToken> Refresh(AuthenticationResult oldToken, HttpContext httpContext);
 }

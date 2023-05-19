@@ -19,7 +19,7 @@ public class AuthController : ControllerBase
     [HttpGet("users")]
     public async Task<ActionResult<User>> GetUsers()
     {
-        IEnumerable<User> users = await _service.GetUsers();
+        IEnumerable<User> users = _service.GetUsers();
 
         return Ok(users);
     }
@@ -28,7 +28,7 @@ public class AuthController : ControllerBase
     public async Task<ActionResult<User>> Register(
         [FromBody] UserDto request)
     {
-        RegistrationResult result = await _service.Register(request);
+        RegistrationResult result = await _service.Register(request, HttpContext);
 
         return Ok(result);
     }
@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
     public async Task<ActionResult<string>> Login(
         [FromBody] UserDto request)
     {
-        AuthenticationResult result = await _service.Login(request);
+        AuthenticationResult result = await _service.Login(request, HttpContext);
 
         return Ok(result);
     }
@@ -46,17 +46,8 @@ public class AuthController : ControllerBase
     public async Task<ActionResult> Refresh(
         [FromBody] AuthenticationResult request)
     {
-        AuthenticationResult result = await _service.Refresh(request);
+        AccessToken token = await _service.Refresh(request, HttpContext);
 
-        return Ok(result);
+        return Ok(token);
     }
-
-    //[HttpPost("token")]
-    //public async Task<ActionResult<string>> GenerateJwtToken(
-    //    [FromBody] UserDto request)
-    //{
-    //    var token = _service.GenerateJwtToken(request);
-
-    //    return Ok(token);
-    //}
 }

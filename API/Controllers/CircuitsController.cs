@@ -1,10 +1,12 @@
 ﻿using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class CircuitsController : ControllerBase

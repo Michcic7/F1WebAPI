@@ -1,4 +1,4 @@
-﻿using API.CustomExceptions;
+﻿using API.CustomExceptions.AuthExceptions;
 using API.Data;
 using API.Data.DTOs;
 using API.Data.Models;
@@ -14,6 +14,7 @@ namespace API.Services;
 public class AuthService : IAuthService
 {
     private readonly TimeSpan _accessTokenLifetime = TimeSpan.FromMinutes(1);
+    private readonly TimeSpan _refreshTokenLifetime = TimeSpan.FromMinutes(2);
 
     private readonly SymmetricSecurityKey _securityKey = new SymmetricSecurityKey(
         Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(
@@ -33,13 +34,15 @@ public class AuthService : IAuthService
         return _context.Users.Include(u => u.RefreshTokens);
     }
 
-    public async Task<RegistrationResult> Register(UserDto request)
+    public async Task<RegistrationResult> Register(UserDto request, HttpContext httpContext)
     {
+        // Check if the username is not taken.
         if (_context.Users.Any(u => u.Username == request.Username))
         {
-            throw new Exception("Username taken");
+            throw new UsernameTakenException(httpContext.Request.Path);
         }
 
+        // Hash the inputed password.
         string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
         User user = new()
@@ -54,93 +57,110 @@ public class AuthService : IAuthService
         return new RegistrationResult{ Username = request.Username };
     }
 
-    public async Task<AuthenticationResult> Login(UserDto request)
+    public async Task<AuthenticationResult> Login(UserDto request, HttpContext httpContext)
     {
-        User existingUser = await _context.Users.FirstOrDefaultAsync(u =>
-            u.Username == request.Username);
+        // Check if the username is valid.
+        User existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username) ??
+            throw new InvalidUserCredentialException(httpContext.Request.Path);
 
+        // Check if the password is valid.
+        if (!IsPasswordValid(existingUser, request.Password))
+        {
+            throw new InvalidUserCredentialException(httpContext.Request.Path);
+        }
+
+        // Check if the user's refresh token has expired.
+        RefreshToken? refreshToken = existingUser.RefreshTokens?.Find(rt => rt.Expiry < DateTime.UtcNow);
+        if (refreshToken == null)
+        {
+            refreshToken = GetRefreshToken(existingUser);
+
+            await _context.RefreshTokens.AddAsync(refreshToken);
+            await _context.SaveChangesAsync();
+        }
+
+        AccessToken accessToken = GetAccessToken(existingUser);
+
+        return new AuthenticationResult
+        {
+            AccessToken = accessToken.Token,
+            RefreshToken = refreshToken.Content,
+            Expiry = DateTime.UtcNow.Add(_accessTokenLifetime)
+        };
+    }
+
+    public async Task<AccessToken> Refresh(AuthenticationResult oldTokens, HttpContext httpContext)
+    {
+        // Get the access token's claims.
+        ClaimsPrincipal principalAccessToken = GetPrincipalFromAccessToken(oldTokens.AccessToken, httpContext);
+                
+        // Get the user's ID from the request body.
+        if (!int.TryParse(principalAccessToken.Claims.First(c => 
+            c.Type == ClaimTypes.NameIdentifier).Value, out int oldTokensUserId))
+        {
+            throw new InvalidAccessTokenException(httpContext.Request.Path);
+        }
+
+        // Check the user's credential.
+        User? existingUser = await _context.Users
+            .Include(u => u.RefreshTokens)
+            .FirstOrDefaultAsync(u => u.UserId == oldTokensUserId);
         if (existingUser == null)
         {
-            throw new Exception("Invalid username or password");
+            throw new InvalidUserCredentialException(httpContext.Request.Path);
         }
 
-        User user = AuthenticateUser(existingUser, request.Password);
+        // Check if the user's refresh token is valid.
+        RefreshToken? refreshToken = existingUser.RefreshTokens.FirstOrDefault(rt =>
+            rt.Content == oldTokens.RefreshToken);
+        if (refreshToken == null)
+        {
+            throw new ExpiredRefreshTokenException(httpContext.Request.Path);
+        }
 
-        return await GetAccessToken(existingUser);
+        // Check if their refresh token has expired.
+        if (refreshToken.Expiry < DateTime.UtcNow)
+        {
+            IEnumerable<RefreshToken> userRefreshTokens = existingUser.RefreshTokens;
+
+            RefreshToken newRefreshToken = GetRefreshToken(existingUser);
+
+            using (var context = new F1WebAPIContext())
+            {
+                _context.RefreshTokens.RemoveRange(userRefreshTokens);
+                await _context.RefreshTokens.AddAsync(newRefreshToken);
+                await _context.SaveChangesAsync();
+            }            
+        }
+
+        // Get a new access token.
+        AccessToken accessToken = GetAccessToken(existingUser);
+
+        return accessToken;
     }
 
-    public async Task<AuthenticationResult> Refresh(AuthenticationResult oldToken)
-    {
-        ClaimsPrincipal principal = GetPrincipalFromExpiredToken(oldToken.AccessToken);
-
-        if (!int.TryParse(principal.Claims.First(c => 
-            c.Type == ClaimTypes.NameIdentifier).Value, out int oldTokenUserId))
-        {
-            // No user 
-        }
-
-        RefreshToken oldRefreshToken = await _context.RefreshTokens.FirstOrDefaultAsync(rt =>
-            rt.UserId == oldTokenUserId && rt.Content == oldToken.RefreshToken);
-
-        if (oldRefreshToken == null)
-        {
-            // invalid refresh token
-        }
-
-        User user = await _context.Users.FirstAsync(u =>
-            u.UserId == oldTokenUserId);
-
-        AuthenticationResult result = await GetAccessToken(user);
-
-        RefreshToken newRefreshToken = new()
-        {
-            Content = result.RefreshToken,
-            User = user,
-            UserId = user.UserId
-        };
-
-        await _context.RefreshTokens.AddAsync(newRefreshToken);
-
-        //_context.Remove(oldRefreshToken);
-        await _context.SaveChangesAsync();
-
-        return result;
-    }
-
-    private User AuthenticateUser(User user, string password)
+    private bool IsPasswordValid(User user, string password)
     {
         if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
         {
-            throw new Exception("Invalid username or password");
+            return false;
         }
 
-        return user;
+        return true;
     }
 
-    private async Task<string> GetRefreshToken(string username)
+    private RefreshToken GetRefreshToken(User user)
     {
-        User existingUser = await _context.Users.FirstOrDefaultAsync(
-            u => u.Username == username);
-
-        if (existingUser == null)
-        {
-            throw new Exception("User does not exist");
-        }
-
-        RefreshToken refreshToken = new()
+        return new RefreshToken
         {
             Content = Guid.NewGuid().ToString(),
-            User = existingUser,
-            UserId = existingUser.UserId
+            Expiry = DateTime.UtcNow.Add(_refreshTokenLifetime),
+            User = user,
+            UserId = user.UserId
         };
-
-        await _context.RefreshTokens.AddAsync(refreshToken);
-        await _context.SaveChangesAsync();
-
-        return refreshToken.Content;
     }
 
-    private async Task<AuthenticationResult> GetAccessToken(User user)
+    private AccessToken GetAccessToken(User user)
     {
         JwtSecurityTokenHandler tokenHandler = new();
 
@@ -148,9 +168,6 @@ public class AuthService : IAuthService
         {
             new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
             new Claim(ClaimTypes.Name, user.Username)
-
-            //new Claim(ClaimTypes.id, Guid.NewGuid().ToString()),
-            //new Claim(JwtRegisteredClaimNames.Name, request.Username)
         };
 
         SigningCredentials credentials = new(_securityKey, SecurityAlgorithms.HmacSha512);
@@ -167,18 +184,17 @@ public class AuthService : IAuthService
         };
 
         SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+        string tokenContent = tokenHandler.WriteToken(token);
 
-        string accessToken = tokenHandler.WriteToken(token);
-
-        return new AuthenticationResult
+        return new AccessToken
         {
-            AccessToken = accessToken,
-            RefreshToken = await GetRefreshToken(user.Username),
+            Token = tokenContent,
             Expiry = expiry
         };
     }
 
-    public ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
+    private ClaimsPrincipal GetPrincipalFromAccessToken(
+        string accessTokenContent, HttpContext httpContext)
     {
         var tokenValidationParameters = new TokenValidationParameters
         {
@@ -193,17 +209,26 @@ public class AuthService : IAuthService
 
         var tokenHandler = new JwtSecurityTokenHandler();
 
-        ClaimsPrincipal principal = tokenHandler.ValidateToken(
-            token, tokenValidationParameters, out SecurityToken securityToken);
+        SecurityToken securityToken;
+        ClaimsPrincipal principal;
+
+        try
+        {
+            principal = tokenHandler.ValidateToken(
+                accessTokenContent, tokenValidationParameters, out securityToken);
+        }
+        catch (Exception)
+        {
+            throw new InvalidAccessTokenException(httpContext.Request.Path);
+        }
 
         if (!(securityToken is JwtSecurityToken jwtSecurityToken) ||
             !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha512, 
             StringComparison.InvariantCultureIgnoreCase))
         {
-            throw new SecurityTokenException("Invalid token");
+            throw new InvalidAccessTokenException(httpContext.Request.Path);
         }
 
         return principal;
     }
-
 }

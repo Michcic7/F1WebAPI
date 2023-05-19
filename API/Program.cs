@@ -3,7 +3,6 @@ using API.ExtensionMethods;
 using API.Interfaces;
 using API.Services;
 using Hellang.Middleware.ProblemDetails;
-using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +22,7 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-	//app.UseSwagger();
+	app.UseSwagger();
 	app.UseSwaggerUI();
 
 	using (var scope = app.Services.CreateScope())

@@ -1,7 +1,7 @@
 ﻿namespace API.Data.Models;
 
-public class RegistrationResult
+public record RegistrationResult
 {
     public string Message => "Registration succesful";
-    public string Username { get; set; }
+    public required string Username { get; init; }
 }
