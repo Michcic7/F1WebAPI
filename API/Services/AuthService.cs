@@ -113,25 +113,16 @@ public class AuthService : IAuthService
         // Check if the user's refresh token is valid.
         RefreshToken? refreshToken = existingUser.RefreshTokens.FirstOrDefault(rt =>
             rt.Content == oldTokens.RefreshToken);
-        if (refreshToken == null)
+        if (refreshToken == null || refreshToken.Expiry < DateTime.UtcNow)
         {
             throw new ExpiredRefreshTokenException(httpContext.Request.Path);
         }
 
-        // Check if their refresh token has expired.
-        if (refreshToken.Expiry < DateTime.UtcNow)
-        {
-            IEnumerable<RefreshToken> userRefreshTokens = existingUser.RefreshTokens;
-
-            RefreshToken newRefreshToken = GetRefreshToken(existingUser);
-
-            using (var context = new F1WebAPIContext())
-            {
-                _context.RefreshTokens.RemoveRange(userRefreshTokens);
-                await _context.RefreshTokens.AddAsync(newRefreshToken);
-                await _context.SaveChangesAsync();
-            }            
-        }
+        // Remove the old refresh token and add a new one.
+        IEnumerable<RefreshToken> userRefreshTokens = existingUser.RefreshTokens;
+        _context.RefreshTokens.RemoveRange(userRefreshTokens);
+        await _context.RefreshTokens.AddAsync(GetRefreshToken(existingUser));
+        await _context.SaveChangesAsync();
 
         // Get a new access token.
         AccessToken accessToken = GetAccessToken(existingUser);
