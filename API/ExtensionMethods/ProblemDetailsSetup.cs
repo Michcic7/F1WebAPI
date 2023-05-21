@@ -35,9 +35,9 @@ public static class ProblemDetailsSetup
             // Auth exceptions.
             MapException<ExpiredRefreshTokenException, ExpiredRefreshTokenDetails>(options);
             MapException<UsernameTakenException, UsernameTakenDetails>(options);
-            MapException<InvalidUserCredentialException, InvalidUserCredentialDetails>(options);
+            MapException<InvalidUserCredentialsException, InvalidUserCredentialsDetails>(options);
             MapException<InvalidAccessTokenException, InvalidAccessTokenDetails>(options);
-
+            MapException<EmptyUserCredentialsException, EmptyUserCredentialsDetails>(options);
         });
 
         return services;

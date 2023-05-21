@@ -12,6 +12,8 @@ namespace API.Controllers;
 public class DriversController : ControllerBase
 {
     private const int _maxPageSize = 40;
+
+    // Default parameter for an action method must be a compile-time constant, thus not DateTime.Now.Year.
     private const int _defaultYear = 2023;
 
     private readonly IDriverService _driverService;
@@ -34,7 +36,7 @@ public class DriversController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PaginatedDriversDto>> GetDrivers(
         [FromQuery] int page = 1, [FromQuery] int pageSize = 20,
-        [FromQuery] string name = null, [FromQuery] string nationality = null)
+        [FromQuery] string name = null!, [FromQuery] string nationality = null!)
     {
         PaginatedDriversDto drivers = await _driverService
             .GetDrivers(page, pageSize, _maxPageSize, name, nationality, HttpContext);

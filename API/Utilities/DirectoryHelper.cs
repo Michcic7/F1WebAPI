@@ -6,8 +6,12 @@ public static class DirectoryHelper
 {
     internal static string GetProjectFolderPath()
     {
-        string baseDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        string baseDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ??
+            throw new DirectoryNotFoundException("Could not find the project's base directory.");
 
-        return Directory.GetParent(baseDirectory).Parent.Parent.FullName;
+        string path = Directory.GetParent(baseDirectory)?.Parent?.Parent?.FullName ??
+            throw new DirectoryNotFoundException("Could not find project folder.");
+
+        return path;
     }
 }

@@ -29,14 +29,18 @@ public class AuthService : IAuthService
         _configuration = configuration;
     }
 
-    public IEnumerable<User> GetUsers()
+    public async Task<IEnumerable<User>> GetUsersAsync()
     {
-        return _context.Users.Include(u => u.RefreshTokens);
+        return await _context.Users.Include(u => u.RefreshTokens).ToListAsync();
     }
 
     public async Task<RegistrationResult> Register(UserDto request, HttpContext httpContext)
     {
-        // Check if the username is not taken.
+        if (string.IsNullOrWhiteSpace(request.Username) || string.IsNullOrWhiteSpace(request.Password))
+        {
+            throw new EmptyUserCredentialsException(httpContext.Request.Path);
+        }
+        
         if (_context.Users.Any(u => u.Username == request.Username))
         {
             throw new UsernameTakenException(httpContext.Request.Path);
@@ -61,12 +65,12 @@ public class AuthService : IAuthService
     {
         // Check if the username is valid.
         User existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Username == request.Username) ??
-            throw new InvalidUserCredentialException(httpContext.Request.Path);
+            throw new InvalidUserCredentialsException(httpContext.Request.Path);
 
         // Check if the password is valid.
         if (!IsPasswordValid(existingUser, request.Password))
         {
-            throw new InvalidUserCredentialException(httpContext.Request.Path);
+            throw new InvalidUserCredentialsException(httpContext.Request.Path);
         }
 
         // Check if the user's refresh token has expired.
@@ -107,11 +111,11 @@ public class AuthService : IAuthService
             .FirstOrDefaultAsync(u => u.UserId == oldTokensUserId);
         if (existingUser == null)
         {
-            throw new InvalidUserCredentialException(httpContext.Request.Path);
+            throw new InvalidUserCredentialsException(httpContext.Request.Path);
         }
 
         // Check if the user's refresh token is valid.
-        RefreshToken? refreshToken = existingUser.RefreshTokens.FirstOrDefault(rt =>
+        RefreshToken? refreshToken = existingUser.RefreshTokens?.FirstOrDefault(rt =>
             rt.Content == oldTokens.RefreshToken);
         if (refreshToken == null || refreshToken.Expiry < DateTime.UtcNow)
         {
@@ -119,7 +123,7 @@ public class AuthService : IAuthService
         }
 
         // Remove the old refresh token and add a new one.
-        IEnumerable<RefreshToken> userRefreshTokens = existingUser.RefreshTokens;
+        IEnumerable<RefreshToken> userRefreshTokens = existingUser.RefreshTokens!;
         _context.RefreshTokens.RemoveRange(userRefreshTokens);
         await _context.RefreshTokens.AddAsync(GetRefreshToken(existingUser));
         await _context.SaveChangesAsync();
@@ -195,7 +199,9 @@ public class AuthService : IAuthService
             ValidIssuer = _configuration["Jwt:Issuer"],
             ValidateAudience = true,
             ValidAudience = _configuration["Jwt:Audience"],
-            ValidateLifetime = false // Validating an expired token, so lifetime validation is disabled.
+            ValidateLifetime = false, // Validating an expired token, so lifetime validation is disabled.
+
+            NameClaimType = JwtRegisteredClaimNames.Sub,
         };
 
         var tokenHandler = new JwtSecurityTokenHandler();

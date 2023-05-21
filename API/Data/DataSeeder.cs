@@ -26,13 +26,13 @@ public class DataSeeder
             context.Teams.AddRange(teams);
             context.Circuits.AddRange(circuits);
 
-            // preserve json relationships in DriverStanding
+            // Preserve json relationships in DriverStandings.
             foreach (var driverStanding in driverStandings)
             {
                 Driver driver = driverStanding.Driver;
                 Team team = driverStanding.Team;
 
-                Driver existingDriver = drivers.FirstOrDefault(d =>
+                Driver? existingDriver = drivers.FirstOrDefault(d =>
                     d.DriverId == driverStanding.DriverId);
 
                 if (existingDriver != null)
@@ -44,7 +44,7 @@ public class DataSeeder
                     context.Attach(driver);
                 }
 
-                Team existingTeam = teams.FirstOrDefault(t =>
+                Team? existingTeam = teams.FirstOrDefault(t =>
                     t.TeamId == team.TeamId);
 
                 if (existingTeam != null)
@@ -69,12 +69,12 @@ public class DataSeeder
             }
 
 
-            // preserve json relationships in TeamStanding
+            // Preserve json relationships in TeamStandings.
             foreach (var teamStanding in teamStandings)
             {
                 Team team = teamStanding.Team;
 
-                Team existingTeam = teams.FirstOrDefault(t =>
+                Team? existingTeam = teams.FirstOrDefault(t =>
                     t.TeamId == teamStanding.TeamId);
 
                 if (existingTeam != null)
@@ -98,14 +98,14 @@ public class DataSeeder
             }
 
 
-            // preserve json relationships in RaceResults
+            // Preserve json relationships in RaceResults.
             foreach (var raceResult in raceResults)
             {
                 Driver driver = raceResult.Driver;
                 Team team = raceResult.Team;
                 Circuit circuit = raceResult.Circuit;
 
-                Driver existingDriver = drivers.FirstOrDefault(d =>
+                Driver? existingDriver = drivers.FirstOrDefault(d =>
                     d.DriverId == raceResult.DriverId);
 
                 if (existingDriver != null)
@@ -117,7 +117,7 @@ public class DataSeeder
                     context.Attach(driver);
                 }
 
-                Team existingTeam = teams.FirstOrDefault(t =>
+                Team? existingTeam = teams.FirstOrDefault(t =>
                     t.TeamId == raceResult.TeamId);
 
                 if (existingTeam != null)
@@ -129,7 +129,7 @@ public class DataSeeder
                     context.Attach(team);
                 }
 
-                Circuit existingCircuit = circuits.FirstOrDefault(c =>
+                Circuit? existingCircuit = circuits.FirstOrDefault(c =>
                     c.CircuitId == raceResult.CircuitId);
 
                 if (existingCircuit != null)
@@ -164,14 +164,14 @@ public class DataSeeder
 
     private List<RaceResult> DeserializeRaceResults()
     {
-        List<RaceResult> raceResults = new();
+        List<RaceResult>? raceResults = new();
 
         string path = Path.Combine(_jsonFolder, "raceResults.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            raceResults = JsonConvert.DeserializeObject<List<RaceResult>>(json);
+            raceResults = JsonConvert.DeserializeObject<List<RaceResult>>(json)!;
         }
 
         foreach (var raceResult in raceResults)
@@ -186,14 +186,14 @@ public class DataSeeder
 
     private List<TeamStanding> DeserializeTeamStandings()
     {
-        List<TeamStanding> teamStandings = new();
+        List<TeamStanding>? teamStandings = new();
 
         string path = Path.Combine(_jsonFolder, "teamStandings.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            teamStandings = JsonConvert.DeserializeObject<List<TeamStanding>>(json);
+            teamStandings = JsonConvert.DeserializeObject<List<TeamStanding>>(json)!;
         }
 
         foreach (var teamStanding in teamStandings)
@@ -206,14 +206,14 @@ public class DataSeeder
 
     private List<DriverStanding> DeserializeDriverStandings()
     {
-        List<DriverStanding> driverStandings = new();
+        List<DriverStanding>? driverStandings = new();
 
         string path = Path.Combine(_jsonFolder, "driverStandings.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            driverStandings = JsonConvert.DeserializeObject<List<DriverStanding>>(json);
+            driverStandings = JsonConvert.DeserializeObject<List<DriverStanding>>(json)!;
         }
 
         foreach (var driverStanding in driverStandings)
@@ -227,14 +227,14 @@ public class DataSeeder
 
     private List<Circuit> DeserializeCircuits()
     {
-        List<Circuit> circuits = new();
+        List<Circuit>? circuits = new();
 
         string path = Path.Combine(_jsonFolder, "circuits.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            circuits = JsonConvert.DeserializeObject<List<Circuit>>(json);
+            circuits = JsonConvert.DeserializeObject<List<Circuit>>(json)!;
         }
 
         return circuits;
@@ -242,14 +242,14 @@ public class DataSeeder
 
     private List<Team> DeserializeTeams()
     {
-        List<Team> teams = new();
+        List<Team>? teams = new();
 
         string path = Path.Combine(_jsonFolder, "teams.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            teams = JsonConvert.DeserializeObject<List<Team>>(json);
+            teams = JsonConvert.DeserializeObject<List<Team>>(json)!;
         }
 
         return teams;
@@ -257,14 +257,14 @@ public class DataSeeder
 
     private List<Driver> DeserializeDrivers()
     {
-        List<Driver> drivers = new();
+        List<Driver>? drivers = new();
 
         string path = Path.Combine(_jsonFolder, "drivers.json");
 
         using (StreamReader reader = new(path))
         {
             string json = reader.ReadToEnd();
-            drivers = JsonConvert.DeserializeObject<List<Driver>>(json);
+            drivers = JsonConvert.DeserializeObject<List<Driver>>(json)!;
         }
 
         return drivers;

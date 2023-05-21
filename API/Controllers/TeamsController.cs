@@ -12,6 +12,8 @@ namespace API.Controllers;
 public class TeamsController : ControllerBase
 {
     private const int _maxPageSize = 40;
+
+    // Default parameter for an action method must be a compile-time constant, thus not DateTime.Now.Year.
     private const int _defaultYear = 2023;
 
     private readonly ITeamService _teamService;
@@ -32,7 +34,7 @@ public class TeamsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PaginatedTeamsDto>> GetTeams(
-        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
+        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null!)
     {
         PaginatedTeamsDto teams = await _teamService.GetTeams(
             page, pageSize, _maxPageSize, name, HttpContext);

@@ -10,6 +10,9 @@ namespace API.Services;
 
 public class DriverService : IDriverService
 {
+    private const int _startYear = 1950;
+    private readonly int _endYear = DateTime.Now.Year;
+
     private readonly F1WebAPIContext _context;
 
     public DriverService(F1WebAPIContext context)
@@ -49,7 +52,7 @@ public class DriverService : IDriverService
             nationalityFilter = nationalityFilter.ToLower();
 
             query = query.Where(d =>
-                d.Nationality.ToLower().Contains(nationalityFilter));
+                d.Nationality!.ToLower().Contains(nationalityFilter));
         }
 
         // Calculate metadata.
@@ -73,7 +76,7 @@ public class DriverService : IDriverService
             throw new PageNumberExceededTotalPagesException(context.Request.Path);
         }
 
-        if (drivers.Count() == 0)
+        if (!drivers.Any())
         {
             throw new FilteredEntitiesNotFoundException(typeof(Driver), context.Request.Path);
         }
@@ -84,7 +87,8 @@ public class DriverService : IDriverService
             TotalPages = totalPages,
             CurrentPage = page,
             PageSize = pageSize,
-            NameFilter = nameFilter?.ToLower(),
+            NameFilter = nameFilter.ToLower(),
+            NationalityFilter = nationalityFilter.ToLower(),
             Drivers = drivers
         };
     }
@@ -104,12 +108,8 @@ public class DriverService : IDriverService
                 Name = d.FirstName + " " + d.LastName,
                 Nationality = d.Nationality
             })
-            .FirstOrDefaultAsync();
-
-        if (driver == null)
-        {
-            throw new EntityNotFoundException(typeof(Driver), id, context.Request.Path);
-        }
+            .FirstOrDefaultAsync() ?? 
+                throw new EntityNotFoundException(typeof(Driver), id, context.Request.Path);
 
         return driver;
     }
@@ -117,7 +117,7 @@ public class DriverService : IDriverService
     public async Task<IEnumerable<DriverStandingDto>> GetDriverStanding(
         int year, HttpContext context)
     {
-        if (year < 1950 || year > 2022)
+        if (year < _startYear || year > _endYear)
         {
             throw new InvalidYearException(typeof(DriverStanding), context.Request.Path);
         }
@@ -181,7 +181,7 @@ public class DriverService : IDriverService
             throw new InvalidEntityIdException(typeof(Driver), context.Request.Path);
         }
 
-        if (year < 1950 || year > 2022)
+        if (year < _startYear || year > _endYear)
         {
             throw new InvalidYearException(typeof(RaceResult), context.Request.Path);
         }

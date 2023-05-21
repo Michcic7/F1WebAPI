@@ -2,6 +2,6 @@
 
 namespace API.CustomExceptions.AuthExceptions.AuthProblemDetails;
 
-public class InvalidUserCredentialDetails : ProblemDetails
+public class EmptyUserCredentialsDetails : ProblemDetails
 {
 }

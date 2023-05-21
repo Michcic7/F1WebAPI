@@ -10,6 +10,9 @@ namespace API.Services;
 
 public class CircuitService : ICircuitService
 {
+    private const int _startYear = 1950;
+    private readonly int _endYear = DateTime.Now.Year;
+
     private readonly F1WebAPIContext _context;
 
     public CircuitService(F1WebAPIContext context)
@@ -62,7 +65,7 @@ public class CircuitService : ICircuitService
             throw new PageNumberExceededTotalPagesException(context.Request.Path);
         }
 
-        if (circuits.Count() == 0)
+        if (!circuits.Any())
         {
             throw new FilteredEntitiesNotFoundException(typeof(Circuit), context.Request.Path);
         }
@@ -93,12 +96,8 @@ public class CircuitService : ICircuitService
                 Name = c.Name,
                 Location = c.Location
             })
-            .FirstOrDefaultAsync();
-
-        if (circuit == null)
-        {
-            throw new EntityNotFoundException(typeof(Circuit), id, context.Request.Path);
-        }
+            .FirstOrDefaultAsync() ??
+                throw new EntityNotFoundException(typeof(Circuit), id, context.Request.Path);
 
         return circuit;
     }
@@ -111,7 +110,7 @@ public class CircuitService : ICircuitService
             throw new InvalidEntityIdException(typeof(Circuit), context.Request.Path);
         }
 
-        if (year < 1950 || year > 2022)
+        if (year < _startYear || year > _endYear)
         {
             throw new InvalidYearException(typeof(RaceResult), context.Request.Path);
         }

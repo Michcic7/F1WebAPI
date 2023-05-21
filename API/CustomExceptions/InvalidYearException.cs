@@ -23,8 +23,8 @@ public class InvalidYearException : Exception, IExceptionProperties
             nameof(DriverStanding) =>
                 "The requested year must be between 1950 and 2022.",
             nameof(RaceResult) => 
-                "The requested year must be between 1950 and 2022."
-
+                "The requested year must be between 1950 and 2022.",
+            _ => throw new Exception("Something went wrong with year standings")
         };
         Instance = instance;
     }
