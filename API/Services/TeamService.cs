@@ -10,6 +10,9 @@ namespace API.Services;
 
 public class TeamService : ITeamService
 {
+    private const int _startYear = 1958;
+    private readonly int _endYear = DateTime.Now.Year;
+    
     private readonly F1WebAPIContext _context;
 
     public TeamService(F1WebAPIContext context)
@@ -60,7 +63,7 @@ public class TeamService : ITeamService
             throw new PageNumberExceededTotalPagesException(context.Request.Path);
         }
 
-        if (teams.Count() == 0)
+        if (!teams.Any())
         {
             throw new FilteredEntitiesNotFoundException(typeof(Team), context.Request.Path);
         }
@@ -90,12 +93,8 @@ public class TeamService : ITeamService
                 TeamId = t.TeamId,
                 Name = t.Name
             })
-            .FirstOrDefaultAsync();
-
-        if (team == null)
-        {
-            throw new EntityNotFoundException(typeof(Team), id, context.Request.Path);
-        }
+            .FirstOrDefaultAsync() ?? 
+                throw new EntityNotFoundException(typeof(Team), id, context.Request.Path);
 
         return team;
     }
@@ -103,7 +102,7 @@ public class TeamService : ITeamService
     public async Task<IEnumerable<TeamStandingDto>> GetTeamStanding(
         int year, HttpContext context)
     {
-        if (year < 1950 || year > 2022)
+        if (year < _startYear || year > _endYear)
         {
             throw new InvalidYearException(typeof(TeamStanding), context.Request.Path);
         }
@@ -160,7 +159,7 @@ public class TeamService : ITeamService
             throw new InvalidEntityIdException(typeof(Team), context.Request.Path);
         }
 
-        if (year < 1950 || year > 2022)
+        if (year < _startYear || year > _endYear)
         {
             throw new InvalidYearException(typeof(RaceResult), context.Request.Path);
         }

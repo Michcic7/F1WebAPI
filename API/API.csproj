@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
+    <Content Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
+    <EmbeddedResource Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
+    <None Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Data\Json\drivers.json" />
     <Content Remove="Data\Json\races.json" />
     <Content Remove="Data\Json\teams.json" />
@@ -24,13 +31,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CustomExceptions\AuthExceptions\AuthProblemDetials\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

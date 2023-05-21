@@ -1,16 +1,20 @@
 ﻿using API.Data.DTOs;
 using API.Data.DTOs.DTOsWithMetadata;
 using API.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class CircuitsController : ControllerBase
 {
     private const int _maxPageSize = 40;
-    private const int _defaultYear = 2023;
+
+    // Default parameter for an action method must be a compile-time constant, thus not DateTime.Now.Year.
+    private const int _defaultYear = 2023; 
 
     private readonly ICircuitService _circuitService;
 
@@ -30,7 +34,7 @@ public class CircuitsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<PaginatedCircuitsDto>> GetCircuits(
-        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null)
+        [FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string name = null!)
     {
         PaginatedCircuitsDto circuits = await _circuitService.GetCircuits(
             page, pageSize, _maxPageSize, name, HttpContext);
@@ -65,7 +69,7 @@ public class CircuitsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<RaceResultDto>>> GetCircuitRaceResultsByYear(
-        int id, [FromQuery] int year = _defaultYear)
+        int id, [FromQuery] int year = _defaultYear) 
     {
         IEnumerable<RaceResultDto> raceResults = await
             _circuitService.GetCircuitRaceResultsByYear(id, year, HttpContext);

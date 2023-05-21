@@ -1,10 +1,8 @@
-﻿using API.Data.DTOs;
+﻿namespace API.Data.Models;
 
-namespace API.Data.Models;
-
-public class AuthenticationResult
+public record AuthenticationResult
 {
-    public string AccessToken { get; set; }
-    public string RefreshToken { get; set; }
-    public DateTime Expiry { get; set; }
+    public required string AccessToken { get; init; }
+    public required string RefreshToken { get; init; }
+    public required DateTime Expiry { get; init; }
 }

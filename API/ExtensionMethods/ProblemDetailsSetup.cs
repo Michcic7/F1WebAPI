@@ -3,6 +3,8 @@ using API.CustomExceptions;
 using API.CustomExceptions.CustomProblemDetails;
 using Microsoft.AspNetCore.Mvc;
 using API.Interfaces;
+using API.CustomExceptions.AuthExceptions;
+using API.CustomExceptions.AuthExceptions.AuthProblemDetails;
 
 namespace API.ExtensionMethods;
 
@@ -30,7 +32,12 @@ public static class ProblemDetailsSetup
             MapException<TeamDidNotRaceInThatYearException, TeamDidNotRaceInThatYearDetails>(options);
             MapException<CircuitNoRaceInThatYearException, CircuitNoRaceInThatYearDetails>(options);
 
-
+            // Auth exceptions.
+            MapException<ExpiredRefreshTokenException, ExpiredRefreshTokenDetails>(options);
+            MapException<UsernameTakenException, UsernameTakenDetails>(options);
+            MapException<InvalidUserCredentialsException, InvalidUserCredentialsDetails>(options);
+            MapException<InvalidAccessTokenException, InvalidAccessTokenDetails>(options);
+            MapException<EmptyUserCredentialsException, EmptyUserCredentialsDetails>(options);
         });
 
         return services;
