@@ -13,8 +13,8 @@ namespace API.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly TimeSpan _accessTokenLifetime = TimeSpan.FromMinutes(1);
-    private readonly TimeSpan _refreshTokenLifetime = TimeSpan.FromMinutes(2);
+    private readonly TimeSpan _accessTokenLifetime = TimeSpan.FromMinutes(5);
+    private readonly TimeSpan _refreshTokenLifetime = TimeSpan.FromDays(1);
 
     private readonly SymmetricSecurityKey _securityKey = new SymmetricSecurityKey(
         Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(

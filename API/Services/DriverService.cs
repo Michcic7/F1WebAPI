@@ -88,7 +88,7 @@ public class DriverService : IDriverService
             CurrentPage = page,
             PageSize = pageSize,
             NameFilter = nameFilter.ToLower(),
-            NationalityFilter = nationalityFilter.ToLower(),
+            NationalityFilter = nationalityFilter?.ToLower(),
             Drivers = drivers
         };
     }

@@ -40,8 +40,9 @@ public class CircuitService : ICircuitService
         {
             nameFilter = nameFilter.ToLower();
 
-            query = query.Where(d =>
-                d.Name.ToLower().Contains(nameFilter));
+            query = query.Where(c =>
+                c.Name.ToLower().Contains(nameFilter) ||
+                c.Location.ToLower().Contains(nameFilter));
         }
 
         // Calculate metadata.
