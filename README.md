@@ -2,7 +2,7 @@
 
 A REST API for accessing the data scraped from the Formula 1 official website's standings tab. It includes drivers, teams and race results.
 
-Built with ASP.NET Core 7 and PostgreSQL. The project showcases my 1 year of learning back-end programming.
+Built with ASP.NET Core 7, PostgreSQL and Docker. The project showcases my 1 year of learning back-end programming.
 
 ## Features
 
@@ -12,6 +12,7 @@ Built with ASP.NET Core 7 and PostgreSQL. The project showcases my 1 year of lea
 - ProblemDetails responses
 - JWT authentication and authorisation with refresh tokens
 - Code-first database approach
+- Multi-container (Linux) application
 
 ## Authentication & Authorization
 
@@ -35,23 +36,14 @@ To refresh the access token using the body returned from the login endpoint:
 
 Tokens lifetime:
 
-- Access token - 5 minutes
+- Access token - 10 minutes
   
 - Refresh token - 1 day
   
 
 ## How to use
 
-Currently, to use the API you have to fork the repository and set two environment variables:
-
-- "F1WebAPIConnectionString" with your connection string to a postgres database
-  
-- "F1WebAPIJwtToken" with a secret password used in symmetric security key
-  
-
-If the database is absent, the project will automatically create one and seed it with the data.
-
-My current to-do list includes learning Docker to contenerize the project for easier testing and I want to deploy the API after learning more about security.
+With Docker Desktop installed and running, run `docker-compose up --build` inside the `F1WebAPI` folder using CLI of choice.
 
 ## Endpoints
 
