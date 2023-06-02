@@ -13,12 +13,12 @@ namespace API.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly TimeSpan _accessTokenLifetime = TimeSpan.FromMinutes(5);
+    private readonly TimeSpan _accessTokenLifetime = TimeSpan.FromMinutes(10);
     private readonly TimeSpan _refreshTokenLifetime = TimeSpan.FromDays(1);
 
     private readonly SymmetricSecurityKey _securityKey = new SymmetricSecurityKey(
         Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable(
-            "F1WebAPIJwtToken", EnvironmentVariableTarget.User) ?? throw new NullReferenceException("Security key not found.")));
+            "F1WebAPIJwtToken", EnvironmentVariableTarget.Process) ?? throw new NullReferenceException("Security key not found.")));
 
     private readonly F1WebAPIContext _context;
     private readonly IConfiguration _configuration;

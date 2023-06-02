@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\C#\F1WebAPI\API\bin\Release\net7.0\</_PublishTargetUrl>
+    <History>True|2023-05-31T18:58:19.9763056Z;True|2023-05-31T20:55:39.2674558+02:00;True|2023-05-31T20:48:22.6604981+02:00;True|2023-05-31T20:42:11.7730939+02:00;True|2023-05-31T20:41:37.1655920+02:00;True|2023-05-31T20:12:54.6137784+02:00;True|2023-05-31T20:10:50.9212820+02:00;True|2023-05-31T20:00:01.5127725+02:00;True|2023-05-31T19:23:04.0704369+02:00;True|2023-05-31T19:20:31.1703478+02:00;True|2023-05-31T19:16:19.6151007+02:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
