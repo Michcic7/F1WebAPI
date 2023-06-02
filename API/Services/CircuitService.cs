@@ -21,7 +21,7 @@ public class CircuitService : ICircuitService
     }
 
     public async Task<PaginatedCircuitsDto> GetCircuits(
-        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context)
+        int page, int pageSize, int maxPageSize, string? nameFilter, HttpContext context)
     {
         if (page <= 0)
         {

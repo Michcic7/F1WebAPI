@@ -30,7 +30,7 @@ public static class AuthSetup
 
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
                         Environment.GetEnvironmentVariable("F1WebAPIJwtToken",
-                                                            EnvironmentVariableTarget.User) ??
+                                                            EnvironmentVariableTarget.Process) ??
                         throw new NullReferenceException("Could not get the environment variable for the jwt token.")))
                 };
             });

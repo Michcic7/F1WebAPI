@@ -6,20 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
+    <UserSecretsId>ab0026ef-e8e6-4209-ab04-b52b4bbb184d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
-    <Content Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
-    <EmbeddedResource Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
-    <None Remove="CustomExceptions\AuthExceptions\AuthProblemDetials\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Data\Json\drivers.json" />
-    <Content Remove="Data\Json\races.json" />
-    <Content Remove="Data\Json\teams.json" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
@@ -31,19 +20,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Data\Json\drivers.json" />
-    <None Include="Data\Json\teams.json" />
   </ItemGroup>
 
 </Project>

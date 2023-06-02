@@ -21,7 +21,7 @@ public class TeamService : ITeamService
     }
 
     public async Task<PaginatedTeamsDto> GetTeams(
-        int page, int pageSize, int maxPageSize, string nameFilter, HttpContext context)
+        int page, int pageSize, int maxPageSize, string? nameFilter, HttpContext context)
     {
         if (page <= 0)
         {
@@ -74,7 +74,7 @@ public class TeamService : ITeamService
             TotalPages = totalPages,
             CurrentPage = page,
             PageSize = pageSize,
-            NameFilter = nameFilter,
+            NameFilter = nameFilter?.ToLower(),
             Teams = teams
         };
     }

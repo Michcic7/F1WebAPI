@@ -2,13 +2,14 @@ using API.Data;
 using API.ExtensionMethods;
 using API.Interfaces;
 using API.Services;
+using API.Utilities;
 using Hellang.Middleware.ProblemDetails;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
 	.AddSwagger()
-	.AddDbContext(builder)
+	.AddDbContext<F1WebAPIContext>()
 	.AddControllersConfiguration()
 	.AddProblemDetailsConfiguration()
 	.AddRateLimiterConfiguration()
@@ -23,18 +24,20 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
-	app.UseSwaggerUI();
+	app.UseSwaggerUI();	
+}
 
-	using (var scope = app.Services.CreateScope())
+DirectoryHelper.Configure(app.Environment);
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<F1WebAPIContext>();
+
+	if (dbContext.Database.EnsureCreated())
 	{
-		var dbContext = scope.ServiceProvider.GetRequiredService<F1WebAPIContext>();
-
-		if (dbContext.Database.EnsureCreated())
-		{
-            DataSeeder seeder = new();
-            seeder.SeedInitialData();
-        }
-    }
+		DataSeeder seeder = new();
+		seeder.SeedInitialData();
+	}
 }
 
 app.UseProblemDetails();

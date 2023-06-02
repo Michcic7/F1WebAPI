@@ -22,7 +22,7 @@ public class DriverService : IDriverService
 
     public async Task<PaginatedDriversDto> GetDrivers(
         int page, int pageSize, int maxPageSize, 
-        string nameFilter, string nationalityFilter, HttpContext context)
+        string? nameFilter, string? nationalityFilter, HttpContext context)
     {
         if (page <= 0)
         {
@@ -87,7 +87,7 @@ public class DriverService : IDriverService
             TotalPages = totalPages,
             CurrentPage = page,
             PageSize = pageSize,
-            NameFilter = nameFilter.ToLower(),
+            NameFilter = nameFilter?.ToLower(),
             NationalityFilter = nationalityFilter?.ToLower(),
             Drivers = drivers
         };
